@@ -31,7 +31,7 @@ public class Diplomacy {
             moves = moveLine.split(";");
             for(int i = 0; i < moves.length; i++) moves[i] = i + " : " + moves[i].trim();
         }
-        gameState = gameState.progress(moves);
+        gameState = gameState.movephase(moves);
         bool retreat = gameState.doIneedafuckingretreat;
 
         //Take orders for strage: retreat if necessary
@@ -42,6 +42,14 @@ public class Diplomacy {
         }
 
         //TODO print the current state
+        String seas = "Fall  "; if(season = Map.SPRING) seas = "Spring "; if(season = Map.WINTER) seas = "Winter";
+        String message =  "==========================\n";
+        String message += "==        Year: " + year + "    ==\n";
+        String message += "==      Season: " + seas + "  ==\n";
+        String message += "==========================";
+        System.out.println(message);
+
+        for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
     public static void runBuild() {
