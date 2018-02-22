@@ -1,5 +1,3 @@
-
-
 public class Game {
     public Country[] countries;
     public Territory[] territories;
@@ -27,12 +25,28 @@ public class Game {
         this.doIneedafuckingretreat=false;
     }
 
-    public Game progress(String[] orders) {
+    public Game movephase(String[] orders) {
         for(string o : orders) {
             String[] orderset = o.split(" : ");
-            //order[0]=country.id   order[1]=order
+            //orderset[0]=country.id
             String[] type = orderset[1].split(" ");
+            //type[0]=A or F
             String[] startloc = type[1].split(" ");
+            //startloc[0]= starting location
+            int id= String.parseint(orderset[0]);
+            //check if ownership is valid
+            boolean unitcheck=true;
+            for(Unit u : this.countries[id].units)
+                if((u.isFleet && type[0].equals("F") || !u.isFleet && type[0].equals("A"))
+                        && (u.location.name.equals(startloc[0]))) {
+                    unitcheck = false;
+                    break;
+                }
+            if(unitcheck)
+                System.out.println("Order: "+o+" failed becuase you do not own a "+type[0]+"in "+startloc[0]);
+            String[] movetype = startloc[1].split(" ");
+            //movetype[0]= H, -, S, C
+
 
         }
         return new Game();
