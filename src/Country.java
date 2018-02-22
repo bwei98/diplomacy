@@ -20,17 +20,21 @@ public class Country {
     /**
      * toString returns the name, units, and supply centers of a country
      */
-    public void toString() {
+    public String toString() {
         String str = name;
-        str += "\nUnits: "
-        for(int i = 0; i < units.length; i++) {
+        str += "\nUnits: ";
+        for(int i = 0; i < units.length; i++)
             str += units[i].toString() + " ";
-        }
         str += "\nSupply centers: ";
-        for(int i = 0; i < territories.length; i++) {
+        for(int i = 0; i < territories.length; i++)
             if(territories[i].supplyCenter) str += territories[i].toString() + " ";
-        }
         str += "\n----------\n";
         return str;
     }
+
+
+
+
+
+
 }

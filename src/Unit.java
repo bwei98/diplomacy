@@ -28,10 +28,11 @@ public class Unit {
      * toString returns whether it is a fleet or an army, the location,
      * and the country that owns the unit
      */
-    public void toString() {
+    public String toString() {
         String str = "";
-        if(isFleet) str += "F " else str += "A ";
+        if(isFleet) str += "F "; else str += "A ";
         str += location.toString() + " ";
         str += "(" + owner.name + ")";
+        return str;
     }
 }

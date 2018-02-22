@@ -64,7 +64,7 @@ public class Territory{
     /**
      * toString returns the name of the territory
      */
-    public void toString() {
+    public String toString() {
         return name;
     }
 }
