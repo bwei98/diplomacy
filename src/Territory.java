@@ -14,4 +14,26 @@ public class Territory{
         this.supplyCenter = sc;
     }
 
+    public boolean equals(Territory T) {
+	    return this.name.equals(T.name);
+    }
+
+    public boolean touchF(Territory T) {
+	    int len = this.neighborsF.length-1;
+	    while(len >= 0)
+            if(this.neighborsF[len].equals(T))
+                return true;
+	    return false;
+    }
+
+    public boolean touchA(Territory T) {
+        int len = this.neighborsF.length-1;
+        while(len >= 0)
+            if(this.neighborsA[len].equals(T))
+                return true;
+        return false;
+    }
+
+
+
 }
