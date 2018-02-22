@@ -6,6 +6,9 @@ public class Territory{
 	public int occupied; //0: unoccupied, 1: army, -1: fleet
 	public boolean supplyCenter; //true=yes
 
+    public int holdStrength;
+    public int[] attackStrength;
+
     /**
      * Basic constructor for territory
      * @param name string for the name
@@ -20,6 +23,9 @@ public class Territory{
         this.neighborsA = nA;
         this.occupied = occ;
         this.supplyCenter = sc;
+
+        this.holdStrength = 0;
+        this.attackStrength = new int[Diplomacy.numCountries];
     }
 
     /**
