@@ -20,8 +20,8 @@ public class Unit {
      * @param location2 Territory representing intended destination
      */
     public void move(Territory location2) {
-        if(isFleet) if(touchF(location2)) location = location2;
-        else if(touchA(location2)) location = location2;
+        if(isFleet) if(location.touchF(location2)) location = location2;
+        else if(location.touchA(location2)) location = location2;
     }
 
     /**

@@ -1,10 +1,12 @@
+import java.util.Scanner;
+
 public class Diplomacy {
     public static int numCountries = 7;
     public static Country[] countries = new Country[numCountries];
     public static boolean won = false;
     public static Game gameState;
-    public int year;
-    public int season;
+    public static int year;
+    public static int season;
 
     /**
      * Initialize the game with the correct starts and units assigned
@@ -12,7 +14,7 @@ public class Diplomacy {
     public static void init() {
         year = 1900;
         season = Map.SPRING;
-        gameState = new Game(countries, Map.territories, false);
+        gameState = new Game(countries, Map.TERRITORIES, false);
     }
 
     /**
@@ -24,17 +26,17 @@ public class Diplomacy {
         Scanner reader = new Scanner(System.in);
 
         //Take orders for stage: progress
-        String[] moves;
+        String[] moves = new String[0];
         for(int i = 0; i < numCountries; i++) {
             System.out.println(countries[i].name + " : what are your moves? ");
             String moveLine = reader.nextLine();
             moves = moveLine.split(";");
-            for(int i = 0; i < moves.length; i++) moves[i] = i + " : " + moves[i].trim();
+            for(int j = 0; j < moves.length; i++) moves[j] = i + " : " + moves[j].trim();
         }
         gameState = gameState.movephase(moves);
-        bool retreat = gameState.doIneedafuckingretreat;
+        boolean retreat = gameState.doIneedafuckingretreat;
 
-        //Take orders for strage: retreat if necessary
+        //Take orders for stage: retreat if necessary
         if(retreat) {
             for(int i = 0; i < numCountries; i++) {
                 //TODO
@@ -42,11 +44,11 @@ public class Diplomacy {
         }
 
         //TODO print the current state
-        String seas = "Fall  "; if(season = Map.SPRING) seas = "Spring "; if(season = Map.WINTER) seas = "Winter";
+        String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
         String message =  "==========================\n";
-        String message += "==        Year: " + year + "    ==\n";
-        String message += "==      Season: " + seas + "  ==\n";
-        String message += "==========================";
+        message += "==        Year: " + year + "    ==\n";
+        message += "==      Season: " + seas + "  ==\n";
+        message += "==========================";
         System.out.println(message);
 
         for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
@@ -65,12 +67,12 @@ public class Diplomacy {
     public static void main(String[] args) {
         init();
         while(!won) {
-            if(season = Map.SPRING || season = Map.FALL) {
+            if(season == Map.SPRING || season == Map.FALL) {
                 runSeason();
                 season = (season + 1) % 3;
             }
-            if(season = Map.SPRING) year++;
-            if(season = Map.WINTER) {
+            if(season == Map.SPRING) year++;
+            if(season == Map.WINTER) {
                 runBuild();
                 season = Map.SPRING;
             }
