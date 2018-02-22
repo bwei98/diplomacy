@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecfbc53-ffe8-41d4-a036-9f09f0f6db21" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Country.java" afterPath="$PROJECT_DIR$/src/Country.java" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/Territory.java" afterPath="$PROJECT_DIR$/src/Territory.java" />
-      <change beforePath="$PROJECT_DIR$/src/Unit.java" afterPath="$PROJECT_DIR$/src/Unit.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +18,7 @@
       <file leaf-file-name="Territory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Territory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
+            <state relative-caret-position="690">
               <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding>
                 <element signature="e#1077#1078#0" expanded="true" />
@@ -54,11 +51,9 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-              <folding>
-                <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="481">
+              <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -483,9 +478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="36" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -601,9 +594,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="false" />
+            <element signature="e#10148#10149#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Territory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="690">
           <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="e#1077#1078#0" expanded="true" />
@@ -620,14 +632,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-          <folding>
-            <element signature="e#10065#10066#0" expanded="true" />
-            <element signature="e#10148#10149#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -639,29 +648,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-          <folding>
-            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="481">
+          <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
