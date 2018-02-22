@@ -3,7 +3,6 @@ public class Unit {
     public boolean isFleet;    //true=fleet, false=army
     public Territory location;
 
-
     /**
      * Basic constructor for units
      * @param owner Country for who owns the unit
@@ -25,4 +24,14 @@ public class Unit {
         else if(touchA(location2)) location = location2;
     }
 
+    /**
+     * toString returns whether it is a fleet or an army, the location,
+     * and the country that owns the unit
+     */
+    public void toString() {
+        String str = "";
+        if(isFleet) str += "F " else str += "A ";
+        str += location.toString() + " ";
+        str += "(" + owner.name + ")";
+    }
 }

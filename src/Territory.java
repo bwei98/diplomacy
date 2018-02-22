@@ -6,8 +6,7 @@ public class Territory{
 	public int occupied; //0: unoccupied, 1: army, -1: fleet
 	public boolean supplyCenter; //true=yes
 
-    public int holdStrength;
-    public int[] attackStrength;
+    public int[] takeStrength;
 
     /**
      * Basic constructor for territory
@@ -24,8 +23,7 @@ public class Territory{
         this.occupied = occ;
         this.supplyCenter = sc;
 
-        this.holdStrength = 0;
-        this.attackStrength = new int[Diplomacy.numCountries];
+        this.takeStrength = new int[Diplomacy.numCountries];
     }
 
     /**
@@ -34,7 +32,7 @@ public class Territory{
      * @return boolean on if they are equal
      */
     public boolean equals(Territory T) {
-	    return this.name.equals(T.name);
+	    return (this.name).equals(T.name);
     }
 
     /**
@@ -63,7 +61,10 @@ public class Territory{
         return false;
     }
 
-
-
-
+    /**
+     * toString returns the name of the territory
+     */
+    public void toString() {
+        return name;
+    }
 }

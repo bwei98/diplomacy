@@ -1,6 +1,7 @@
 public class Diplomacy {
     public static int numCountries = 7;
     public static Country[] countries = new Country[numCountries];
+    public static boolean won = false;
 
     /**
      * Initialize the game with the correct starts and units assigned
@@ -19,11 +20,17 @@ public class Diplomacy {
             System.out.println(countries[i].name + " : what are your moves? ");
             String moveLine = reader.nextLine();
             String[] moves = moveLine.split(";");
+            for(int i = 0; i < moves.length; i++) moves[i] = i + " : " + moves[i].trim();
         }
     }
+
+    /**
+     * Hi I'm the main function what's up
+     * @param args
+     */
     public static void main(String[] args) {
-
+        init();
+        while(!won) run();
     }
-
 
 }

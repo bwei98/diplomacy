@@ -12,7 +12,4 @@ public class Game {
         this.countries=countries;
         this.territories=territories;
     }
-
-
-
 }
