@@ -38,14 +38,14 @@ public class Game {
     }
 
     public Game movephase(String[] orders) {
-        for(string o : orders) {
+        for(String o : orders) {
             String[] orderset = o.split(" : ");
             //orderset[0]=country.id
             String[] type = orderset[1].split(" ");
             //type[0]=A or F
             String[] startloc = type[1].split(" ");
             //startloc[0]= starting location
-            int id= String.parseint(orderset[0]);
+            int id= Integer.parseInt(orderset[0]);
             //check if ownership is valid
             boolean unitcheck=true;
             for(Unit u : this.countries[id].units)
@@ -66,6 +66,9 @@ public class Game {
 
     public Game retreat(String[] orders) {
 
+
+
+        return new Game();
     }
 
     //## : A Lvn H   (7)
