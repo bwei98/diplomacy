@@ -24,4 +24,6 @@ public class Diplomacy {
     public static void main(String[] args) {
 
     }
+
+
 }
