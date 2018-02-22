@@ -26,12 +26,13 @@ public class Diplomacy {
         Scanner reader = new Scanner(System.in);
 
         //Take orders for stage: progress
-        String[] moves = new String[0];
+        String[][] moves = new String[numCountries][0];
         for(int i = 0; i < numCountries; i++) {
             System.out.println(countries[i].name + " : what are your moves? ");
             String moveLine = reader.nextLine();
-            moves = moveLine.split(";");
-            for(int j = 0; j < moves.length; i++) moves[j] = i + " : " + moves[j].trim();
+            String[] cMoves = moveLine.split(";");
+            for (int j = 0; j < cMoves.length; i++) cMoves[j] = i + " : " + cMoves[j].trim();
+            moves[i] = cMoves;
         }
         gameState = gameState.movephase(moves);
         boolean retreat = gameState.doIneedafuckingretreat;

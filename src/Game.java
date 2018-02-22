@@ -39,7 +39,7 @@ public class Game {
         this.doIneedafuckingretreat = false;
     }
 
-    public Game movephase(String[] orders) {
+    public Game movephase(String[][] orders) {
         for(String o : orders) {
             String[] orderset = o.split(" : ");
             //orderset[0]=country.id
