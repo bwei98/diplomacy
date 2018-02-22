@@ -47,7 +47,7 @@ public class Game {
             //type[0]=A or F
             String[] startloc = type[1].split(" ");
             //startloc[0]= starting location
-            int id= parseInt(orderset[0]);
+            int id= Integer.parseInt(orderset[0]);
             //check if ownership is valid
             boolean unitcheck=true;
             for(Unit u : this.countries[id].units)
