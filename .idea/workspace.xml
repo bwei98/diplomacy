@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5ecfbc53-ffe8-41d4-a036-9f09f0f6db21" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Country.java" afterPath="$PROJECT_DIR$/src/Country.java" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
       <change beforePath="$PROJECT_DIR$/src/Territory.java" afterPath="$PROJECT_DIR$/src/Territory.java" />
-      <change beforePath="$PROJECT_DIR$/src/Unit.java" afterPath="$PROJECT_DIR$/src/Unit.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,16 +19,21 @@
       <file leaf-file-name="Territory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Territory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            <state relative-caret-position="354">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+                <element signature="method#Territory#1;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
                 <element signature="method#touchF#0;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
                 <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+                <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+                <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -39,18 +42,18 @@
       <file leaf-file-name="Unit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Diplomacy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Diplomacy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="458">
+              <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -59,15 +62,32 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state relative-caret-position="720">
+              <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
+                <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
+                <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
                 <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-                <element signature="method#movephase#0;class#Game#0" expanded="false" />
-                <element signature="docComment;method#processOrder#0;class#Game#0" expanded="false" />
-                <element signature="method#processOrder#0;class#Game#0" expanded="false" />
-                <element signature="e#4815#4816#0" expanded="true" />
-                <element signature="e#4848#4849#0" expanded="true" />
+                <element signature="e#1668#1674#0" expanded="true" />
+                <element signature="e#2275#2276#0" expanded="true" />
+                <element signature="e#2308#2309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Move.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Move.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding>
+                <element signature="method#Move#0;class#Move#0" expanded="false" />
+                <element signature="docComment;method#Move#1;class#Move#0" expanded="false" />
+                <element signature="method#Move#1;class#Move#0" expanded="false" />
+                <element signature="docComment;method#Move#2;class#Move#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,8 +96,8 @@
       <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -86,11 +106,12 @@
       <file leaf-file-name="Country.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Country.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
                 <element signature="method#Country#1;class#Country#0" expanded="false" />
+                <element signature="method#toString#0;class#Country#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -121,14 +142,14 @@
         <option value="$PROJECT_DIR$/src/Unit.java" />
         <option value="$PROJECT_DIR$/src/Territory.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/Move.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="25" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1400" />
-    <option name="height" value="837" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -168,9 +189,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,7 +313,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -327,22 +348,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
-            <element signature="method#Country#1;class#Country#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -358,13 +368,18 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -382,13 +397,18 @@
         <state relative-caret-position="240">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -406,13 +426,18 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -454,6 +479,7 @@
           <folding>
             <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
             <element signature="method#Country#1;class#Country#0" expanded="false" />
+            <element signature="method#toString#0;class#Country#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -463,13 +489,18 @@
         <state relative-caret-position="690">
           <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -487,12 +518,14 @@
         <state relative-caret-position="327">
           <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
             <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#processOrder#0;class#Game#0" expanded="false" />
-            <element signature="method#processOrder#0;class#Game#0" expanded="false" />
-            <element signature="e#4815#4816#0" expanded="true" />
-            <element signature="e#4848#4849#0" expanded="true" />
+            <element signature="e#1668#1674#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -518,13 +551,18 @@
         <state relative-caret-position="300">
           <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -544,6 +582,7 @@
           <folding>
             <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
             <element signature="method#Country#1;class#Country#0" expanded="false" />
+            <element signature="method#toString#0;class#Country#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,13 +602,18 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -587,13 +631,18 @@
         <state relative-caret-position="240">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -611,13 +660,18 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -660,6 +714,7 @@
           <folding>
             <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
             <element signature="method#Country#1;class#Country#0" expanded="false" />
+            <element signature="method#toString#0;class#Country#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -677,13 +732,18 @@
         <state relative-caret-position="330">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -693,12 +753,14 @@
         <state relative-caret-position="480">
           <caret line="36" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
             <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#processOrder#0;class#Game#0" expanded="false" />
-            <element signature="method#processOrder#0;class#Game#0" expanded="false" />
-            <element signature="e#4815#4816#0" expanded="true" />
-            <element signature="e#4848#4849#0" expanded="true" />
+            <element signature="e#1668#1674#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -708,13 +770,18 @@
         <state relative-caret-position="300">
           <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -734,6 +801,7 @@
           <folding>
             <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
             <element signature="method#Country#1;class#Country#0" expanded="false" />
+            <element signature="method#toString#0;class#Country#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -753,13 +821,18 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -777,13 +850,18 @@
         <state relative-caret-position="240">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -801,13 +879,18 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -850,69 +933,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding>
-            <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#processOrder#0;class#Game#0" expanded="false" />
-            <element signature="method#processOrder#0;class#Game#0" expanded="false" />
-            <element signature="e#4815#4816#0" expanded="true" />
-            <element signature="e#4848#4849#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        <state relative-caret-position="18">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
-            <element signature="method#Country#1;class#Country#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Territory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        <state relative-caret-position="354">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="method#touchF#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
             <element signature="method#touchA#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="458">
+          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
+            <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
+            <element signature="e#1668#1674#0" expanded="true" />
+            <element signature="e#2275#2276#0" expanded="true" />
+            <element signature="e#2308#2309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#Country#1;class#Country#0" expanded="false" />
+            <element signature="method#Country#1;class#Country#0" expanded="false" />
+            <element signature="method#toString#0;class#Country#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="method#Move#0;class#Move#0" expanded="false" />
+            <element signature="docComment;method#Move#1;class#Move#0" expanded="false" />
+            <element signature="method#Move#1;class#Move#0" expanded="false" />
+            <element signature="docComment;method#Move#2;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

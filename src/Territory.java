@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Territory{
 	public String name;
@@ -87,4 +90,23 @@ public class Territory{
     public String toString() {
         return name;
     }
+
+    /**
+     * Computes all Neighbors of a territory
+     * @return Territory[] containing all neighbors of the Territory
+     */
+    public Territory[] allNeighbors(){
+        List<Territory> union = Arrays.asList(this.neighborsA);
+        for(Territory t: neighborsF)
+            if(!union.contains(t))
+                union.add(t);
+        int size=union.size(), i=0;
+        Territory[] out= new Territory[size];
+        while(!union.isEmpty()) {
+            out[i] = union.remove(0);
+            i++;
+        }
+        return out;
+    }
+
 }
