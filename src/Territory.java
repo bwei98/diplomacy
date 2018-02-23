@@ -3,9 +3,8 @@ public class Territory{
 	public String name;
 	public Territory[] neighborsF;
 	public Territory[] neighborsA;
-	public int occupied; //0: unoccupied, 1: army, -1: fleet
+	public int occupied; //-1: unoccupied, otherwise country id
 	public boolean supplyCenter; //true=yes
-
     public int[] takeStrength;
 
     /**
@@ -27,12 +26,33 @@ public class Territory{
     }
 
     /**
+     * Default Territory constructor
+     */
+    public Territory(){
+	    name="";
+	    neighborsF=null;
+	    neighborsA=null;
+	    occupied=-1;
+	    supplyCenter=false;
+	    takeStrength=null;
+    }
+
+    /**
      * Comparison function of Territories
      * @param T territory to which this is compared
      * @return boolean on if they are equal
      */
     public boolean equals(Territory T) {
 	    return (this.name).equals(T.name);
+    }
+
+    /**
+     * Comparison function of Territory and string
+     * @param s string representing territory to be compared
+     * @return boolean on if they are equal
+     */
+    public boolean equals(String s){
+        return this.name.equals(s);
     }
 
     /**

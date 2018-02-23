@@ -6,15 +6,26 @@ public class Country {
 
     /**
      * Basic constructor for Countries
-     * @param n String for its name
-     * @param u Unit[] for the units that Country controls
-     * @param t Territory[] for the supply centers controlled
+     * @param name String for its name
+     * @param units Unit[] for the units that Country controls
+     * @param territories Territory[] for the supply centers controlled
+     * @param id int for the country id
      */
     public Country(String name, Unit[] units, Territory[] territories, int id) {
         this.name = name;
         this.units = units;
         this.territories = territories;
         this.id = id;
+    }
+
+    /**
+     * Default Country constructor
+     */
+    public Country(){
+        name="";
+        units=null;
+        territories=null;
+        id=-1;
     }
 
     /**

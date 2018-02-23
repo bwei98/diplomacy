@@ -2,6 +2,7 @@ public class Unit {
     public Country owner;
     public boolean isFleet;    //true=fleet, false=army
     public Territory location;
+    public boolean hasOrder;
 
     /**
      * Basic constructor for units
@@ -13,6 +14,15 @@ public class Unit {
         this.owner = owner;
         this.isFleet = type;
         this.location = init;
+        this.hasOrder=false;
+    }
+
+
+    public Unit(){
+        owner=new Country();
+        isFleet=false;
+        location=new Territory();
+        hasOrder=false;
     }
 
     /**

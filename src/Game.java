@@ -39,32 +39,103 @@ public class Game {
         this.doIneedafuckingretreat = false;
     }
 
+    /**
+     * movephase processes a single movement phase
+     * @param orders String[][] for countries and their orders
+     * @return Game representing the new gamestate
+     */
     public Game movephase(String[][] orders) {
-        for(String o : orders) {
-            String[] orderset = o.split(" : ");
-            //orderset[0]=country.id
-            String[] type = orderset[1].split(" ");
-            //type[0]=A or F
-            String[] startloc = type[1].split(" ");
-            //startloc[0]= starting location
-            int id= Integer.parseInt(orderset[0]);
-            //check if ownership is valid
-            boolean unitcheck=true;
-            for(Unit u : this.countries[id].units)
-                if((u.isFleet && type[0].equals("F") || !u.isFleet && type[0].equals("A"))
-                        && (u.location.name.equals(startloc[0]))) {
-                    unitcheck = false;
-                    break;
-                }
-            if(unitcheck)
-                System.out.println("Order: "+o+" failed becuase you do not own a "+type[0]+"in "+startloc[0]);
-            String[] movetype = startloc[1].split(" ");
-            //movetype[0]= H, -, S, C
-
-
+        for(int id=0; id<orders.length; id++) {
+            for(String o : orders[id]) {
+                String[] order = o.split(" ");
+                //order[0]=A or F, order[1]=start loc, order[2]=type 1, order[3]=dest, order[4]="-", order[5]=dest2
+                for(String s: order)    s.trim();
+                this.processOrder(id, order);
+            }
         }
+        //TODO returning
         return new Game();
     }
+
+    /**
+     * processOrder processes an order on a gamestate
+     * @param id int representing country giving order
+     * @param order String[] for the orders
+     * @return boolean on if the order was valid
+     */
+    private boolean processOrder(int id, String[] order){
+        //check if ownership is valid
+        boolean unitCheck = true;
+        Unit unit=new Unit();
+        Territory loc = new Territory();
+
+        //Ownership
+        for (Unit u : this.countries[id].units) {
+            if ((u.isFleet && order[0].equals("F") || !u.isFleet && order[0].equals("A"))
+                    && (u.location.name.equals(order[1]))) {
+                if (u.hasOrder) {
+                    System.out.println(order[0] + " in " + order[1] + " received more than one order");
+                    return false;
+                }
+                unit = u;
+                loc = unit.location;
+                unitCheck = false;
+                unit.hasOrder = true;
+                break;
+            }
+        }
+        if (unitCheck) {
+            System.out.println("Country " + Integer.toString(id)+ "does not own a " + order[0] + " in " + order[1]);
+            return false;
+        }
+
+        //Hold
+        if(order[2].equals("H")){
+            for(Territory t: territories) {
+                if (t.name.equals(order[1])) {
+                    t.takeStrength[id]++;
+                    break;
+                }
+            }
+            return true;
+        }
+
+        //Support Hold
+        if(order[2].equals("S") && order.length==4){
+            if(unit.isFleet)
+                for(Territory border : loc.neighborsF) {
+                    if (border.equals(order[3]) && border.occupied != -1) {
+                        border.takeStrength[border.occupied]++;
+                        break;
+                    }
+                }
+            else//unit is army
+                for(Territory border : loc.neighborsA) {
+                    if (border.equals(order[3]) && border.occupied != -1) {
+                        border.takeStrength[border.occupied]++;
+                        break;
+                    }
+                }
+            //Not valid Support hold
+            System.out.println("Not a valid support hold between " + order[1]+" and "+order[3] );
+            return false;
+        }
+
+        //TODO Move
+        //move is tricky because armies can move to non-adjacent territories through convoy
+        //TODO Supported attacks
+
+        //Convoy
+        if(order[2].equals("C") && !unit.isFleet){
+            System.out.println("Army in "+ order[1]+ " may not convoy");
+            return false;
+        }
+        //TODO finish convoy
+
+        System.out.println("Invalid entry format");
+        return false;
+    }
+
 
     public Game retreat(String[] orders) {
         return new Game();
@@ -72,6 +143,7 @@ public class Game {
 
     //## : A Lvn H   (7)
     //## : A Lvn - War  (11)
+    //## : A Lvn S War
     //## : A Lvn S Ukr - War (17)
     //## : A Lvn S War (11)
     //## : F NTH C Nwy - Yor (17)
