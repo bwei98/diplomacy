@@ -1,4 +1,4 @@
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 
 enum Type{
     D, H, S, C, M;
