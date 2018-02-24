@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import static java.lang.Integer.parseInt;
-
 public class Game {
     public Country[] countries;
     public Territory[] territories;
@@ -47,7 +45,7 @@ public class Game {
      * @return Game representing the new gamestate
      */
     public Game movephase(String[][] orders) {
-        ArrayList<Move> Moves = new ArrayList<Move>();
+        ArrayList<Move> Moves = new ArrayList<>();
         for(int id=0; id<orders.length; id++) {
             for(String o : orders[id]) {
                 String[] order = o.split(" ");

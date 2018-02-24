@@ -1,6 +1,8 @@
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Arrays;
+enum TerrType{
+    WATER, COAST, LANDLOCKED
+}
 
 public class Territory{
     public String name;
@@ -8,6 +10,7 @@ public class Territory{
     public Territory[] neighborsA;
     public int occupied; //-1: unoccupied, otherwise country id
     public boolean supplyCenter; //true=yes
+    public TerrType type;
     public int[] takeStrength;
 
     /**
@@ -18,13 +21,13 @@ public class Territory{
      * @param occ int for if it is occupied, 0: unoccupied, 1: army, -1: fleet
      * @param sc boolean for if it is a supplycenter
      */
-    public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc) {
+    public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc, TerrType type) {
         this.name = name;
         this.neighborsF = nF;
         this.neighborsA = nA;
         this.occupied = occ;
         this.supplyCenter = sc;
-
+        this.type=type;
         this.takeStrength = new int[Diplomacy.numCountries];
     }
 
@@ -37,6 +40,7 @@ public class Territory{
         neighborsA=null;
         occupied=-1;
         supplyCenter=false;
+        type=TerrType.COAST;
         takeStrength=null;
     }
 
@@ -107,6 +111,30 @@ public class Territory{
             i++;
         }
         return out;
+    }
+
+    /**
+     * Is the territory landlocked
+     * @return boolean of if a fleet can reach the territory
+     */
+    public boolean landlocked(){
+        return this.neighborsF.length==0;
+    }
+
+    /**
+     * Is the territory open water
+     * @return boolean of if an army can reach it
+     */
+    public boolean water(){
+        return this.neighborsA.length==0;
+    }
+
+    /**
+     * is the territory coast
+     * @return boolean of if both armies and fleets can reach
+     */
+    public boolean coast(){
+        return !this.water() && !this.landlocked();
     }
 
 }

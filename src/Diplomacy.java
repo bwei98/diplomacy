@@ -41,7 +41,7 @@ public class Diplomacy {
 
         //Take orders for stage: retreat if necessary
         if(retreat) {
-            for(int i = 0; i < countries.length; i++) {
+            for (Country country : countries) {
                 //TODO
             }
         }

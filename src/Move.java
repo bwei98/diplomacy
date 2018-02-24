@@ -1,10 +1,10 @@
-import org.jetbrains.annotations.NotNull;
+import com.sun.istack.internal.NotNull;
 
 enum Type{
-    D, H, S, C, M;
+    D, H, S, C, M, CM
 }
 enum Status{
-    UNREAD, EXECUTABLE, FAILED, PENDING;
+    UNREAD, EXECUTABLE, FAILED, PENDING
 }
 
 public class Move {
@@ -149,7 +149,7 @@ public class Move {
                 this.type=Type.C;
                 this.status=Status.PENDING;
                 for(Territory t : g.territories)
-                    if(t.equals(order[6])) {
+                    if(order.length>=6 && t.equals(order[6])) {
                         this.destination = t;
                         return;
                     }
@@ -158,11 +158,33 @@ public class Move {
         }
         //Move
         if(order[2].equals("M")){
-            //TODO
-            return;
+            if(unit.isFleet){ //easy case cuz fleets can't convoy!
+                for(Territory t : unit.location.neighborsF)
+                    if(t.equals(order[3])){
+                        this.destination=t;
+                        this.type=Type.M;
+                        this.status=Status.PENDING;
+                        return;
+                    }
+            } else { //!unit.isFleet
+                //regular move
+                for(Territory t : unit.location.neighborsA)
+                    if(t.equals(order[3])){
+                        this.destination=t;
+                        this.type=Type.M;
+                        this.status=Status.PENDING;
+                        return;
+                    }
+                if(unit.location.landlocked()) return;
+                for(Territory t : g.territories)
+                    if(t.equals(order[4]) && t.coast()) {
+                        //potentially a convoy
+                        this.destination = t;
+                        this.status = Status.PENDING;
+                        this.type = Type.CM;
+                    }
+            }
         }
-        //invalid order - holds on spot
-        return;
     }
 }
 

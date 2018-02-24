@@ -1,5 +1,3 @@
-import static java.lang.Math.min;
-
 public class Country {
     public String name;
     public Unit[] units;
@@ -108,10 +106,11 @@ public class Country {
      */
     public boolean hasSupplyCenter(Territory scCheck) {
         boolean hasSC = false;
-        for(Territory sc : supplyCenters){
-            if(sc.equals(sc)) hasSC = true;
-            break;
-        }
+        for(Territory sc : supplyCenters)
+            if(sc.equals(sc)) {
+                hasSC = true;
+                break;
+            }
         return hasSC;
     }
 
@@ -179,11 +178,10 @@ public class Country {
     public String toString() {
         String str = name;
         str += "\nUnits: ";
-        for(int i = 0; i < units.length; i++)
-            str += units[i].toString() + " ";
+        for (Unit unit : units) str += unit.toString() + " ";
         str += "\nSupply centers: ";
-        for(int i = 0; i < supplyCenters.length; i++)
-            if(supplyCenters[i].supplyCenter) str += supplyCenters[i].toString() + " ";
+        for (Territory supplyCenter : supplyCenters)
+            if (supplyCenter.supplyCenter) str += supplyCenter.toString() + " ";
         str += "\n----------\n";
         return str;
     }
