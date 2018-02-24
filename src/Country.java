@@ -31,6 +31,8 @@ public class Country {
         name="";
         units=null;
         supplyCenters =null;
+        homeSCs = null;
+        alive = false;
         id=-1;
     }
 
@@ -115,9 +117,9 @@ public class Country {
 
     /**
      * Create a unit and add it to the list of units the country controls
-     * Requires canBuild(sc);
      * @param sc The territory we are building the unit in
      * @param isFleet Whether the unit is a fleet or not
+     * Requires canBuild(sc)
      */
     public void build(Territory sc, boolean isFleet) {
         Unit unit = new Unit(this, isFleet, sc);
