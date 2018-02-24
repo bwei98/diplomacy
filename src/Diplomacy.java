@@ -28,23 +28,24 @@ public class Diplomacy {
         //Take orders for stage: progress
         String[][] moves = new String[numCountries][0];
         for(int i = 0; i < numCountries; i++) {
-            System.out.println(countries[i].name + " : what are your moves? ");
-            String moveLine = reader.nextLine();
-            String[] cMoves = moveLine.split(";");
-            for (int j = 0; j < cMoves.length; i++) cMoves[j] = i + " : " + cMoves[j].trim();
-            moves[i] = cMoves;
+            if(countries[i].alive) {
+                System.out.println(countries[i].name + " : what are your moves? ");
+                String moveLine = reader.nextLine();
+                String[] cMoves = moveLine.split(";");
+                for (int j = 0; j < cMoves.length; i++) cMoves[j] = i + " : " + cMoves[j].trim();
+                moves[i] = cMoves;
+            }
         }
         gameState = gameState.movephase(moves);
         boolean retreat = gameState.doIneedafuckingretreat;
 
         //Take orders for stage: retreat if necessary
         if(retreat) {
-            for(int i = 0; i < numCountries; i++) {
+            for(int i = 0; i < countries.length; i++) {
                 //TODO
             }
         }
 
-        //TODO print the current state
         String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
         String message =  "==========================\n";
         message += "==        Year: " + year + "    ==\n";
@@ -58,7 +59,27 @@ public class Diplomacy {
     public static void runBuild() {
         Scanner reader = new Scanner(System.in);
 
-        //TODO Take orders for stage: build
+        String[][] buildMoves = new String[numCountries][0];
+        for(int i = 0; i < numCountries; i++) {
+            Country country = countries[i];
+            if(country.alive) {
+                System.out.println(country.name + ": ");
+                int diff = country.numBuildsOrDisbands();
+                //Either disband or build
+                if (diff < 0) {
+                    System.out.println("You have to disband " + diff + " armies.");
+                    System.out.println("You may choose from: ");
+                    for (Unit unit : country.units) System.out.println(unit);
+                    buildMoves[i] = reader.nextLine().split("; ");
+                } else if (diff > 0) {
+                    System.out.println("You may build " + diff + " armies.");
+                    System.out.println("You may build in: ");
+                    for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.println(sc.name);
+                    buildMoves[i] = reader.nextLine().split("; ");
+                }
+            }
+        }
+        //TODO send this to game
     }
 
     /**
