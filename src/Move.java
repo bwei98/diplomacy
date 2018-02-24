@@ -73,17 +73,13 @@ public class Move {
             this.destination = null;
             return;
         }
+        //defualt is that the unit holds in place, we overwrite this if different
+        this.type = Type.H;
+        this.status = Status.EXECUTABLE;
+        this.destination = this.unit.location;
         //Hold
-        if (order[2].equals("H")) {
-            for (Territory t : g.territories) {
-                if (t.name.equals(order[1])) {
-                    this.type = Type.H;
-                    this.status = Status.EXECUTABLE;
-                    this.destination = this.unit.location;
-                    return;
-                }
-            }
-        }
+        if (order[2].equals("H"))
+            return;
         //Support Hold
         if (order[2].equals("S") && order.length == 4) {
             if (unit.isFleet) {
@@ -106,20 +102,12 @@ public class Move {
                 }
             }
             //Not valid Support hold
-            this.type = Type.S;
-            this.status = Status.FAILED;
-            this.destination = null;
             return;
         }
-
         //Support Attack
         if (order[2].equals("S") && order.length == 6) {
-            if (!order[4].equals("-")) {
-                this.type = Type.D;
-                this.destination = null;
-                this.status = Status.FAILED;
+            if (!order[4].equals("-")) //improper syntax - resolves to hold on spot
                 return;
-            }
             if (unit.isFleet) {
                 for (Territory border : this.unit.location.neighborsF) {
                     if (border.equals(order[5])) {
@@ -147,9 +135,34 @@ public class Move {
                     }
                 }
             }
+            /*  this means that a potentially valid support attack could not be found thus
+            this resolves to a hold on spot */
+            return;
         }
-        //TODO Convoy
-        //TODO Move
+        //Convoy
+        if(order[2].equals("C")){
+            if(order.length!=6 || !order[4].equals("-")) //improper syntax - resolves to hold on spot
+                return;
+            if(!this.unit.isFleet) //Armies cannot convoy - resolves to hold on spot
+                return;
+            else { //this.unit.isFleet
+                this.type=Type.C;
+                this.status=Status.PENDING;
+                for(Territory t : g.territories)
+                    if(t.equals(order[6])) {
+                        this.destination = t;
+                        return;
+                    }
+            }
+            return;
+        }
+        //Move
+        if(order[2].equals("M")){
+            //TODO
+            return;
+        }
+        //invalid order - holds on spot
+        return;
     }
 }
 

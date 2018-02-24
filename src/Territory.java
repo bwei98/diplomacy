@@ -3,11 +3,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Territory{
-	public String name;
-	public Territory[] neighborsF;
-	public Territory[] neighborsA;
-	public int occupied; //-1: unoccupied, otherwise country id
-	public boolean supplyCenter; //true=yes
+    public String name;
+    public Territory[] neighborsF;
+    public Territory[] neighborsA;
+    public int occupied; //-1: unoccupied, otherwise country id
+    public boolean supplyCenter; //true=yes
     public int[] takeStrength;
 
     /**
@@ -18,7 +18,7 @@ public class Territory{
      * @param occ int for if it is occupied, 0: unoccupied, 1: army, -1: fleet
      * @param sc boolean for if it is a supplycenter
      */
-	public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc) {
+    public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc) {
         this.name = name;
         this.neighborsF = nF;
         this.neighborsA = nA;
@@ -32,12 +32,12 @@ public class Territory{
      * Default Territory constructor
      */
     public Territory(){
-	    name="";
-	    neighborsF=null;
-	    neighborsA=null;
-	    occupied=-1;
-	    supplyCenter=false;
-	    takeStrength=null;
+        name="";
+        neighborsF=null;
+        neighborsA=null;
+        occupied=-1;
+        supplyCenter=false;
+        takeStrength=null;
     }
 
     /**
@@ -46,7 +46,7 @@ public class Territory{
      * @return boolean on if they are equal
      */
     public boolean equals(Territory T) {
-	    return (this.name).equals(T.name);
+        return (this.name).equals(T.name);
     }
 
     /**
@@ -64,11 +64,11 @@ public class Territory{
      * @return boolean which is true iff T touches w.r.t fleets
      */
     public boolean touchF(Territory T) {
-	    int len = this.neighborsF.length-1;
-	    while(len >= 0)
+        int len = this.neighborsF.length-1;
+        while(len >= 0)
             if(this.neighborsF[len].equals(T))
                 return true;
-	    return false;
+        return false;
     }
 
     /**
