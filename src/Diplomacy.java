@@ -14,7 +14,7 @@ public class Diplomacy {
     public static void init() {
         year = 1900;
         season = Map.SPRING;
-        gameState = new Game(countries, Map.TERRITORIES, false);
+        gameState = new Game(countries, Map.TERRITORIES, new Country[0]);
     }
 
     /**
