@@ -1,10 +1,11 @@
 import com.sun.istack.internal.NotNull;
+import java.util.ArrayList;
 
 enum Type{
     D, H, S, C, M, CM
 }
 enum Status{
-    UNREAD, EXECUTABLE, FAILED, PENDING
+    UNREAD, EXECUTABLE, FAILED, PENDING, EXECUTED
 }
 
 public class Move {
@@ -186,6 +187,7 @@ public class Move {
             }
         }
     }
+
 }
 
 

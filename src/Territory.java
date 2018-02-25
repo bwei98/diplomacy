@@ -1,8 +1,6 @@
 import java.util.List;
 import java.util.Arrays;
-enum TerrType{
-    WATER, COAST, LANDLOCKED
-}
+
 
 public class Territory{
     public String name;
@@ -10,7 +8,6 @@ public class Territory{
     public Territory[] neighborsA;
     public int occupied; //-1: unoccupied, otherwise country id
     public boolean supplyCenter; //true=yes
-    public TerrType type;
     public int[] takeStrength;
 
     /**
@@ -21,13 +18,12 @@ public class Territory{
      * @param occ int for if it is occupied, 0: unoccupied, 1: army, -1: fleet
      * @param sc boolean for if it is a supplycenter
      */
-    public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc, TerrType type) {
+    public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc) {
         this.name = name;
         this.neighborsF = nF;
         this.neighborsA = nA;
         this.occupied = occ;
         this.supplyCenter = sc;
-        this.type=type;
         this.takeStrength = new int[Diplomacy.numCountries];
     }
 
@@ -40,7 +36,6 @@ public class Territory{
         neighborsA=null;
         occupied=-1;
         supplyCenter=false;
-        type=TerrType.COAST;
         takeStrength=null;
     }
 
