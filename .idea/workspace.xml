@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecfbc53-ffe8-41d4-a036-9f09f0f6db21" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Country.java" afterPath="$PROJECT_DIR$/src/Country.java" />
-      <change beforePath="$PROJECT_DIR$/src/Diplomacy.java" afterPath="$PROJECT_DIR$/src/Diplomacy.java" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
       <change beforePath="$PROJECT_DIR$/src/Move.java" afterPath="$PROJECT_DIR$/src/Move.java" />
       <change beforePath="$PROJECT_DIR$/src/Territory.java" afterPath="$PROJECT_DIR$/src/Territory.java" />
@@ -22,11 +19,12 @@
       <file leaf-file-name="Territory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Territory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+            <state relative-caret-position="240">
+              <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+                <element signature="method#Territory#0;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
                 <element signature="method#Territory#1;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -38,12 +36,9 @@
                 <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
                 <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-                <element signature="e#3398#3399#0" expanded="true" />
-                <element signature="e#3446#3447#0" expanded="true" />
-                <element signature="e#3576#3577#0" expanded="true" />
-                <element signature="e#3624#3625#0" expanded="true" />
-                <element signature="e#3761#3762#0" expanded="true" />
-                <element signature="e#3819#3820#0" expanded="true" />
+                <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+                <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+                <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -62,42 +57,43 @@
       <file leaf-file-name="Diplomacy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+            <state relative-caret-position="867">
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
                 <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
                 <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-                <element signature="e#2228#2229#0" expanded="true" />
-                <element signature="e#2261#2262#0" expanded="true" />
+                <element signature="e#4115#4116#0" expanded="true" />
+                <element signature="e#4148#4149#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Move.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-292">
-              <caret line="162" column="43" lean-forward="true" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#Move#0;class#Move#0" expanded="false" />
                 <element signature="method#Move#0;class#Move#0" expanded="false" />
                 <element signature="docComment;method#Move#1;class#Move#0" expanded="false" />
                 <element signature="method#Move#1;class#Move#0" expanded="false" />
                 <element signature="docComment;method#Move#2;class#Move#0" expanded="false" />
+                <element signature="method#Move#2;class#Move#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -116,8 +112,8 @@
       <file leaf-file-name="Country.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Country.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -143,12 +139,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Diplomacy.java" />
         <option value="$PROJECT_DIR$/src/Unit.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
-        <option value="$PROJECT_DIR$/src/Territory.java" />
         <option value="$PROJECT_DIR$/src/Country.java" />
+        <option value="$PROJECT_DIR$/src/Territory.java" />
+        <option value="$PROJECT_DIR$/src/Diplomacy.java" />
         <option value="$PROJECT_DIR$/src/Move.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -352,7 +348,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -374,6 +370,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -385,12 +382,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -410,6 +404,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -421,12 +416,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -446,6 +438,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -457,12 +450,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -512,6 +502,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -523,12 +514,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -547,12 +535,11 @@
           <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
             <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
             <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="e#2228#2229#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4148#4149#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,6 +567,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -591,12 +579,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -634,6 +619,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -645,12 +631,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,6 +653,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -681,12 +665,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -706,6 +687,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -717,12 +699,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,6 +760,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -792,12 +772,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -808,12 +785,11 @@
           <caret line="36" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
             <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
             <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="e#2228#2229#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4148#4149#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -825,6 +801,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -836,12 +813,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -879,6 +853,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -890,12 +865,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -915,6 +887,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -926,12 +899,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -951,6 +921,7 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -962,12 +933,9 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1009,38 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Unit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Game#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
-            <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
-            <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="e#2228#2229#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1049,13 +985,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Unit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Territory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+        <state relative-caret-position="240">
+          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
+            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="method#Territory#1;class#Territory#0" expanded="false" />
             <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
@@ -1067,34 +1020,48 @@
             <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="true" />
-            <element signature="e#3446#3447#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#3624#3625#0" expanded="true" />
-            <element signature="e#3761#3762#0" expanded="true" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Move.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-292">
-          <caret line="162" column="43" lean-forward="true" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#Move#0;class#Move#0" expanded="false" />
             <element signature="method#Move#0;class#Move#0" expanded="false" />
             <element signature="docComment;method#Move#1;class#Move#0" expanded="false" />
             <element signature="method#Move#1;class#Move#0" expanded="false" />
             <element signature="docComment;method#Move#2;class#Move#0" expanded="false" />
+            <element signature="method#Move#2;class#Move#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#Game#1;class#Game#0" expanded="false" />
+            <element signature="docComment;method#Game#2;class#Game#0" expanded="false" />
+            <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4148#4149#0" expanded="true" />
           </folding>
         </state>
       </provider>
