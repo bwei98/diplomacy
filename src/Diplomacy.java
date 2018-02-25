@@ -37,10 +37,10 @@ public class Diplomacy {
             }
         }
         gameState = gameState.movephase(moves);
-        boolean retreat = gameState.doIneedafuckingretreat;
+        Country[] retreat = gameState.doIneedafuckingretreat;
 
         //Take orders for stage: retreat if necessary
-        if(retreat) {
+        if(retreat.length != 0) {
             for (Country country : countries) {
                 //TODO
             }
