@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Game {
     public Country[] countries;
     public Territory[] territories;
-    public Country[] countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded;
+    public Country[] retreating_countries;
     //Countries know what units they have, units know where they are so that should be enough
 
 
@@ -12,12 +12,12 @@ public class Game {
      * Basic constructor for a Game state
      * @param countries Country[] for what the countries are
      * @param territories Territory[] of all the TERRITORIES
-     * @param countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded Whether you need a fucking retreat phase or not
+     * @param retreating_countries Whether you need a fucking retreat phase or not
      */
-    public Game(Country[] countries, Territory[] territories, Country[] countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded) {
+    public Game(Country[] countries, Territory[] territories, Country[] retreating_countries) {
         this.countries = countries;
         this.territories = territories;
-        this.countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded = countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded;
+        this.retreating_countries = retreating_countries;
     }
 
     /**
@@ -28,7 +28,7 @@ public class Game {
     public Game(Country[] countries, Territory[] territories) {
         this.countries = countries;
         this.territories = territories;
-        this.countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded = new Country[0];
+        this. = new Country[0];
     }
 
     /**
@@ -37,7 +37,7 @@ public class Game {
     public Game() {
         this.countries = null;
         this.territories = null;
-        this.countriesthatneedtomakeafuckingretreatwhichwillbeemptyifnoneareneeded = new Country[0];
+        this. = new Country[0];
     }
 
     /**
