@@ -1,10 +1,9 @@
-import javax.lang.model.type.ArrayType;
 import java.util.ArrayList;
 
 public class Game {
     public Country[] countries;
     public Territory[] territories;
-    public Country[] retreating_countries;
+    public Unit[] retreating_units;
     //Countries know what units they have, units know where they are so that should be enough
 
 
@@ -14,10 +13,10 @@ public class Game {
      * @param territories Territory[] of all the TERRITORIES
      * @param retreating_countries Whether you need a fucking retreat phase or not
      */
-    public Game(Country[] countries, Territory[] territories, Country[] retreating_countries) {
+    public Game(Country[] countries, Territory[] territories, Unit[] retreating_countries) {
         this.countries = countries;
         this.territories = territories;
-        this.retreating_countries = retreating_countries;
+        this.retreating_units = retreating_countries;
     }
 
     /**
@@ -28,7 +27,7 @@ public class Game {
     public Game(Country[] countries, Territory[] territories) {
         this.countries = countries;
         this.territories = territories;
-        this. = new Country[0];
+        this.retreating_units = new Unit[0];
     }
 
     /**
@@ -37,7 +36,7 @@ public class Game {
     public Game() {
         this.countries = null;
         this.territories = null;
-        this. = new Country[0];
+        this.retreating_units = new Unit[0];
     }
 
     /**
@@ -47,7 +46,7 @@ public class Game {
      */
     public Game movephase(String[][] orders) {
         ArrayList<Move> moves = new ArrayList<>();
-        ArrayList<Move> retreats = new ArrayList<>();
+        ArrayList<Unit> retreats = new ArrayList<>();
         for(int id=0; id<orders.length; id++) {
             for(String o : orders[id]) {
                 String[] order = o.split(" ");
@@ -60,7 +59,7 @@ public class Game {
             resolution(moves);
 
         while(countExecutable(moves)>0)
-            retreats = executaion(moves, retreats);
+            retreats = execution(moves, retreats);
 
 
         //TODO returning
@@ -82,12 +81,11 @@ public class Game {
      * @param retreatsQueued arraylist of retreats needed
      * @return updated of arraylist of retreats needed
      */
-    private ArrayList<Move> executaion(ArrayList<Move> moveset, ArrayList<Move> retreatsQueued) {
+    private ArrayList<Unit> execution(ArrayList<Move> moveset, ArrayList<Unit> retreatsQueued) {
         //@ENSURES countExecutable(moveset)>countExecutable(moveset')
         //TODO
-        
-        return retreatsQueued;
 
+        return retreatsQueued;
     }
 
     /**

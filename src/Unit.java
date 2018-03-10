@@ -1,4 +1,6 @@
-public class Unit {
+import java.util.ArrayList;
+
+public class Unit implements Comparable {
     public Country owner;
     public boolean isFleet;    //true=fleet, false=army
     public Territory location;
@@ -35,6 +37,21 @@ public class Unit {
     }
 
     /**
+     * Get a list of territories a unit can move to (for use in retreat)
+     * @return Territory array of open territories
+     */
+    public Territory[] canMove () {
+        ArrayList<Territory> openTs = new ArrayList<Territory>();
+        if(isFleet) {
+            for (Territory t : location.neighborsF) if (t.occupied != -1) openTs.add(t);
+        } else {
+            for (Territory t : location.neighborsA) if (t.occupied != -1) openTs.add(t);
+        }
+
+        return (Territory[])openTs.toArray();
+    }
+
+    /**
      * toString returns whether it is a fleet or an army, the location,
      * and the country that owns the unit
      */
@@ -44,5 +61,16 @@ public class Unit {
         str += location.toString() + " ";
         str += "(" + owner.name + ")";
         return str;
+    }
+
+    /**
+     * compareTo provides an ordering on Units
+     * @param o The other Unit
+     * @return a comparison based on owner first, then alphabetical
+     */
+    public int compareTo(Object o) {
+        Unit unit2 = (Unit)o;
+        if(owner.equals(unit2.owner)) return location.name.compareTo(unit2.location.name);
+        else return owner.compareTo(unit2.owner);
     }
 }

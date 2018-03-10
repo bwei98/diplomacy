@@ -1,4 +1,4 @@
-public class Country {
+public class Country implements Comparable {
     public String name;
     public Unit[] units;
     public Territory[] supplyCenters;
@@ -184,6 +184,20 @@ public class Country {
             if (supplyCenter.supplyCenter) str += supplyCenter.toString() + " ";
         str += "\n----------\n";
         return str;
+    }
+
+    /**
+     * compareTo provides an ordering on countries
+     * @param o The other country
+     * @return -1 if o has a smaller id and 1 if o has a larger id
+     */
+    public int compareTo(Object o) {
+        Country country2 = (Country)o;
+        return country2.id - this.id;
+    }
+
+    public boolean equals(Object o) {
+        return this.compareTo(o) == 0;
     }
 
 }

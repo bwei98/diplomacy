@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Diplomacy {
@@ -14,7 +15,7 @@ public class Diplomacy {
     public static void init() {
         year = 1900;
         season = Map.SPRING;
-        gameState = new Game(countries, Map.TERRITORIES, new Country[0]);
+        gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
     }
 
     /**
@@ -37,12 +38,23 @@ public class Diplomacy {
             }
         }
         gameState = gameState.movephase(moves);
-        Country[] retreat = gameState.retreating_countries;
+        Unit[] retreats = gameState.retreating_units;
 
         //Take orders for stage: retreat if necessary
-        if(retreat.length != 0) {
-            for (Country country : retreat) {
-                //TODO
+        if(retreats.length != 0) {
+            Arrays.sort(retreats);
+            int prevCountry = -1;
+            for (Unit retreat : retreats) {
+                if(retreat.owner.id != prevCountry) {
+                    prevCountry = retreat.owner.id;
+                    System.out.println(countries[retreat.owner.id].name + " : please enter your retreats ");
+                }
+                System.out.println(retreat + ": ");
+                System.out.print("Options - DISBAND");
+                for(Territory t : retreat.canMove()) System.out.print(", " + t);
+                System.out.println("\n Where do you want to move this unit?");
+
+                String order = reader.nextLine();
             }
         }
 
