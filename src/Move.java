@@ -2,16 +2,17 @@ import com.sun.istack.internal.NotNull;
 import java.util.ArrayList;
 
 enum Type{
-    D, H, S, C, M, CM
+    D, H, M, C, CM, SH, SA
 }
 enum Status{
-    UNREAD, EXECUTABLE, FAILED, PENDING, EXECUTED
+    EXECUTED, EXECUTABLE, PENDING, UNREAD, FAILED
 }
 
-public class Move {
+public class Move implements Comparable{
     public Country country;
     public Unit unit;
     public Territory destination;
+    public Territory source;
     public Type type;
     public Status status;
 
@@ -23,13 +24,15 @@ public class Move {
      * @param destination Territory representing the target
      * @param type        type of move made
      * @param status      status of the order
+     * @param source      origin for two dest orders
      */
-    public Move(Country country, Unit unit, Territory destination, Type type, Status status) {
+    public Move(Country country, Unit unit, Territory destination, Territory source, Type type, Status status) {
         this.country = country;
         this.unit = unit;
         this.destination = destination;
         this.type = type;
         this.status = status;
+        this.source = source;
     }
 
     /**
@@ -41,6 +44,7 @@ public class Move {
         this.destination = new Territory();
         this.type = Type.D;
         this.status = Status.UNREAD;
+        this.source = null;
     }
 
     /**
@@ -60,6 +64,7 @@ public class Move {
                     this.type = Type.D;
                     this.unit = null;
                     this.destination = null;
+                    this.source = null;
                     return;
                 }
                 this.unit = u;
@@ -72,11 +77,12 @@ public class Move {
             this.status = Status.FAILED;
             this.type = Type.D;
             this.destination = null;
+            this.source = null;
             return;
         }
         //defualt is that the unit holds in place, we overwrite this if different
         this.type = Type.H;
-        this.status = Status.EXECUTABLE;
+        this.status = Status.PENDING;
         this.destination = this.unit.location;
         //Hold
         if (order[2].equals("H"))
@@ -86,7 +92,7 @@ public class Move {
             if (unit.isFleet) {
                 for (Territory border : this.unit.location.neighborsF) {
                     if (border.equals(order[3]) && border.occupied != -1) {
-                        this.type = Type.S;
+                        this.type = Type.SH;
                         this.status = Status.PENDING;
                         this.destination = border;
                         return;
@@ -95,7 +101,7 @@ public class Move {
             } else {    //unit is army
                 for (Territory border : this.unit.location.neighborsA) {
                     if (border.equals(order[3]) && border.occupied != -1) {
-                        this.type = Type.S;
+                        this.type = Type.SH;
                         this.status = Status.PENDING;
                         this.destination = border;
                         return;
@@ -114,8 +120,9 @@ public class Move {
                     if (border.equals(order[5])) {
                         for (Territory border2 : border.allNeighbors()) {
                             if (border2.equals(order[3]) && border2.occupied != -1) {
-                                this.type = Type.S;
+                                this.type = Type.SA;
                                 this.status = Status.PENDING;
+                                this.source = border;
                                 this.destination = border2;
                                 return;
                             }
@@ -127,8 +134,9 @@ public class Move {
                     if (border.equals(order[5])) {
                         for (Territory border2 : border.allNeighbors()) {
                             if (border2.equals(order[3]) && border2.occupied != -1) {
-                                this.type = Type.S;
+                                this.type = Type.SA;
                                 this.status = Status.PENDING;
+                                this.source = border;
                                 this.destination = border2;
                                 return;
                             }
@@ -147,13 +155,17 @@ public class Move {
             if(!this.unit.isFleet) //Armies cannot convoy - resolves to hold on spot
                 return;
             else { //this.unit.isFleet
-                this.type=Type.C;
-                this.status=Status.PENDING;
                 for(Territory t : g.territories)
-                    if(order.length>=6 && t.equals(order[6])) {
-                        this.destination = t;
-                        return;
-                    }
+                    if(t.equals(order[5]))
+                       for(Territory t2 : g.territories)
+                           if(t2.equals(order[3])){
+                                if(t.equals(t2) || !t.coast() || !t2.coast()) return;
+                                this.source=t2;
+                                this.destination=t;
+                                this.type=Type.C;
+                                this.status=Status.PENDING;
+                                return;
+                           }
             }
             return;
         }
@@ -186,6 +198,25 @@ public class Move {
                     }
             }
         }
+    }
+
+    public ArrayList<Move> sort(ArrayList<Move> arr){
+
+        return arr;
+    }
+
+    @Override
+    public int compareTo(Object o){
+        Move m = (Move)o;
+        int scompare = this.status.compareTo(m.status);
+        if(scompare!=0) return scompare;
+        int tcompare = this.type.compareTo(m.type);
+        if(tcompare!=0) return tcompare;
+        int dcompare = this.destination.name.compareTo(m.destination.name);
+        if(dcompare!=0) return dcompare;
+        int ccompare = m.country.id - this.country.id;
+        if(ccompare!=0) return ccompare;
+        return this.unit.location.name.compareTo(m.unit.location.name);
     }
 
 }

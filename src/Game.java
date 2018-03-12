@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Game {
     public Country[] countries;
@@ -73,6 +74,81 @@ public class Game {
     private void resolution(ArrayList<Move> moveset){
         //@ENSURES countPending(moveset)>countPending(moveset')
         //TODO
+        for(Move m : moveset) {
+            if (m.status == Status.FAILED)
+                moveset.remove(m);
+            if (m.status == Status.PENDING) {
+                if (m.type == Type.H) {
+                    m.destination.takeStrength[m.country.id] += 2;
+                    m.status = Status.EXECUTABLE;
+                    return;
+                }
+                if (m.type == Type.M) {
+                    m.destination.takeStrength[m.country.id]++;
+                    //what if you *attack* at territory with two of your units (not support);
+                    //we have no way of dealing with that;
+                    m.status = Status.EXECUTABLE;
+                    return;
+                }
+                if (m.type == Type.SH) {
+                    for (Move n : moveset)
+                        if (!m.equals(n) && n.destination.equals(m.destination) && n.type != Type.M
+                                && n.type != Type.CM && n.type != Type.D) {
+                            m.status = Status.EXECUTABLE;
+                            m.destination.takeStrength[n.country.id]++;
+                            return;
+                        }
+                    m.status= Status.FAILED;
+                }
+                if(m.type==Type.C) {
+                    for(Move n : moveset)
+                        if(n.type==Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)){
+                            m.status=Status.EXECUTABLE;
+                            return;
+                        }
+                    m.status=Status.FAILED;
+                }
+                if(m.type==Type.CM){
+                    //This might break on things like this https://imgur.com/a/lHOyO
+                    Territory where = m.unit.location;
+                    boolean moved = false;
+                    while(!where.equals(m.destination)){
+                        the1stforloop:
+                        for(Territory t : where.neighborsF) {
+                            for (Move n : moveset) {
+                                if (n.type == Type.C && n.source.equals(m.unit.location) &&
+                                        n.destination.equals(m.destination)) {
+                                    where = n.unit.location;
+                                    moved = true;
+                                    break the1stforloop;
+                                }
+                            }
+                        }
+                        if(moved){
+                            moved = false;
+                        } else {
+                            m.status= Status.FAILED;
+                            break;
+                        }
+                    }
+                    m.status=Status.EXECUTABLE;
+                    m.type = Type.M;
+                    m.destination.takeStrength[m.country.id]++;
+                }
+                if(m.type==Type.SA){
+                    for(Move n : moveset)
+                        if(n.type == Type.M && n.unit.location.equals(m.source) && n.destination.equals(m.destination)){
+                            m.status=Status.EXECUTABLE;
+                            m.destination.takeStrength[n.country.id]++;
+                            return;
+                        }
+                    m.status=Status.FAILED;
+                }
+
+
+            }
+        }
+
     }
 
     /**
