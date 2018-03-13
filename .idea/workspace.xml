@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ecfbc53-ffe8-41d4-a036-9f09f0f6db21" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/Move.java" afterPath="$PROJECT_DIR$/src/Move.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,15 +65,16 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+            <state relative-caret-position="519">
+              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#resolution#0;class#Game#0" expanded="false" />
+                <element signature="e#339#350#0" expanded="true" />
+                <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
-                <element signature="e#7082#7083#0" expanded="true" />
-                <element signature="e#7115#7116#0" expanded="true" />
+                <element signature="e#7135#7136#0" expanded="true" />
+                <element signature="e#7168#7169#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -517,11 +516,12 @@
           <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#resolution#0;class#Game#0" expanded="false" />
+            <element signature="e#339#350#0" expanded="true" />
+            <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
-            <element signature="e#7082#7083#0" expanded="true" />
-            <element signature="e#7115#7116#0" expanded="true" />
+            <element signature="e#7135#7136#0" expanded="true" />
+            <element signature="e#7168#7169#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -767,11 +767,12 @@
           <caret line="36" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#resolution#0;class#Game#0" expanded="false" />
+            <element signature="e#339#350#0" expanded="true" />
+            <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
-            <element signature="e#7082#7083#0" expanded="true" />
-            <element signature="e#7115#7116#0" expanded="true" />
+            <element signature="e#7135#7136#0" expanded="true" />
+            <element signature="e#7168#7169#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1009,14 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
@@ -1040,17 +1033,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="93" column="32" lean-forward="true" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        <state relative-caret-position="519">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#resolution#0;class#Game#0" expanded="false" />
+            <element signature="e#339#350#0" expanded="true" />
+            <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
-            <element signature="e#7082#7083#0" expanded="true" />
-            <element signature="e#7115#7116#0" expanded="true" />
+            <element signature="e#7135#7136#0" expanded="true" />
+            <element signature="e#7168#7169#0" expanded="true" />
           </folding>
         </state>
       </provider>

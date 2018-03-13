@@ -6,7 +6,7 @@ public class Game {
     public Territory[] territories;
     public Unit[] retreating_units;
     //Countries know what units they have, units know where they are so that should be enough
-
+    public static ArrayList<Territory> checked = new ArrayList<Territory>();
 
     /**
      * Basic constructor for a Game state
@@ -73,7 +73,6 @@ public class Game {
      */
     private void resolution(ArrayList<Move> moveset){
         //@ENSURES countPending(moveset)>countPending(moveset')
-        //TODO
         for(Move m : moveset) {
             if (m.status == Status.FAILED)
                 moveset.remove(m);
@@ -109,31 +108,16 @@ public class Game {
                     m.status=Status.FAILED;
                 }
                 if(m.type==Type.CM){
-                    //This might break on things like this https://imgur.com/a/lHOyO
-                    Territory where = m.unit.location;
-                    boolean moved = false;
-                    while(!where.equals(m.destination)){
-                        the1stforloop:
-                        for(Territory t : where.neighborsF) {
-                            for (Move n : moveset) {
-                                if (n.type == Type.C && n.source.equals(m.unit.location) &&
-                                        n.destination.equals(m.destination)) {
-                                    where = n.unit.location;
-                                    moved = true;
-                                    break the1stforloop;
-                                }
-                            }
-                        }
-                        if(moved){
-                            moved = false;
-                        } else {
-                            m.status= Status.FAILED;
-                            break;
-                        }
-                    }
-                    m.status=Status.EXECUTABLE;
-                    m.type = Type.M;
-                    m.destination.takeStrength[m.country.id]++;
+                    //continuations would actually be kinda useful here
+                    ArrayList<Territory> visited = new ArrayList<>();
+                    Territory start = m.unit.location;
+                    visited.add(start);
+                    if(convoyMove(m, moveset, visited, start)) {
+                        m.status=Status.EXECUTABLE;
+                        m.type = Type.M;
+                        m.destination.takeStrength[m.country.id]++;
+                    } else
+                        m.status=Status.FAILED;
                 }
                 if(m.type==Type.SA){
                     for(Move n : moveset)
@@ -150,6 +134,25 @@ public class Game {
         }
 
     }
+
+
+    private boolean convoyMove(Move m, ArrayList<Move> moveset, ArrayList<Territory> visited, Territory loc){
+        visited.add(loc);
+        if(m.destination.equals(loc)) return true;
+        boolean success = false;
+        for(Territory t: loc.neighborsF) {
+            for (Move n : moveset) {
+                if (n.type == Type.C && n.source.equals(m.unit.location) &&
+                        n.destination.equals(m.destination) && !visited.contains(n.unit.location) && !success) {
+                    success = convoyMove(m, moveset, visited, t);
+                }
+            }
+
+        }
+        if(!success) visited.remove(loc);
+        return success;
+    }
+
 
     /**
      * Resolves at least one executable move
