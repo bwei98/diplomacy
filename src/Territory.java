@@ -8,7 +8,7 @@ public class Territory{
     public Territory[] neighborsA;
     public int occupied; //-1: unoccupied, otherwise country id
     public boolean supplyCenter; //true=yes
-    public int[] takeStrength;
+    public Integer[] takeStrength;
 
     /**
      * Basic constructor for territory
@@ -24,7 +24,7 @@ public class Territory{
         this.neighborsA = nA;
         this.occupied = occ;
         this.supplyCenter = sc;
-        this.takeStrength = new int[Diplomacy.numCountries];
+        this.takeStrength = new Integer[Diplomacy.numCountries];
     }
 
     /**

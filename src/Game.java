@@ -1,12 +1,13 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Arrays;
 
 public class Game {
     public Country[] countries;
     public Territory[] territories;
     public Unit[] retreating_units;
     //Countries know what units they have, units know where they are so that should be enough
-    public static ArrayList<Territory> checked = new ArrayList<Territory>();
+    public static ArrayList<Territory> checked = new ArrayList<>();
 
     /**
      * Basic constructor for a Game state
@@ -48,6 +49,9 @@ public class Game {
     public Game movephase(String[][] orders) {
         ArrayList<Move> moves = new ArrayList<>();
         ArrayList<Unit> retreats = new ArrayList<>();
+        Game g = new Game();
+
+        //reads orders into moves arraylist
         for(int id=0; id<orders.length; id++) {
             for(String o : orders[id]) {
                 String[] order = o.split(" ");
@@ -56,15 +60,29 @@ public class Game {
                 moves.add(m);
             }
         }
+
+        //determine which are valid
         while(countPending(moves)>0)
             resolution(moves);
 
-        while(countExecutable(moves)>0)
-            retreats = execution(moves, retreats);
+        //remove all unnecessary
+        for(Move m : moves)
+            if(m.status!=Status.EXECUTABLE)
+                moves.remove(m);
 
+        //executes moves
+        while(countExecutable(moves)>0) {
+            for(Move m : moves)
+                if(m.status==Status.EXECUTED)
+                    moves.remove(m);
+            g = execution(moves, g);
+        }
 
-        //TODO returning
-        return new Game();
+        //clear takeStrength
+        for(Territory t : this.territories)
+            Arrays.fill(t.takeStrength, 0);
+
+        return g;
     }
 
     /**
@@ -76,66 +94,84 @@ public class Game {
         for(Move m : moveset) {
             if (m.status == Status.FAILED)
                 moveset.remove(m);
-            if (m.status == Status.PENDING) {
-                if (m.type == Type.H) {
-                    m.destination.takeStrength[m.country.id] += 2;
-                    m.status = Status.EXECUTABLE;
-                    return;
-                }
-                if (m.type == Type.M) {
-                    m.destination.takeStrength[m.country.id]++;
-                    //what if you *attack* at territory with two of your units (not support);
-                    //we have no way of dealing with that;
-                    m.status = Status.EXECUTABLE;
-                    return;
-                }
-                if (m.type == Type.SH) {
-                    for (Move n : moveset)
-                        if (!m.equals(n) && n.destination.equals(m.destination) && n.type != Type.M
-                                && n.type != Type.CM && n.type != Type.D) {
-                            m.status = Status.EXECUTABLE;
-                            m.destination.takeStrength[n.country.id]++;
-                            return;
-                        }
-                    m.status= Status.FAILED;
-                }
-                if(m.type==Type.C) {
-                    for(Move n : moveset)
-                        if(n.type==Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)){
-                            m.status=Status.EXECUTABLE;
-                            return;
-                        }
-                    m.status=Status.FAILED;
-                }
-                if(m.type==Type.CM){
-                    //continuations would actually be kinda useful here
-                    ArrayList<Territory> visited = new ArrayList<>();
-                    Territory start = m.unit.location;
-                    visited.add(start);
-                    if(convoyMove(m, moveset, visited, start)) {
-                        m.status=Status.EXECUTABLE;
-                        m.type = Type.M;
-                        m.destination.takeStrength[m.country.id]++;
-                    } else
-                        m.status=Status.FAILED;
-                }
-                if(m.type==Type.SA){
-                    for(Move n : moveset)
-                        if(n.type == Type.M && n.unit.location.equals(m.source) && n.destination.equals(m.destination)){
-                            m.status=Status.EXECUTABLE;
-                            m.destination.takeStrength[n.country.id]++;
-                            return;
-                        }
-                    m.status=Status.FAILED;
-                }
-
-
+            if (m.status == Status.PENDING && m.type == Type.H) {
+                m.destination.takeStrength[m.country.id] += 2;
+                m.status = Status.EXECUTABLE;
+                return;
             }
         }
-
+        for(Move m : moveset) {
+            if (m.status == Status.PENDING && m.type == Type.M) {
+                m.destination.takeStrength[m.country.id]++;
+                //what if you *attack* at territory with two of your units (not support);
+                //we have no way of dealing with that;
+                m.status = Status.EXECUTABLE;
+                return;
+            }
+        }
+        for(Move m : moveset) {
+            if (m.status == Status.PENDING && m.type == Type.SH) {
+                for (Move n : moveset)
+                    if (!m.equals(n) && n.destination.equals(m.destination) && n.type != Type.M
+                            && n.type != Type.CM && n.type != Type.D) {
+                        m.status = Status.EXECUTABLE;
+                        m.destination.takeStrength[n.country.id]++;
+                        return;
+                    }
+                m.status = Status.FAILED;
+                return;
+            }
+        }
+        for(Move m : moveset) {
+            if (m.type == Type.C) {
+                for (Move n : moveset)
+                    if (n.type == Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
+                        m.status = Status.EXECUTABLE;
+                        return;
+                    }
+                m.status = Status.FAILED;
+                return;
+            }
+        }
+        for(Move m : moveset) {
+            if (m.type == Type.CM) {
+                //continuations would actually be kinda useful here
+                ArrayList<Territory> visited = new ArrayList<>();
+                Territory start = m.unit.location;
+                visited.add(start);
+                if (convoyMove(m, moveset, visited, start)) {
+                    m.status = Status.EXECUTABLE;
+                    m.type = Type.M;
+                    m.destination.takeStrength[m.country.id]++;
+                    return;
+                } else {
+                    m.status = Status.FAILED;
+                    return;
+                }
+            }
+        }
+        for(Move m : moveset) {
+            if (m.type == Type.SA) {
+                for (Move n : moveset)
+                    if (n.type == Type.M && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
+                        m.status = Status.EXECUTABLE;
+                        m.destination.takeStrength[n.country.id]++;
+                        return;
+                    }
+                m.status = Status.FAILED;
+                return;
+            }
+        }
     }
 
-
+    /**
+     * checks if a convoy move is valid, recursive backtracking
+     * @param m move in question
+     * @param moveset other moves for the turn
+     * @param visited path
+     * @param loc current
+     * @return is it valid?
+     */
     private boolean convoyMove(Move m, ArrayList<Move> moveset, ArrayList<Territory> visited, Territory loc){
         visited.add(loc);
         if(m.destination.equals(loc)) return true;
@@ -153,18 +189,37 @@ public class Game {
         return success;
     }
 
-
     /**
      * Resolves at least one executable move
      * @param moveset arraylist of moves
-     * @param retreatsQueued arraylist of retreats needed
+     * @param g game with state
      * @return updated of arraylist of retreats needed
      */
-    private ArrayList<Unit> execution(ArrayList<Move> moveset, ArrayList<Unit> retreatsQueued) {
+    private Game execution(ArrayList<Move> moveset, Game g) {
         //@ENSURES countExecutable(moveset)>countExecutable(moveset')
-        //TODO
-
-        return retreatsQueued;
+        ArrayList<Unit> retreats = new ArrayList<>();
+        Unit[] newRetreats = g.retreating_units;
+        Move m = moveset.get(0);
+        Territory t = m.destination;
+        int mostPowCountry = Collections.max(Arrays.asList(t.takeStrength));
+        if(t.occupied!=mostPowCountry){
+            Collections.addAll(retreats, g.retreating_units);
+            for(Unit unit : g.countries[t.occupied].units)
+                if(unit.location.equals(t))
+                    retreats.add(unit);
+            newRetreats = new Unit[retreats.size()];
+            newRetreats = retreats.toArray(newRetreats);
+            for(Move n : moveset)
+                if(n.destination.equals(t) && n.country.id==mostPowCountry) {
+                    n.unit.location = t;
+                    t.occupied = mostPowCountry;
+                    break;
+                }
+        }
+        for(Move n : moveset)
+            if(n.destination.equals(t))
+                n.status=Status.EXECUTED;
+        return new Game(g.countries, g.territories, newRetreats);
     }
 
     /**

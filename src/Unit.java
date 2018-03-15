@@ -41,7 +41,7 @@ public class Unit implements Comparable {
      * @return Territory array of open territories
      */
     public Territory[] canMove () {
-        ArrayList<Territory> openTs = new ArrayList<Territory>();
+        ArrayList<Territory> openTs = new ArrayList<>();
         if(isFleet) {
             for (Territory t : location.neighborsF) if (t.occupied != -1) openTs.add(t);
         } else {
