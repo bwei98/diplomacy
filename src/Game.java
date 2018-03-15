@@ -7,7 +7,6 @@ public class Game {
     public Territory[] territories;
     public Unit[] retreating_units;
     //Countries know what units they have, units know where they are so that should be enough
-    public static ArrayList<Territory> checked = new ArrayList<>();
 
     /**
      * Basic constructor for a Game state

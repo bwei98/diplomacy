@@ -28,12 +28,15 @@ public class Unit implements Comparable {
     }
 
     /**
-     * Moves unit from one territory to another
-     * @param location2 Territory representing intended destination
+     * toString returns whether it is a fleet or an army, the location,
+     * and the country that owns the unit
      */
-    public void move(Territory location2) {
-        if(isFleet) if(location.touchF(location2)) location = location2;
-        else if(location.touchA(location2)) location = location2;
+    public String toString() {
+        String str = "";
+        if(isFleet) str += "F "; else str += "A ";
+        str += location.toString() + " ";
+        str += "(" + owner.name + ")";
+        return str;
     }
 
     /**
@@ -52,18 +55,6 @@ public class Unit implements Comparable {
     }
 
     /**
-     * toString returns whether it is a fleet or an army, the location,
-     * and the country that owns the unit
-     */
-    public String toString() {
-        String str = "";
-        if(isFleet) str += "F "; else str += "A ";
-        str += location.toString() + " ";
-        str += "(" + owner.name + ")";
-        return str;
-    }
-
-    /**
      * compareTo provides an ordering on Units
      * @param o The other Unit
      * @return a comparison based on owner first, then alphabetical
@@ -73,4 +64,17 @@ public class Unit implements Comparable {
         if(owner.equals(unit2.owner)) return location.name.compareTo(unit2.location.name);
         else return owner.compareTo(unit2.owner);
     }
+
+    //Unused
+    /**
+     * Moves unit from one territory to another
+     * @param location2 Territory representing intended destination
+     */
+    public void move(Territory location2) {
+        if(isFleet) if(location.touchF(location2)) location = location2;
+        else if(location.touchA(location2)) location = location2;
+    }
+
+
+
 }
