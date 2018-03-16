@@ -313,6 +313,7 @@ public class Game {
         Unit[] newRetreats = this.retreatingUnits;
         Move m = moveset.get(0);
         Territory t = m.destination;
+        //TODO if mostPow is tie then all orders fail
         int mostPow = 0;
         int mostPowCountry = t.occupied;
         for (int i = 0; i < t.takeStrength.length; i++){

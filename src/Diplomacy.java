@@ -15,7 +15,7 @@ public class Diplomacy {
     public static void init() {
         year = 1900;
         season = Map.SPRING;
-        Map.initMap();
+        Map.initUK();
 
         /*------------------------------------------------*/
         Country England = new Country("England", new Territory[]{Map.Lvp, Map.Edi, Map.Lon}, 0);

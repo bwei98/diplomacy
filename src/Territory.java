@@ -93,6 +93,7 @@ public class Territory {
      * @return Territory[] containing all neighbors of the Territory
      */
     public Territory[] allNeighbors() {
+        //TODO this does not work
         List<Territory> union = Arrays.asList(this.neighborsA);
         for (Territory t : neighborsF)
             if (!union.contains(t))
