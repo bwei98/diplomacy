@@ -91,7 +91,7 @@ public class Game {
      * @return The new game state
      */
     public Game retreatphase(String[] orders) {
-        //Process input into valid Teerritory moves
+        //Process input into valid Territory moves
         Territory[] dests = new Territory[orders.length];
 
         for(int i = 0; i < retreatingUnits.length; i++) {
@@ -163,26 +163,26 @@ public class Game {
             for(String o : orders[id]) {
                 String[] order = o.split(" ");
                 for(String s: order)    s=s.trim();
+                System.out.println("movephase, id: " + id);
                 Move m=new Move(this, id, order);
                 moves.add(m);
             }
         }
+
+        for(Move m : moves)
+            System.out.println(m.toString());
 
         //determine which are valid
         while(countPending(moves)>0)
             resolution(moves);
 
         //remove all unnecessary
-        for(Move m : moves)
-            if(m.status!=Status.EXECUTABLE)
-                moves.remove(m);
+        moves.removeIf(m -> (m.status!=Status.EXECUTABLE));
 
         //executes moves
         while(countExecutable(moves)>0) {
-            for(Move m : moves)
-                if(m.status==Status.EXECUTED)
-                    moves.remove(m);
-            g = execution(moves, g);
+            g = this.execution(moves);
+            moves.removeIf(m -> (m.status!=Status.EXECUTED));
         }
 
         //clear takeStrength
@@ -299,34 +299,50 @@ public class Game {
     /**
      * Resolves at least one executable move
      * @param moveset arraylist of moves
-     * @param g game with state
      * @return updated of arraylist of retreats needed
      */
-    private Game execution(ArrayList<Move> moveset, Game g) {
+    private Game execution(ArrayList<Move> moveset) {
         //@ENSURES countExecutable(moveset)>countExecutable(moveset')
+        System.out.println("entering execution");
         ArrayList<Unit> retreats = new ArrayList<>();
-        Unit[] newRetreats = g.retreatingUnits;
+        Unit[] newRetreats = this.retreatingUnits;
         Move m = moveset.get(0);
         Territory t = m.destination;
-        int mostPowCountry = Collections.max(Arrays.asList(t.takeStrength));
+        int mostPow = 0;
+        int mostPowCountry = t.occupied;
+        for (int i = 0; i < t.takeStrength.length; i++){
+            if (t.takeStrength[i] > mostPow) {
+                mostPow = t.takeStrength[i];
+                mostPowCountry = i;
+            }
+    }
         if(t.occupied!=mostPowCountry){
-            Collections.addAll(retreats, g.retreatingUnits);
-            for(Unit unit : g.countries[t.occupied].units)
-                if(unit.location.equals(t))
-                    retreats.add(unit);
-            newRetreats = new Unit[retreats.size()];
-            newRetreats = retreats.toArray(newRetreats);
-            for(Move n : moveset)
-                if(n.destination.equals(t) && n.country.id==mostPowCountry) {
+            Collections.addAll(retreats, this.retreatingUnits);
+            if(t.occupied != -1) {
+                for (Unit unit : this.countries[t.occupied].units)
+                    if (unit.location.equals(t))
+                        retreats.add(unit);
+                newRetreats = new Unit[retreats.size()];
+                newRetreats = retreats.toArray(newRetreats);
+            }
+            for(Move n : moveset) {
+                System.out.println(n.toString());
+                System.out.println(t.toString());
+                System.out.println(mostPowCountry);
+                if (n.destination.equals(t) && n.country.id == mostPowCountry) {
                     n.unit.location = t;
                     t.occupied = mostPowCountry;
                     break;
                 }
+            }
         }
         for(Move n : moveset)
             if(n.destination.equals(t))
                 n.status=Status.EXECUTED;
-        return new Game(g.countries, g.territories, newRetreats);
+        for(Country c : this.countries)
+            for(Unit u : c.units)
+                System.out.println(c.name + " " + u.toString());
+        return new Game(this.countries, this.territories, newRetreats);
     }
 
     /**
@@ -355,11 +371,6 @@ public class Game {
         return numExecutable;
     }
 
-
-
-    public Game retreat(String[] orders) {
-        return new Game();
-    }
 
     //## : A Lvn H   (7)
     //## : A Lvn - War  (11)

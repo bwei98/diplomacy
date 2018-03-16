@@ -1,5 +1,3 @@
-import jdk.dynalink.linker.ConversionComparator;
-
 import java.util.List;
 import java.util.Arrays;
 
@@ -24,6 +22,7 @@ public class Territory {
         this.supplyCenter = sc;
         this.occupied = -1;
         this.takeStrength = new Integer[Diplomacy.numCountries];
+        Arrays.fill(takeStrength, 0);
     }
 
     /**
