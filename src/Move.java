@@ -55,15 +55,7 @@ public class Move implements Comparable {
         String[] order = new String[orderOrig.length-2];
         for(int i=0; i<order.length; i++)
             order[i]=orderOrig[i+2];
-        for(String s : order){
-            System.out.print(s+" ");
-        }
-        System.out.println("\n"+ order[0]);
-        System.out.println(order[1]);
         for (Unit u : this.country.units) {
-            System.out.println(u.toString());
-            System.out.println(u.isFleet);
-            System.out.println(u.location.toString());
             if ((u.isFleet && order[0].equals("F") || (!u.isFleet && order[0].equals("A")))
                     && (u.location.equals(order[1]))) {
                 if (u.hasOrder) break;

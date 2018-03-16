@@ -179,15 +179,20 @@ public class Game {
         //remove all unnecessary
         moves.removeIf(m -> (m.status!=Status.EXECUTABLE));
 
+        System.out.println("NumExecutable = " + countExecutable(moves));
         //executes moves
         while(countExecutable(moves)>0) {
             g = this.execution(moves);
-            moves.removeIf(m -> (m.status!=Status.EXECUTED));
+            moves.removeIf(m -> (m.status==Status.EXECUTED));
+            System.out.println("NumExecutable = " + countExecutable(moves));
         }
 
-        //clear takeStrength
+        //reset
         for(Territory t : this.territories)
             Arrays.fill(t.takeStrength, 0);
+        for(Country c : g.countries)
+            for(Unit u : c.units)
+                u.hasOrder=false;
 
         return g;
     }
