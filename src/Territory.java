@@ -15,17 +15,14 @@ public class Territory {
     /**
      * Basic constructor for territory
      * @param name string for the name
-     * @param nF Territory[] for neighbors w.r.t. fleets
-     * @param nA Territory[] for neighbors w.r.t. armies
-     * @param occ int for if it is occupied, 0: unoccupied, 1: army, -1: fleet
      * @param sc boolean for if it is a supplycenter
      */
-    public Territory(String name, Territory[] nF, Territory[] nA, int occ, boolean sc) {
+    public Territory(String name, boolean sc) {
         this.name = name;
-        this.neighborsF = nF;
-        this.neighborsA = nA;
-        this.occupied = occ;
+        this.neighborsF = new Territory[0];
+        this.neighborsA = new Territory[0];
         this.supplyCenter = sc;
+        this.occupied = -1;
         this.takeStrength = new Integer[Diplomacy.numCountries];
     }
 
