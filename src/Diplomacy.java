@@ -105,8 +105,15 @@ public class Diplomacy {
                 } else if (diff < 0) {
                     System.out.println("You may build " + (-diff) + " armies.");
                     System.out.print("You may build in: ");
-                    for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.print(sc.name + " ");
-                    System.out.print("\n Enter your semicolon-separated builds (specific F/A): \t");
+                    for(Territory sc : country.homeSCs) {
+                        if (country.canBuild(sc)) {
+                            System.out.print(sc.name + " ");
+                            if (sc.coast()) System.out.print("(F/A) ");
+                            if (sc.water()) System.out.print("(F)");
+                            if (sc.landlocked()) System.out.print("(A) ");
+                        }
+                    }
+                    System.out.print("\n Enter your semicolon-separated builds (specify F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
                 }
             }

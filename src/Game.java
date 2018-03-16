@@ -63,7 +63,7 @@ public class Game {
                 if (diff < 0) { //process as a build
                     for (Territory sc : country.homeSCs) {
                         if (sc.equals(location) && sc.occupied == -1) {
-                            country.build(sc, isFleet);
+                            if(!(isFleet && sc.landlocked())) country.build(sc, isFleet);
                         }
                     }
                 } else { //process as a disband
