@@ -7,7 +7,7 @@ public class Territory {
     public Territory[] neighborsF;
     public Territory[] neighborsA;
     public int occupied; //-1: unoccupied, otherwise country id
-    public boolean supplyCenter; //true=yes
+    public int supplyCenter; //-99 = no, -1 = yes and neutral, otherwise yes and country id
     public Integer[] takeStrength;
 
     /**
@@ -15,7 +15,7 @@ public class Territory {
      * @param name string for the name
      * @param sc boolean for if it is a supplycenter
      */
-    public Territory(String name, boolean sc) {
+    public Territory(String name, int sc) {
         this.name = name;
         this.neighborsF = new Territory[0];
         this.neighborsA = new Territory[0];
@@ -33,7 +33,7 @@ public class Territory {
         neighborsF=null;
         neighborsA=null;
         occupied=-1;
-        supplyCenter=false;
+        supplyCenter=-99;
         takeStrength=null;
     }
 
@@ -79,6 +79,10 @@ public class Territory {
             if(this.neighborsA[len].equals(T))
                 return true;
         return false;
+    }
+
+    public boolean isSupplyCenter() {
+        return supplyCenter != -99;
     }
 
     /**

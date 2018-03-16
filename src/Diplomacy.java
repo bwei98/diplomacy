@@ -26,15 +26,6 @@ public class Diplomacy {
         /*------------------------------------------------*/
 
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
-
-        String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring"; if(season == Map.WINTER) seas = "Winter";
-        String message =  "==========================\n";
-        message += "==       Year: " + year + "     ==\n";
-        message += "==     Season: " + seas + "   ==\n";
-        message += "==========================";
-        System.out.println(message);
-
-        for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
     /**
@@ -89,15 +80,6 @@ public class Diplomacy {
 
             gameState = gameState.retreatphase(destinations);
         }
-
-        String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
-        String message =  "==========================\n";
-        message += "==       Year: " + year + "     ==\n";
-        message += "==     Season: " + seas + "   ==\n";
-        message += "==========================";
-        System.out.println(message);
-
-        for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
     /**
@@ -114,22 +96,38 @@ public class Diplomacy {
                 System.out.println(country.name + ": ");
                 int diff = country.numBuildsOrDisbands();
                 //Either disband or build
-                if (diff < 0) {
+                if (diff > 0) {
                     System.out.println("You have to disband " + diff + " armies.");
                     System.out.println("You may choose from: ");
                     for (Unit unit : country.units) System.out.println(unit);
-                    System.out.print("Enter your colon-separated disbands (specify F/A): \t");
+                    System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
-                } else if (diff > 0) {
-                    System.out.println("You may build " + diff + " armies.");
-                    System.out.println("You may build in: ");
-                    for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.println(sc.name);
-                    System.out.print("Enter your colon-separated builds (specific F/A): \t");
+                } else if (diff < 0) {
+                    System.out.println("You may build " + (-diff) + " armies.");
+                    System.out.print("You may build in: ");
+                    for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.print(sc.name + " ");
+                    System.out.print("\n Enter your semicolon-separated builds (specific F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
                 }
             }
         }
         gameState = gameState.buildphase(buildMoves);
+    }
+
+    /**
+     * Give countries supply centers and take them away as needed
+     */
+    public static void resolveUnits() {
+        for(Country country : countries) {
+            for(Unit unit : country.units) {
+                if(unit.location.isSupplyCenter() && unit.location.supplyCenter != unit.owner.id) {
+                    country.gainSupplyCenter(unit.location);
+                    if(unit.location.supplyCenter != -1)
+                        countries[unit.location.supplyCenter].loseSupplyCenter(unit.location);
+                    unit.location.supplyCenter = unit.owner.id;
+                }
+            }
+        }
     }
 
     /**
@@ -139,14 +137,26 @@ public class Diplomacy {
     public static void main(String[] args) {
         init();
         while(!won) {
-            if(season == Map.SPRING || season == Map.FALL) {
+            String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring"; if(season == Map.WINTER) seas = "Winter";
+            String message =  "==========================\n";
+            message += "==       Year: " + year + "     ==\n";
+            message += "==     Season: " + seas + "   ==\n";
+            message += "==========================";
+            System.out.println(message);
+
+            for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
+
+            if(season == Map.SPRING) {
                 runSeason();
                 season = (season + 1) % 3;
-            }
-            if(season == Map.SPRING) year++;
-            if(season == Map.WINTER) {
+            } else if (season == Map.FALL) {
+                runSeason();
+                resolveUnits();
+                season = (season + 1) % 3;
+            } else if(season == Map.WINTER) {
                 runBuild();
                 season = Map.SPRING;
+                year++;
             }
         }
     }
