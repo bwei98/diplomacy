@@ -1,5 +1,3 @@
-import com.sun.istack.internal.NotNull                                                                                 ;
-
 enum Type                                                                                                              {
     D, H, M, C, CM, SH, SA                                                                                             }
 enum Status                                                                                                            {
@@ -48,7 +46,7 @@ public class Move implements Comparable                                         
      * @param id int for the country making the move
      * @param order String[] for the order
      */
-    public Move(@NotNull Game g, int id, String[] order)                                                               {
+    public Move(Game g, int id, String[] order)                                                               {
         this.country = g.countries[id]                                                                                 ;
         boolean unitCheck = true                                                                                       ;
         for (Unit u : this.country.units)                                                                              {

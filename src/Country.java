@@ -125,6 +125,7 @@ public class Country implements Comparable {
         Unit[] newUnits = new Unit[units.length];
         for(int i = 0; i < units.length; i++) newUnits[i] = units[i];
         newUnits[units.length] = unit;
+        sc.occupied = id;
 
         units = newUnits;
     }
@@ -142,12 +143,14 @@ public class Country implements Comparable {
                 idx++;
             }
         }
+        unit.location.occupied = -1;
 
         units = newUnits;
     }
 
     /**
      * Calculate how many units a country needs to build or disband
+     * Positive = disbands needed, negative = builds needed
      * @return see above
      */
     public int numBuildsOrDisbands() {

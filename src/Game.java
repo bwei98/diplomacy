@@ -41,6 +41,49 @@ public class Game {
     }
 
     /**
+     * buildphase processses a single movement phase
+     * In case of incorrect orders:
+     * Incorrect disbands will cause the buildphase to randomly select units to disband
+     * Incorrect builds will result in a country losing that build
+     * If more disbands or builds are entered than the country needs, they will not go through after
+     * they are no longer necessary
+     * If a country has no units, the country is declared dead here
+     * @param orders
+     * @return
+     */
+    public Game buildphase(String[][] orders) {
+        for(int id = 0; id < orders.length; id++) {
+            Country country = countries[id];
+            for(String o : orders[id]) {
+                String[] order = o.split(" ");
+                boolean isFleet = order[0].trim().equals("F");
+                String location = order[1].trim();
+
+                int diff = country.numBuildsOrDisbands();
+                if (diff < 0) { //process as a build
+                    for (Territory sc : country.homeSCs) {
+                        if (sc.name == location && sc.occupied == -1) {
+                            country.build(sc, isFleet);
+                        }
+                    }
+                } else { //process as a disband
+                    for (Unit unit : country.units) {
+                        if (unit.location.name == location) {
+                            country.disband(unit);
+                        }
+                    }
+                }
+
+                while(country.numBuildsOrDisbands() > 0) country.disband(country.units[0]);
+            }
+
+            if(country.units.length == 0) country.alive = false;
+        }
+
+        return this;
+    }
+
+    /**
      * movephase processes a single movement phase
      * @param orders String[][] for countries and their orders
      * @return Game representing the new gamestate
@@ -240,11 +283,11 @@ public class Game {
      * @return int for the number of executable orders in the list
      */
     private static int countExecutable(ArrayList<Move> moveset) {
-        int numPending=0;
+        int numExecutable=0;
         for(Move a : moveset)
             if(a.status==Status.EXECUTABLE)
-                numPending++;
-        return numPending;
+                numExecutable++;
+        return numExecutable;
     }
 
 

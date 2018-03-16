@@ -1,8 +1,10 @@
+import jdk.dynalink.linker.ConversionComparator;
+
 import java.util.List;
 import java.util.Arrays;
 
 
-public class Territory{
+public class Territory {
     public String name;
     public Territory[] neighborsF;
     public Territory[] neighborsA;
@@ -131,5 +133,4 @@ public class Territory{
     public boolean coast(){
         return !this.water() && !this.landlocked();
     }
-
 }

@@ -68,6 +68,10 @@ public class Diplomacy {
         for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
+    /**
+     * Asks the users who require builds or disbands and processes their inputs
+     * Desired format: A Smy; F ADR
+     */
     public static void runBuild() {
         Scanner reader = new Scanner(System.in);
 
@@ -82,16 +86,18 @@ public class Diplomacy {
                     System.out.println("You have to disband " + diff + " armies.");
                     System.out.println("You may choose from: ");
                     for (Unit unit : country.units) System.out.println(unit);
+                    System.out.println("Enter your colon-separated disbands (specify F/A)");
                     buildMoves[i] = reader.nextLine().split("; ");
                 } else if (diff > 0) {
                     System.out.println("You may build " + diff + " armies.");
                     System.out.println("You may build in: ");
                     for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.println(sc.name);
+                    System.out.println("Enter your colon-separated builds (specific F/A)");
                     buildMoves[i] = reader.nextLine().split("; ");
                 }
             }
         }
-        //TODO send this to game
+        gameState = gameState.buildphase(buildMoves);
     }
 
     /**
