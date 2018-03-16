@@ -11,6 +11,13 @@ public class Map {
     public static final int NUM_TERRITORIES = 5; //TODO make this 75
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
 
+    /**
+     * Set t1 and t2 as neighbors of each other
+     * @param t1 Territory 1
+     * @param t2 Territory 2
+     * @param canFleet Whether they are connected by sea
+     * @param canArmy Whether they are connected by land
+     */
     public static void makeNeighbor(Territory t1, Territory t2, boolean canFleet, boolean canArmy) {
         if(canFleet) {
             List<Territory> neighborsT1 = Arrays.asList(t1.neighborsF);

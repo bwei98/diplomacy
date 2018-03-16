@@ -93,18 +93,29 @@ public class Territory {
      * Computes all Neighbors of a territory
      * @return Territory[] containing all neighbors of the Territory
      */
-    public Territory[] allNeighbors(){
+    public Territory[] allNeighbors() {
         List<Territory> union = Arrays.asList(this.neighborsA);
-        for(Territory t: neighborsF)
-            if(!union.contains(t))
+        for (Territory t : neighborsF)
+            if (!union.contains(t))
                 union.add(t);
-        int size=union.size(), i=0;
-        Territory[] out= new Territory[size];
-        while(!union.isEmpty()) {
+        int size = union.size(), i = 0;
+        Territory[] out = new Territory[size];
+        while (!union.isEmpty()) {
             out[i] = union.remove(0);
             i++;
         }
         return out;
+    }
+
+    /**
+     * Set the neighbors of the Territory
+     * @param neighbors The territories' neighbors
+     * @param isFleet Whether the territories are connected by land or water
+     * @return
+     */
+    public void setNeighbors(Territory[] neighbors, boolean isFleet) {
+        if(isFleet) neighborsF = neighbors;
+        else neighborsA = neighbors;
     }
 
     /**
