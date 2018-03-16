@@ -23,6 +23,21 @@ public class Country implements Comparable {
     }
 
     /**
+     * Actually useful constructor for Countries
+     * @param name String for its name
+     * @param supplyCenters Territory[] for the supply centers controlled
+     * @param id int for the country id
+     */
+    public Country(String name, Territory[] supplyCenters, int id) {
+        this.name = name;
+        this.units = null;
+        this.supplyCenters = supplyCenters;
+        this.homeSCs = supplyCenters;
+        this.alive = true;
+        this.id = id;
+    }
+
+    /**
      * Default Country constructor
      */
     public Country(){
@@ -32,6 +47,14 @@ public class Country implements Comparable {
         homeSCs = null;
         alive = false;
         id=-1;
+    }
+
+    /**
+     * Set the country's units
+     * @param units Unit[] for the country's new units
+     */
+    public void setUnits(Unit[] units) {
+        this.units = units;
     }
 
     /**

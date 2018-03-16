@@ -11,12 +11,12 @@ public class Map {
     public static final int NUM_TERRITORIES = 6; //TODO make this 75
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
 
-    private static Territory Lvp = new Territory("Lvp", true);
-    private static Territory Cly = new Territory("Cly", true);
-    private static Territory Yor = new Territory("Yor", true);
-    private static Territory Wal = new Territory("Wal", true);
-    private static Territory Edi = new Territory("Edi", true);
-    private static Territory Lon = new Territory("Lon", true);
+    public static Territory Lvp = new Territory("Lvp", true);
+    public static Territory Cly = new Territory("Cly", true);
+    public static Territory Yor = new Territory("Yor", true);
+    public static Territory Wal = new Territory("Wal", true);
+    public static Territory Edi = new Territory("Edi", true);
+    public static Territory Lon = new Territory("Lon", true);
 
     public static void initMap() {
         TERRITORIES[0] = Lvp;

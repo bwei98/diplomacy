@@ -17,12 +17,30 @@ public class Diplomacy {
         season = Map.SPRING;
         Map.initMap();
 
+        /*------------------------------------------------*/
+        Country England = new Country("England", new Territory[]{Map.Lvp, Map.Edi, Map.Lon}, 0);
+        countries[0] = England;
+        England.setUnits(new Unit[]{new Unit(England, true, Map.Lon), new Unit(England, false, Map.Lvp),
+                                    new Unit(England, true, Map.Edi)});
+
+        /*------------------------------------------------*/
+
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
+
+        String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring"; if(season == Map.WINTER) seas = "Winter";
+        String message =  "==========================\n";
+        message += "==       Year: " + year + "     ==\n";
+        message += "==     Season: " + seas + "   ==\n";
+        message += "==========================";
+        System.out.println(message);
+
+        for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
     /**
      * Run an iteration of the game
      * Possible move formats: A Lvn H; A Lvn - War; A Lvn S Ukr - War; A Lvn S War; F NTH C Nwy - Yor;
+     * Example for current testing: A Lvp - Yor; F Lon - Wal; F Edi H
      * (and equivalent for fleets)
      */
     public static void runSeason() {
@@ -32,15 +50,21 @@ public class Diplomacy {
         String[][] moves = new String[numCountries][0];
         for(int i = 0; i < numCountries; i++) {
             if(countries[i].alive) {
-                System.out.println(countries[i].name + " : what are your moves? ");
+                System.out.print(countries[i].name + " : what are your moves?\t");
                 String moveLine = reader.nextLine();
                 String[] cMoves = moveLine.split(";");
-                for (int j = 0; j < cMoves.length; i++) cMoves[j] = i + " : " + cMoves[j].trim();
+
+                for (int j = 0; j < cMoves.length; j++) cMoves[j] = i + " : " + cMoves[j].trim();
                 moves[i] = cMoves;
             }
         }
+
+        System.out.println("Got it");
+
         gameState = gameState.movephase(moves);
         Unit[] retreats = gameState.retreatingUnits;
+
+        System.out.println("Retreats: " + (retreats.length > 0));
 
         //Take orders for stage: retreat if necessary
         if(retreats.length > 0) {
@@ -57,7 +81,7 @@ public class Diplomacy {
                 System.out.println(retreat + ": ");
                 System.out.print("Options - DISBAND");
                 for(Territory t : retreat.canMove()) System.out.print(", " + t);
-                System.out.println("\n Where do you want to move this unit?");
+                System.out.print("\n Where do you want to move this unit? \t");
 
                 String order = reader.nextLine();
                 destinations[i] = order.trim();
@@ -68,8 +92,8 @@ public class Diplomacy {
 
         String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
         String message =  "==========================\n";
-        message += "==        Year: " + year + "    ==\n";
-        message += "==      Season: " + seas + "  ==\n";
+        message += "==       Year: " + year + "     ==\n";
+        message += "==     Season: " + seas + "   ==\n";
         message += "==========================";
         System.out.println(message);
 
@@ -94,13 +118,13 @@ public class Diplomacy {
                     System.out.println("You have to disband " + diff + " armies.");
                     System.out.println("You may choose from: ");
                     for (Unit unit : country.units) System.out.println(unit);
-                    System.out.println("Enter your colon-separated disbands (specify F/A)");
+                    System.out.print("Enter your colon-separated disbands (specify F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
                 } else if (diff > 0) {
                     System.out.println("You may build " + diff + " armies.");
                     System.out.println("You may build in: ");
                     for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.println(sc.name);
-                    System.out.println("Enter your colon-separated builds (specific F/A)");
+                    System.out.print("Enter your colon-separated builds (specific F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
                 }
             }
