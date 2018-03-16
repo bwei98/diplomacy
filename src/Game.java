@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Game {
     public Country[] countries;
     public Territory[] territories;
-    public Unit[] retreating_units;
+    public Unit[] retreatingUnits;
     //Countries know what units they have, units know where they are so that should be enough
 
     /**
@@ -17,7 +17,7 @@ public class Game {
     public Game(Country[] countries, Territory[] territories, Unit[] retreating_countries) {
         this.countries = countries;
         this.territories = territories;
-        this.retreating_units = retreating_countries;
+        this.retreatingUnits = retreating_countries;
     }
 
     /**
@@ -28,7 +28,7 @@ public class Game {
     public Game(Country[] countries, Territory[] territories) {
         this.countries = countries;
         this.territories = territories;
-        this.retreating_units = new Unit[0];
+        this.retreatingUnits = new Unit[0];
     }
 
     /**
@@ -37,7 +37,7 @@ public class Game {
     public Game() {
         this.countries = null;
         this.territories = null;
-        this.retreating_units = new Unit[0];
+        this.retreatingUnits = new Unit[0];
     }
 
     /**
@@ -62,13 +62,13 @@ public class Game {
                 int diff = country.numBuildsOrDisbands();
                 if (diff < 0) { //process as a build
                     for (Territory sc : country.homeSCs) {
-                        if (sc.name.equals(location) && sc.occupied == -1) {
+                        if (sc.equals(location) && sc.occupied == -1) {
                             country.build(sc, isFleet);
                         }
                     }
                 } else { //process as a disband
                     for (Unit unit : country.units) {
-                        if (unit.location.name.equals(location)) {
+                        if (unit.location.equals(location)) {
                             country.disband(unit);
                         }
                     }
@@ -80,6 +80,71 @@ public class Game {
             if(country.units.length == 0) country.alive = false;
         }
 
+        return this;
+    }
+
+    /**
+     * Process retreat orders in basically the most inefficient way possible
+     * Invalid orders are disbands
+     * If two units try to retreat to the same place, they are both disbanded
+     * @param orders The desired retreats, indexed to match with retreats
+     * @return The new game state
+     */
+    public Game retreatphase(String[] orders) {
+        //Process input into valid Teerritory moves
+        Territory[] dests = new Territory[orders.length];
+
+        for(int i = 0; i < retreatingUnits.length; i++) {
+            Unit unit = retreatingUnits[i];
+            String dest = orders[i];
+            if(dest.toUpperCase().equals("DISBAND")){
+                dests[i] = null;
+            } else {
+                boolean found = false;
+                for (Territory t : unit.canMove()) {
+                    if (t.equals(dest)) {
+                        found = true;
+                        dests[i] = t;
+                        break;
+                    }
+                }
+                if (!found) dests[i] = null;
+            }
+        }
+
+        //Check for conflicts
+        Territory[] places = new Territory[retreatingUnits.length];
+        int[] placesCount = new int[retreatingUnits.length];
+        for(int i = 0; i < retreatingUnits.length; i++) {
+            Unit unit = retreatingUnits[i];
+            Territory dest = dests[i];
+
+            for(int j = 0; j < places.length; j++) {
+                if(placesCount[j] == 0) {
+                    places[j] = dest;
+                    placesCount[j]++;
+                } else {
+                    if(places[j] == dest) placesCount[j]++;
+                }
+            }
+        }
+
+        //Set to disband if there is a conflict
+        for(int i = 0; i < dests.length; i++) {
+            for(int j = 0; j < places.length; j++) {
+                if(placesCount[j] > 1 && dests[i] == places[j]) dests[i] = null;
+            }
+        }
+
+        //Perform retreats
+        for(int i = 0; i < retreatingUnits.length; i++) {
+            Unit unit = retreatingUnits[i];
+            Territory dest = dests[i];
+            if(dest == null) unit.owner.disband(unit);
+            else unit.move(dest);
+        }
+
+        retreatingUnits = new Unit[0];
         return this;
     }
 
@@ -240,12 +305,12 @@ public class Game {
     private Game execution(ArrayList<Move> moveset, Game g) {
         //@ENSURES countExecutable(moveset)>countExecutable(moveset')
         ArrayList<Unit> retreats = new ArrayList<>();
-        Unit[] newRetreats = g.retreating_units;
+        Unit[] newRetreats = g.retreatingUnits;
         Move m = moveset.get(0);
         Territory t = m.destination;
         int mostPowCountry = Collections.max(Arrays.asList(t.takeStrength));
         if(t.occupied!=mostPowCountry){
-            Collections.addAll(retreats, g.retreating_units);
+            Collections.addAll(retreats, g.retreatingUnits);
             for(Unit unit : g.countries[t.occupied].units)
                 if(unit.location.equals(t))
                     retreats.add(unit);

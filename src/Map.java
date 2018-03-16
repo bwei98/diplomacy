@@ -8,12 +8,35 @@ public class Map {
     public static final int FALL = 2;
     public static final int WINTER = 0;
 
-    public static final int NUM_TERRITORIES = 5; //TODO make this 75
+    public static final int NUM_TERRITORIES = 6; //TODO make this 75
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
+
+    private static Territory Lvp = new Territory("Lvp", true);
+    private static Territory Cly = new Territory("Cly", true);
+    private static Territory Yor = new Territory("Yor", true);
+    private static Territory Wal = new Territory("Wal", true);
+    private static Territory Edi = new Territory("Edi", true);
+    private static Territory Lon = new Territory("Lon", true);
+
+    public static void initMap() {
+        TERRITORIES[0] = Lvp;
+        TERRITORIES[1] = Cly;
+        TERRITORIES[2] = Yor;
+        TERRITORIES[3] = Wal;
+        TERRITORIES[4] = Edi;
+        TERRITORIES[5] = Lon;
+
+        Lvp.setNeighbors(new Territory[]{Cly, Yor, Wal, Edi, Lon}, new Territory[]{Cly, Wal});
+        Cly.setNeighbors(new Territory[]{Edi, Lvp}, new Territory[]{Edi, Lvp});
+        Yor.setNeighbors(new Territory[]{Lvp, Wal, Edi, Lon}, new Territory[]{Edi, Lon});
+        Wal.setNeighbors(new Territory[]{Lvp, Yor, Lon}, new Territory[]{Lvp, Lon});
+        Edi.setNeighbors(new Territory[]{Cly, Lvp, Lon}, new Territory[]{Cly, Yor});
+        Lon.setNeighbors(new Territory[]{Yor, Wal}, new Territory[]{Yor, Wal});
+    }
 
     /**
      * Set t1 and t2 as neighbors of each other
-     * @param t1 Territory 1
+     p* @param t1 Territory 1
      * @param t2 Territory 2
      * @param canFleet Whether they are connected by sea
      * @param canArmy Whether they are connected by land

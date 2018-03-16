@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Diplomacy {
-    public static int numCountries = 7;
+    public static int numCountries = 1; //TODO make this 7
     public static Country[] countries = new Country[numCountries];
     public static boolean won = false;
     public static Game gameState;
@@ -15,6 +15,8 @@ public class Diplomacy {
     public static void init() {
         year = 1900;
         season = Map.SPRING;
+        Map.initMap();
+
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
     }
 
@@ -38,13 +40,16 @@ public class Diplomacy {
             }
         }
         gameState = gameState.movephase(moves);
-        Unit[] retreats = gameState.retreating_units;
+        Unit[] retreats = gameState.retreatingUnits;
 
         //Take orders for stage: retreat if necessary
-        if(retreats.length != 0) {
+        if(retreats.length > 0) {
+            String[] destinations = new String[retreats.length];
+
             Arrays.sort(retreats);
             int prevCountry = -1;
-            for (Unit retreat : retreats) {
+            for (int i = 0; i < retreats.length; i++) {
+                Unit retreat = retreats[i];
                 if(retreat.owner.id != prevCountry) {
                     prevCountry = retreat.owner.id;
                     System.out.println(countries[retreat.owner.id].name + " : please enter your retreats ");
@@ -55,10 +60,11 @@ public class Diplomacy {
                 System.out.println("\n Where do you want to move this unit?");
 
                 String order = reader.nextLine();
+                destinations[i] = order.trim();
             }
-        }
 
-        //TODO send retreats to game
+            gameState = gameState.retreatphase(destinations);
+        }
 
         String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
         String message =  "==========================\n";

@@ -65,14 +65,22 @@ public class Unit implements Comparable {
         else return owner.compareTo(unit2.owner);
     }
 
-    //Unused
     /**
      * Moves unit from one territory to another
      * @param location2 Territory representing intended destination
      */
     public void move(Territory location2) {
-        if(isFleet) if(location.touchF(location2)) location = location2;
-        else if(location.touchA(location2)) location = location2;
+        if(isFleet) {
+            if(location.touchF(location2)) {
+                location = location2;
+                location.occupied = owner.id;
+            }
+        } else {
+            if(location.touchA(location2)) {
+                location = location2;
+                location.occupied = owner.id;
+            }
+        }
     }
 
 
