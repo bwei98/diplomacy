@@ -35,7 +35,6 @@ public class Unit implements Comparable {
         String str = "";
         if(isFleet) str += "F "; else str += "A ";
         str += location.toString() + " ";
-        str += "(" + owner.name + ")";
         return str;
     }
 
