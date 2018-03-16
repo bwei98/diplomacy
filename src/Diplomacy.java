@@ -58,6 +58,8 @@ public class Diplomacy {
             }
         }
 
+        //TODO send retreats to game
+
         String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
         String message =  "==========================\n";
         message += "==        Year: " + year + "    ==\n";

@@ -62,13 +62,13 @@ public class Game {
                 int diff = country.numBuildsOrDisbands();
                 if (diff < 0) { //process as a build
                     for (Territory sc : country.homeSCs) {
-                        if (sc.name == location && sc.occupied == -1) {
+                        if (sc.name.equals(location) && sc.occupied == -1) {
                             country.build(sc, isFleet);
                         }
                     }
                 } else { //process as a disband
                     for (Unit unit : country.units) {
-                        if (unit.location.name == location) {
+                        if (unit.location.name.equals(location)) {
                             country.disband(unit);
                         }
                     }
