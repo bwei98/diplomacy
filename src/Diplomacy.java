@@ -37,7 +37,7 @@ public class Diplomacy {
         Country Russia = new Country("Russia",new Territory[]{Map.Mos, Map.Stp, Map.Sev, Map.War},3);
         countries[3] = Russia;
         Russia.setUnits(new Unit[]{ new Unit(Russia, true, Map.Stp), new Unit(Russia, false, Map.Mos),
-                                    new Unit(Russia, false, Map.War), new Unit(Russia, true, Map.Stp)});
+                                    new Unit(Russia, false, Map.War), new Unit(Russia, true, Map.Sev)});
 
         Country Austria = new Country("Austria",new Territory[]{Map.Vie, Map.Tri, Map.Bud},4);
         countries[4] = Austria;

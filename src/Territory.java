@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.Arrays;
+import java.util.*;
 
 
 public class Territory {
@@ -101,13 +100,11 @@ public class Territory {
      * @return Territory[] containing all neighbors of the Territory
      */
     public Territory[] allNeighbors() {
-        //TODO this does not work, which does not allow support moves to go through
-        List<Territory> union = Arrays.asList(this.neighborsA);
-        for (Territory t : neighborsF)
-            if (!union.contains(t))
-                union.add(t);
-        Territory[] out = (Territory[])union.toArray();
-        return out;
+        Set<Territory> union = new HashSet<Territory>();
+        union.addAll(Arrays.asList(neighborsA));
+        union.addAll(Arrays.asList(neighborsF));
+
+        return union.toArray(new Territory[union.size()]);
     }
 
     /**
