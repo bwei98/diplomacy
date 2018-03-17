@@ -56,7 +56,7 @@ public class Move implements Comparable {
         for(int i=0; i<order.length; i++)
             order[i]=orderOrig[i+2];
         for (Unit u : this.country.units) {
-            if ((u.isFleet && order[0].equals("F") || (!u.isFleet && order[0].equals("A")))
+            if (order.length>2 && (u.isFleet && order[0].equals("F") || (!u.isFleet && order[0].equals("A")))
                     && (u.location.equals(order[1]))) {
                 if (u.hasOrder) break;
                 this.unit = u;
@@ -183,7 +183,7 @@ public class Move implements Comparable {
                     }
                 if (unit.location.landlocked()) return;
                 for (Territory t : g.territories)
-                    if (t.equals(order[4]) && t.coast()) {
+                    if (t.equals(order[3]) && t.coast()) {
                         //potentially a convoy
                         this.destination = t;
                         this.status = Status.PENDING;
@@ -198,6 +198,7 @@ public class Move implements Comparable {
      * @return obvious
      */
     public String toString(){
+        if(this.status==Status.FAILED) return "Failed";
         String out = "";
         out += this.country.id;
         out += " ";

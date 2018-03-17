@@ -203,9 +203,8 @@ public class Game {
      */
     private void resolution(ArrayList<Move> moveset){
         //@ENSURES countPending(moveset)>countPending(moveset')
+        moveset.removeIf(m -> (m.status==Status.FAILED));
         for(Move m : moveset) {
-            if (m.status == Status.FAILED)
-                moveset.remove(m);
             if (m.status == Status.PENDING && m.type == Type.H) {
                 m.destination.takeStrength[m.country.id] += 2;
                 m.status = Status.EXECUTABLE;
