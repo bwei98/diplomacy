@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Diplomacy {
-    public static int numCountries = 1; //TODO make this 7
+    public static int numCountries = 7; //TODO make this 7
     public static Country[] countries = new Country[numCountries];
     public static boolean won = false;
     public static Game gameState;
@@ -15,7 +15,7 @@ public class Diplomacy {
     public static void init() {
         year = 1900;
         season = Map.SPRING;
-        Map.initUK();
+        Map.initFull();
 
         /*------------------------------------------------*/
         Country England = new Country("England", new Territory[]{Map.Lvp, Map.Edi, Map.Lon}, 0);
@@ -24,17 +24,38 @@ public class Diplomacy {
                                     new Unit(England, true, Map.Edi)});
 
         /*------------------------------------------------*/
+        Country France = new Country("France", new Territory[]{Map.Par, Map.Bre, Map.Mar}, 1);
+        countries[1] = France;
+        France.setUnits(new Unit[]{ new Unit(France, true, Map.Bre), new Unit(France, false, Map.Par),
+                                    new Unit(France, false, Map.Mar)});
+
+        Country Germany = new Country("Germany",new Territory[]{Map.Kie, Map.Ber, Map.Mun},2);
+        countries[2] = Germany;
+        Germany.setUnits(new Unit[]{new Unit(Germany, true, Map.Kie), new Unit(Germany, false, Map.Ber),
+                                    new Unit(Germany, false, Map.Mun)});
+
+        Country Russia = new Country("Russia",new Territory[]{Map.Mos, Map.Stp, Map.Sev, Map.War},3);
+        countries[3] = Russia;
+        Russia.setUnits(new Unit[]{ new Unit(Russia, true, Map.Stp), new Unit(Russia, false, Map.Mos),
+                                    new Unit(Russia, false, Map.War), new Unit(Russia, true, Map.Stp)});
+
+        Country Austria = new Country("Austria",new Territory[]{Map.Vie, Map.Tri, Map.Bud},4);
+        countries[4] = Austria;
+        Austria.setUnits(new Unit[]{new Unit(Austria, true, Map.Tri), new Unit(Austria, false, Map.Vie),
+                                    new Unit(Austria, false, Map.Bud)});
+
+        Country Italy = new Country("Italy",new Territory[]{Map.Rom, Map.Ven, Map.Nap},5);
+        countries[5] = Italy;
+        Italy.setUnits(new Unit[]{  new Unit(Italy, true, Map.Nap), new Unit(Italy, false, Map.Ven),
+                                    new Unit(Italy, false, Map.Rom)});
+
+        Country Turkey = new Country("Turkey",new Territory[]{Map.Ank, Map.Con, Map.Smy},6);
+        countries[6] = Turkey;
+        Turkey.setUnits(new Unit[]{ new Unit(Turkey, true, Map.Ank), new Unit(Turkey, false, Map.Smy),
+                                    new Unit(Turkey, false, Map.Con)});
+        /*------------------------------------------------*/
 
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
-
-        String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring"; if(season == Map.WINTER) seas = "Winter";
-        String message =  "==========================\n";
-        message += "==       Year: " + year + "     ==\n";
-        message += "==     Season: " + seas + "   ==\n";
-        message += "==========================";
-        System.out.println(message);
-
-        for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
     /**
@@ -89,15 +110,6 @@ public class Diplomacy {
 
             gameState = gameState.retreatphase(destinations);
         }
-
-        String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring "; if(season == Map.WINTER) seas = "Winter";
-        String message =  "==========================\n";
-        message += "==       Year: " + year + "     ==\n";
-        message += "==     Season: " + seas + "   ==\n";
-        message += "==========================";
-        System.out.println(message);
-
-        for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
     }
 
     /**
@@ -114,22 +126,45 @@ public class Diplomacy {
                 System.out.println(country.name + ": ");
                 int diff = country.numBuildsOrDisbands();
                 //Either disband or build
-                if (diff < 0) {
+                if (diff > 0) {
                     System.out.println("You have to disband " + diff + " armies.");
                     System.out.println("You may choose from: ");
                     for (Unit unit : country.units) System.out.println(unit);
-                    System.out.print("Enter your colon-separated disbands (specify F/A): \t");
+                    System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
-                } else if (diff > 0) {
-                    System.out.println("You may build " + diff + " armies.");
-                    System.out.println("You may build in: ");
-                    for(Territory sc : country.homeSCs) if(country.canBuild(sc)) System.out.println(sc.name);
-                    System.out.print("Enter your colon-separated builds (specific F/A): \t");
+                } else if (diff < 0) {
+                    System.out.println("You may build " + (-diff) + " armies.");
+                    System.out.print("You may build in: ");
+                    for(Territory sc : country.homeSCs) {
+                        if (country.canBuild(sc)) {
+                            System.out.print(sc.name + " ");
+                            if (sc.coast()) System.out.print("(F/A) ");
+                            if (sc.water()) System.out.print("(F)");
+                            if (sc.landlocked()) System.out.print("(A) ");
+                        }
+                    }
+                    System.out.print("\n Enter your semicolon-separated builds (specify F/A): \t");
                     buildMoves[i] = reader.nextLine().split("; ");
                 }
             }
         }
         gameState = gameState.buildphase(buildMoves);
+    }
+
+    /**
+     * Give countries supply centers and take them away as needed
+     */
+    public static void resolveUnits() {
+        for(Country country : countries) {
+            for(Unit unit : country.units) {
+                if(unit.location.isSupplyCenter() && unit.location.supplyCenter != unit.owner.id) {
+                    country.gainSupplyCenter(unit.location);
+                    if(unit.location.supplyCenter != -1)
+                        countries[unit.location.supplyCenter].loseSupplyCenter(unit.location);
+                    unit.location.supplyCenter = unit.owner.id;
+                }
+            }
+        }
     }
 
     /**
@@ -139,14 +174,26 @@ public class Diplomacy {
     public static void main(String[] args) {
         init();
         while(!won) {
-            if(season == Map.SPRING || season == Map.FALL) {
+            String seas = "Fall  "; if(season == Map.SPRING) seas = "Spring"; if(season == Map.WINTER) seas = "Winter";
+            String message =  "==========================\n";
+            message += "==       Year: " + year + "     ==\n";
+            message += "==     Season: " + seas + "   ==\n";
+            message += "==========================";
+            System.out.println(message);
+
+            for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
+
+            if(season == Map.SPRING) {
                 runSeason();
                 season = (season + 1) % 3;
-            }
-            if(season == Map.SPRING) year++;
-            if(season == Map.WINTER) {
+            } else if (season == Map.FALL) {
+                runSeason();
+                resolveUnits();
+                season = (season + 1) % 3;
+            } else if(season == Map.WINTER) {
                 runBuild();
                 season = Map.SPRING;
+                year++;
             }
         }
     }

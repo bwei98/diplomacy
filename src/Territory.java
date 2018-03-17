@@ -7,7 +7,7 @@ public class Territory {
     public Territory[] neighborsF;
     public Territory[] neighborsA;
     public int occupied; //-1: unoccupied, otherwise country id
-    public boolean supplyCenter; //true=yes
+    public int supplyCenter; //-99 = no, -1 = yes and neutral, otherwise yes and country id
     public Integer[] takeStrength;
 
     /**
@@ -15,7 +15,7 @@ public class Territory {
      * @param name string for the name
      * @param sc boolean for if it is a supplycenter
      */
-    public Territory(String name, boolean sc) {
+    public Territory(String name, int sc) {
         this.name = name;
         this.neighborsF = new Territory[0];
         this.neighborsA = new Territory[0];
@@ -33,7 +33,7 @@ public class Territory {
         neighborsF=null;
         neighborsA=null;
         occupied=-1;
-        supplyCenter=false;
+        supplyCenter=-99;
         takeStrength=null;
     }
 
@@ -82,6 +82,14 @@ public class Territory {
     }
 
     /**
+     * is this territory a supplyCenter?
+     * @return is it?
+     */
+    public boolean isSupplyCenter() {
+        return supplyCenter != -99;
+    }
+
+    /**
      * toString returns the name of the territory
      */
     public String toString() {
@@ -93,17 +101,12 @@ public class Territory {
      * @return Territory[] containing all neighbors of the Territory
      */
     public Territory[] allNeighbors() {
-        //TODO this does not work
+        //TODO this might work now
         List<Territory> union = Arrays.asList(this.neighborsA);
         for (Territory t : neighborsF)
             if (!union.contains(t))
                 union.add(t);
-        int size = union.size(), i = 0;
-        Territory[] out = new Territory[size];
-        while (!union.isEmpty()) {
-            out[i] = union.remove(0);
-            i++;
-        }
+        Territory[] out = (Territory[])union.toArray();
         return out;
     }
 

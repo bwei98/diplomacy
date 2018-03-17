@@ -1,3 +1,7 @@
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Country implements Comparable {
     public String name;
     public Unit[] units;
@@ -70,20 +74,6 @@ public class Country implements Comparable {
     }
 
     /**
-     * Add an array of new supplyCenters
-     * @param newSC The new supplyCenters the country gains
-     */
-    public void gainSupplyCenter(Territory[] newSC) {
-        Territory[] newTerritories = new Territory[supplyCenters.length + newSC.length];
-        for(int i = 0; i < supplyCenters.length; i++) newTerritories[i] = supplyCenters[i];
-        for(int i = supplyCenters.length; i < newTerritories.length; i++){
-            newTerritories[i] = newSC[i - supplyCenters.length];
-        }
-
-        supplyCenters = newTerritories;
-    }
-
-    /**
      * Remove the supply center from the country's SCs
      * Requires that the country actually has goneSC
      * @param goneSC The supply center to be removed
@@ -94,27 +84,6 @@ public class Country implements Comparable {
         for(Territory territory : supplyCenters) {
             if(!territory.equals(goneSC)){
                 newTerritories[idx] = territory;
-                idx++;
-            }
-        }
-
-        supplyCenters = newTerritories;
-    }
-
-    /**
-     * Remove the supply centers from the country's SCs
-     * Requires that the country actually has all of goneSCs
-     * @param goneSCs The supply centers to be removed
-     */
-    public void loseSupplyCenter(Territory[] goneSCs) {
-        Territory[] newTerritories = new Territory[supplyCenters.length - goneSCs.length];
-        int idx = 0;
-        for(Territory sc : supplyCenters) {
-            boolean getRidOf = false;
-            for(Territory newSC :  goneSCs) if(sc.equals(newSC)) getRidOf = true;
-
-            if(!getRidOf) {
-                newTerritories[idx] = sc;
                 idx++;
             }
         }
@@ -145,7 +114,7 @@ public class Country implements Comparable {
      */
     public void build(Territory sc, boolean isFleet) {
         Unit unit = new Unit(this, isFleet, sc);
-        Unit[] newUnits = new Unit[units.length];
+        Unit[] newUnits = new Unit[units.length + 1];
         for(int i = 0; i < units.length; i++) newUnits[i] = units[i];
         newUnits[units.length] = unit;
         sc.occupied = id;
@@ -204,10 +173,10 @@ public class Country implements Comparable {
     public String toString() {
         String str = name;
         str += "\nUnits: ";
-        for (Unit unit : units) str += unit.toString() + " ";
+        for (Unit unit : units) str += unit.toString();
         str += "\nSupply centers: ";
         for (Territory supplyCenter : supplyCenters)
-            if (supplyCenter.supplyCenter) str += supplyCenter.toString() + " ";
+            str += supplyCenter.toString() + " ";
         str += "\n----------\n";
         return str;
     }

@@ -11,88 +11,91 @@ public class Map {
     public static final int NUM_TERRITORIES = 75; //Change to 6 for UK
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
 
-    public static Territory Lvp = new Territory("Lvp", true);
-    public static Territory Cly = new Territory("Cly", false);
-    public static Territory Yor = new Territory("Yor", false);
-    public static Territory Wal = new Territory("Wal", false);
-    public static Territory Edi = new Territory("Edi", true);
-    public static Territory Lon = new Territory("Lon", true);
-    public static Territory Por = new Territory("Por", true);
-    public static Territory Spa = new Territory("Spa", true);
-    public static Territory Gas = new Territory("Gas", false);
-    public static Territory Mar = new Territory("Mar", true);
+    //Countries:
+    //England 0, France 1, Germany 2, Russia 3, Austria 4, Italy 5, Trukey 6
 
-    public static Territory Par = new Territory("Par", true);
-    public static Territory Bre = new Territory("Bre", true);
-    public static Territory Pic = new Territory("Pic", false);
-    public static Territory Bur = new Territory("Bur", false);
-    public static Territory Bel = new Territory("Bel", true);
-    public static Territory Hol = new Territory("Hol", true);
-    public static Territory Ruh = new Territory("Ruh", true);
-    public static Territory Kie = new Territory("Kie", true);
-    public static Territory Mun = new Territory("Mun", true);
-    public static Territory Ber = new Territory("Ber", true);
+    public static Territory Lvp = new Territory("Lvp", 0);
+    public static Territory Cly = new Territory("Cly", -99);
+    public static Territory Yor = new Territory("Yor", -99);
+    public static Territory Wal = new Territory("Wal", -99);
+    public static Territory Edi = new Territory("Edi", 0);
+    public static Territory Lon = new Territory("Lon", 0);
+    public static Territory Por = new Territory("Por", -1);
+    public static Territory Spa = new Territory("Spa", -1);
+    public static Territory Gas = new Territory("Gas", -99);
+    public static Territory Mar = new Territory("Mar", 1);
 
-    public static Territory Den = new Territory("Den", true);
-    public static Territory Pie = new Territory("Pie", false);
-    public static Territory Tyr = new Territory("Tyr", false);
-    public static Territory Boh = new Territory("Boh", false);
-    public static Territory Pru = new Territory("Pru", false);
-    public static Territory Sil = new Territory("Sil", false);
-    public static Territory War = new Territory("War", true);
-    public static Territory Gal = new Territory("Gal", false);
-    public static Territory Lvn = new Territory("Lvn", false);
-    public static Territory Stp = new Territory("Stp", true);
+    public static Territory Par = new Territory("Par", 1);
+    public static Territory Bre = new Territory("Bre", 1);
+    public static Territory Pic = new Territory("Pic", -99);
+    public static Territory Bur = new Territory("Bur", -99);
+    public static Territory Bel = new Territory("Bel", -1);
+    public static Territory Hol = new Territory("Hol", -1);
+    public static Territory Ruh = new Territory("Ruh", -99);
+    public static Territory Kie = new Territory("Kie", 2);
+    public static Territory Mun = new Territory("Mun", 2);
+    public static Territory Ber = new Territory("Ber", 2);
 
-    public static Territory Mos = new Territory("Mos", true);
-    public static Territory Ukr = new Territory("Ukr", false);
-    public static Territory Sev = new Territory("Sev", true);
-    public static Territory Rum = new Territory("Rum", true);
-    public static Territory Vie = new Territory("Vie", true);
-    public static Territory Bud = new Territory("Bud", true);
-    public static Territory Tri = new Territory("Tri", true);
-    public static Territory Ven = new Territory("Ven", true);
-    public static Territory Tus = new Territory("Tus", false);
-    public static Territory Rom = new Territory("Rom", true);
+    public static Territory Den = new Territory("Den", -1);
+    public static Territory Pie = new Territory("Pie", -99);
+    public static Territory Tyr = new Territory("Tyr", -99);
+    public static Territory Boh = new Territory("Boh", -99);
+    public static Territory Pru = new Territory("Pru", -99);
+    public static Territory Sil = new Territory("Sil", -99);
+    public static Territory War = new Territory("War", 3);
+    public static Territory Gal = new Territory("Gal", -99);
+    public static Territory Lvn = new Territory("Lvn", -99);
+    public static Territory Stp = new Territory("Stp", 3);
 
-    public static Territory Apu = new Territory("Apu", false);
-    public static Territory Nap = new Territory("Nap", true);
-    public static Territory Ser = new Territory("Ser", true);
-    public static Territory Alb = new Territory("Alb", false);
-    public static Territory Gre = new Territory("Gre", true);
-    public static Territory Bul = new Territory("Bul", true);
-    public static Territory Con = new Territory("Con", true);
-    public static Territory Smy = new Territory("Smy", true);
-    public static Territory Ank = new Territory("Ank", true);
-    public static Territory Arm = new Territory("Arm", false);
+    public static Territory Mos = new Territory("Mos", 3);
+    public static Territory Ukr = new Territory("Ukr", -99);
+    public static Territory Sev = new Territory("Sev", 3);
+    public static Territory Rum = new Territory("Rum", -1);
+    public static Territory Vie = new Territory("Vie", 4);
+    public static Territory Bud = new Territory("Bud", 4);
+    public static Territory Tri = new Territory("Tri", 4);
+    public static Territory Ven = new Territory("Ven", 5);
+    public static Territory Tus = new Territory("Tus", -99);
+    public static Territory Rom = new Territory("Rom", 5);
 
-    public static Territory Syr = new Territory("Syr", false);
-    public static Territory Naf = new Territory("Naf", false);
-    public static Territory Tun = new Territory("Tun", true);
-    public static Territory Nwy = new Territory("Nwy", true);
-    public static Territory Swe = new Territory("Swe", true);
-    public static Territory Fin = new Territory("Fin", false);
+    public static Territory Apu = new Territory("Apu", -99);
+    public static Territory Nap = new Territory("Nap", 5);
+    public static Territory Ser = new Territory("Ser", -1);
+    public static Territory Alb = new Territory("Alb", -99);
+    public static Territory Gre = new Territory("Gre", -1);
+    public static Territory Bul = new Territory("Bul", -1);
+    public static Territory Con = new Territory("Con", 6);
+    public static Territory Smy = new Territory("Smy", 6);
+    public static Territory Ank = new Territory("Ank", 6);
+    public static Territory Arm = new Territory("Arm", -99);
 
-    public static Territory BAR = new Territory("BAR", false);
-    public static Territory NWG = new Territory("NWG", false);
-    public static Territory BOT = new Territory("BOT", false);
-    public static Territory BAL = new Territory("BAL", false);
-    public static Territory SKA = new Territory("SKA", false);
-    public static Territory HEL = new Territory("HEL", false);
-    public static Territory NTH = new Territory("NTH", false);
-    public static Territory NAO = new Territory("NAO", false);
-    public static Territory IRI = new Territory("IRI", false);
-    public static Territory ENG = new Territory("ENG", false);
+    public static Territory Syr = new Territory("Syr", -99);
+    public static Territory Naf = new Territory("Naf", -99);
+    public static Territory Tun = new Territory("Tun", -1);
+    public static Territory Nwy = new Territory("Nwy", -1);
+    public static Territory Swe = new Territory("Swe", -1);
+    public static Territory Fin = new Territory("Fin", -99);
 
-    public static Territory MAO = new Territory("MAO", false);
-    public static Territory LYO = new Territory("LYO", false);
-    public static Territory WES = new Territory("WES", false);
-    public static Territory TYS = new Territory("TYS", false);
-    public static Territory ADR = new Territory("ADR", false);
-    public static Territory ION = new Territory("ION", false);
-    public static Territory AEG = new Territory("AEG", false);
-    public static Territory EAS = new Territory("EAS", false);
-    public static Territory BLA = new Territory("BLA", false);
+    public static Territory BAR = new Territory("BAR", -99);
+    public static Territory NWG = new Territory("NWG", -99);
+    public static Territory BOT = new Territory("BOT", -99);
+    public static Territory BAL = new Territory("BAL", -99);
+    public static Territory SKA = new Territory("SKA", -99);
+    public static Territory HEL = new Territory("HEL", -99);
+    public static Territory NTH = new Territory("NTH", -99);
+    public static Territory NAO = new Territory("NAO", -99);
+    public static Territory IRI = new Territory("IRI", -99);
+    public static Territory ENG = new Territory("ENG", -99);
+
+    public static Territory MAO = new Territory("MAO", -99);
+    public static Territory LYO = new Territory("LYO", -99);
+    public static Territory WES = new Territory("WES", -99);
+    public static Territory TYS = new Territory("TYS", -99);
+    public static Territory ADR = new Territory("ADR", -99);
+    public static Territory ION = new Territory("ION", -99);
+    public static Territory AEG = new Territory("AEG", -99);
+    public static Territory EAS = new Territory("EAS", -99);
+    public static Territory BLA = new Territory("BLA", -99);
 
 
     public static void initUK() {
@@ -156,6 +159,67 @@ public class Map {
         Kie.setNeighbors(new Territory[]{Den, Hol, Ber, Mun, Ruh}, new Territory[]{HEL, BAL, Hol, Den, Ber});
         Mun.setNeighbors(new Territory[]{Kie, Ber, Sil, Boh, Tyr, Bur, Ruh}, new Territory[]{});
         Ber.setNeighbors(new Territory[]{Mun, Kie, Pru, Sil}, new Territory[]{Pru, BAL, Kie});
+
+        Den.setNeighbors(new Territory[]{Swe, Kie}, new Territory[]{NTH, SKA, BAL, HEL, Kie, Swe});
+        Pie.setNeighbors(new Territory[]{Mar, Tus, Tyr, Ven}, new Territory[]{Mar, Tus, LYO});
+        Tyr.setNeighbors(new Territory[]{Pie, Ven, Tri, Vie, Boh, Mun}, new Territory[]{});
+        Boh.setNeighbors(new Territory[]{Mun, Sil, Gal, Vie, Tyr}, new Territory[]{});
+        Pru.setNeighbors(new Territory[]{Ber, Sil, War, Lvn}, new Territory[]{Ber, BAL, Lvn});
+        Sil.setNeighbors(new Territory[]{Mun, Ber, Pru, War, Gal, Boh}, new Territory[]{});
+        War.setNeighbors(new Territory[]{Sil, Pru, Lvn, Mos, Ukr, Gal}, new Territory[]{});
+        Gal.setNeighbors(new Territory[]{Boh, Sil, War, Ukr, Rum, Bud, Vie}, new Territory[]{});
+        Lvn.setNeighbors(new Territory[]{Pru, War, Stp, Mos}, new Territory[]{BAL, BOT, Stp, Pru});
+        Stp.setNeighbors(new Territory[]{Nwy, Fin, Lvn, Mos}, new Territory[]{BAR, Nwy, Fin, Lvn, BOT});
+
+        Mos.setNeighbors(new Territory[]{Stp, Lvn, War, Ukr, Sev}, new Territory[]{});
+        Ukr.setNeighbors(new Territory[]{War, Mos, Sev, Rum, Gal}, new Territory[]{});
+        Sev.setNeighbors(new Territory[]{Mos, Ukr, Rum, Arm}, new Territory[]{Rum, BLA, Arm});
+        Rum.setNeighbors(new Territory[]{Sev, Ukr, Gal, Bud, Ser, Bul}, new Territory[]{Sev, Bul, BLA});
+        Vie.setNeighbors(new Territory[]{Boh, Gal, Bud, Tri, Tyr}, new Territory[]{});
+        Bud.setNeighbors(new Territory[]{Vie, Gal, Rum, Ser, Tri}, new Territory[]{});
+        Tri.setNeighbors(new Territory[]{Ven, Tyr, Vie, Bud, Ser, Alb}, new Territory[]{Ven, ADR, Alb});
+        Ven.setNeighbors(new Territory[]{Pie, Tus, Tyr, Tri, Apu, Rom}, new Territory[]{Tri, Apu, ADR});
+        Tus.setNeighbors(new Territory[]{Pie, Ven, Rom}, new Territory[]{Pie, LYO, Rom, TYS});
+        Rom.setNeighbors(new Territory[]{Tus, Ven, Apu, Nap}, new Territory[]{Tus, Nap, TYS});
+
+        Apu.setNeighbors(new Territory[]{Ven, Rom, Nap}, new Territory[]{Ven, ADR, ION, Nap});
+        Nap.setNeighbors(new Territory[]{Apu, Rom}, new Territory[]{Rom, Apu, TYS, ION});
+        Ser.setNeighbors(new Territory[]{Tri, Bud, Rum, Bul, Gre, Alb}, new Territory[]{});
+        Alb.setNeighbors(new Territory[]{Tri, Ser, Gre}, new Territory[]{Tri, Gre, ION, ADR});
+        Gre.setNeighbors(new Territory[]{Alb, Ser, Bul}, new Territory[]{Alb, Bul, AEG, ION});
+        Bul.setNeighbors(new Territory[]{Gre, Ser, Rum, Con}, new Territory[]{Gre, AEG, Con, Rum, BLA});
+        Con.setNeighbors(new Territory[]{Bul, Ank, Smy}, new Territory[]{BLA, Ank, AEG, Bul, Smy});
+        Smy.setNeighbors(new Territory[]{Con, Ank, Arm, Syr}, new Territory[]{AEG, Con, Syr, EAS});
+        Ank.setNeighbors(new Territory[]{Con, Smy, Arm}, new Territory[]{Arm, Con, BLA});
+        Arm.setNeighbors(new Territory[]{Ank, Smy, Syr, Sev}, new Territory[]{Ank, Sev, BLA});
+
+        Syr.setNeighbors(new Territory[]{Smy, Arm}, new Territory[]{Smy, EAS});
+        Naf.setNeighbors(new Territory[]{Tun}, new Territory[]{MAO, WES, Tun});
+        Tun.setNeighbors(new Territory[]{Naf}, new Territory[]{ION, TYS, WES, Naf});
+        Nwy.setNeighbors(new Territory[]{Swe, Fin, Stp}, new Territory[]{Stp, BAR, NWG, NTH, SKA, Swe});
+        Swe.setNeighbors(new Territory[]{Nwy, Den, Fin}, new Territory[]{BOT, Fin, BAL, Den, SKA, Nwy});
+        Fin.setNeighbors(new Territory[]{Nwy, Swe, Stp}, new Territory[]{BOT, Stp, Swe});
+
+        BAR.setNeighbors(new Territory[]{}, new Territory[]{Stp, Nwy, NWG});
+        NWG.setNeighbors(new Territory[]{}, new Territory[]{NAO, Cly, Edi, NTH, Nwy, BAR});
+        BOT.setNeighbors(new Territory[]{}, new Territory[]{Swe, Fin, Stp, Lvn, BAL});
+        BAL.setNeighbors(new Territory[]{}, new Territory[]{Den, Swe, BOT, Lvn, Pru, Ber, Kie});
+        SKA.setNeighbors(new Territory[]{}, new Territory[]{NTH, Nwy, Swe, Den});
+        HEL.setNeighbors(new Territory[]{}, new Territory[]{NTH, Den, Kie, Hol});
+        NTH.setNeighbors(new Territory[]{}, new Territory[]{Lon, Yor, Edi, NWG, Nwy, SKA, Den, HEL, Hol, Bel, ENG});
+        NAO.setNeighbors(new Territory[]{}, new Territory[]{NWG, Cly, Lvp, IRI, MAO});
+        IRI.setNeighbors(new Territory[]{}, new Territory[]{NAO, Cly, Lvp, Wal, ENG, MAO});
+        ENG.setNeighbors(new Territory[]{}, new Territory[]{MAO, IRI, Wal, Lon, Bel, Pic, Bre});
+
+        MAO.setNeighbors(new Territory[]{}, new Territory[]{NAO, IRI, ENG, Bre, Gas, Spa, Por, Naf, WES});
+        LYO.setNeighbors(new Territory[]{}, new Territory[]{Spa, Mar, Pie, Tus, TYS, WES});
+        WES.setNeighbors(new Territory[]{}, new Territory[]{MAO, Spa, LYO, TYS, Tun, Naf});
+        TYS.setNeighbors(new Territory[]{}, new Territory[]{LYO, Tus, Rom, Nap, ION, Tun, WES});
+        ADR.setNeighbors(new Territory[]{}, new Territory[]{Apu, Ven, Tri, Alb, ION});
+        ION.setNeighbors(new Territory[]{}, new Territory[]{Tun, TYS, Nap, Apu, ADR, Alb, Gre, AEG, EAS});
+        AEG.setNeighbors(new Territory[]{}, new Territory[]{ION, Gre, Bul, Con, Smy, EAS});
+        EAS.setNeighbors(new Territory[]{}, new Territory[]{ION, AEG, Smy, Syr});
+        BLA.setNeighbors(new Territory[]{}, new Territory[]{Con, Bul, Rum, Sev, Arm, Ank});
     }
 
 
