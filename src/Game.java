@@ -173,9 +173,9 @@ public class Game {
             System.out.println(m.toString());
 
         //determine which are valid
-        while(countPending(moves)>0)
+        while(countPending(moves)>0) {
             resolution(moves);
-
+        }
         //remove all unnecessary
         moves.removeIf(m -> (m.status!=Status.EXECUTABLE));
 
@@ -203,8 +203,10 @@ public class Game {
      */
     private void resolution(ArrayList<Move> moveset){
         //@ENSURES countPending(moveset)>countPending(moveset')
+        System.out.println(moveset.toString());
         moveset.removeIf(m -> (m.status==Status.FAILED));
         for(Move m : moveset) {
+            System.out.println("loop 1: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.H) {
                 m.destination.takeStrength[m.country.id] += 2;
                 m.status = Status.EXECUTABLE;
@@ -212,6 +214,7 @@ public class Game {
             }
         }
         for(Move m : moveset) {
+            System.out.println("loop 2: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.M) {
                 m.destination.takeStrength[m.country.id]++;
                 //what if you *attack* at territory with two of your units (not support);
@@ -221,6 +224,7 @@ public class Game {
             }
         }
         for(Move m : moveset) {
+            System.out.println("loop 3: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.SH) {
                 for (Move n : moveset)
                     if (!m.equals(n) && n.destination.equals(m.destination) && n.type != Type.M
@@ -234,7 +238,8 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            if (m.type == Type.C) {
+            System.out.println("loop 4: " + m.toString());
+            if (m.status == Status.PENDING && m.type == Type.C) {
                 for (Move n : moveset)
                     if (n.type == Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
                         m.status = Status.EXECUTABLE;
@@ -245,7 +250,9 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            if (m.type == Type.CM) {
+            System.out.println("loop 5: " + m.toString());
+            if (m.status == Status.PENDING && m.type == Type.CM) {
+                System.out.println("reached CM");
                 //continuations would actually be kinda useful here
                 ArrayList<Territory> visited = new ArrayList<>();
                 Territory start = m.unit.location;
@@ -262,7 +269,8 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            if (m.type == Type.SA) {
+            System.out.println("loop 6: " + m.toString());
+            if (m.status == Status.PENDING && m.type == Type.SA) {
                 for (Move n : moveset)
                     if (n.type == Type.M && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
                         m.status = Status.EXECUTABLE;
@@ -284,19 +292,19 @@ public class Game {
      * @return is it valid?
      */
     private boolean convoyMove(Move m, ArrayList<Move> moveset, ArrayList<Territory> visited, Territory loc){
+        System.out.println("Call to convoyMove: " + m.toString() + " Moveset: " + moveset.toString() + " \n visited: " + visited.toString() + " loc: " + loc.toString());
         visited.add(loc);
         if(m.destination.equals(loc)) return true;
         boolean success = false;
         for(Territory t: loc.neighborsF) {
             for (Move n : moveset) {
                 if (n.type == Type.C && n.source.equals(m.unit.location) &&
-                        n.destination.equals(m.destination) && !visited.contains(n.unit.location) && !success) {
+                        n.destination.equals(m.destination) && !visited.contains(t) && !success) {
                     success = convoyMove(m, moveset, visited, t);
                 }
             }
-
         }
-        if(!success) visited.remove(loc);
+        //if(!success) visited.remove(loc);
         return success;
     }
 

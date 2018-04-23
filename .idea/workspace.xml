@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5ecfbc53-ffe8-41d4-a036-9f09f0f6db21" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/bin/Map.class" afterPath="$PROJECT_DIR$/bin/Map.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Move.class" afterPath="$PROJECT_DIR$/bin/Move.class" />
+      <change beforePath="$PROJECT_DIR$/bin/Diplomacy.class" afterPath="$PROJECT_DIR$/bin/Diplomacy.class" />
+      <change beforePath="$PROJECT_DIR$/bin/Game.class" afterPath="$PROJECT_DIR$/bin/Game.class" />
+      <change beforePath="$PROJECT_DIR$/bin/Territory.class" afterPath="$PROJECT_DIR$/bin/Territory.class" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/Move.java" afterPath="$PROJECT_DIR$/src/Move.java" />
-      <change beforePath="$PROJECT_DIR$/src/Territory.java" afterPath="$PROJECT_DIR$/src/Territory.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,23 +21,17 @@
       <file leaf-file-name="Territory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Territory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="103" column="22" lean-forward="false" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+            <state relative-caret-position="1485">
+              <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-                <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-                <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-                <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-                <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-                <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
+                <element signature="e#1485#1486#0" expanded="true" />
+                <element signature="e#1527#1528#0" expanded="true" />
+                <element signature="e#2417#2418#0" expanded="true" />
+                <element signature="e#2459#2460#0" expanded="true" />
+                <element signature="e#2557#2558#0" expanded="true" />
+                <element signature="e#2584#2585#0" expanded="true" />
                 <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
                 <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
                 <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -52,24 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Unit.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Unit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="463">
+              <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
               <folding>
                 <element signature="docComment;method#canMove#0;class#Unit#0" expanded="false" />
                 <element signature="method#canMove#0;class#Unit#0" expanded="false" />
@@ -78,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Diplomacy.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Diplomacy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            <state relative-caret-position="-1107">
+              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
               <folding>
                 <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
                 <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
@@ -94,8 +73,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="215" column="50" lean-forward="true" selection-start-line="215" selection-start-column="50" selection-end-line="215" selection-end-column="50" />
+            <state relative-caret-position="172">
+              <caret line="302" column="65" lean-forward="true" selection-start-line="302" selection-start-column="65" selection-end-line="302" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#buildphase#0;class#Game#0" expanded="false" />
@@ -104,7 +83,7 @@
                 <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#convoyMove#0;class#Game#0" expanded="false" />
-                <element signature="method#convoyMove#0;class#Game#0" expanded="false" />
+                <element signature="method#execution#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
                 <element signature="method#countPending#0;class#Game#0" expanded="false" />
                 <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
@@ -117,9 +96,12 @@
       <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
+            <state relative-caret-position="-511">
+              <caret line="51" column="52" lean-forward="false" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
               <folding>
+                <element signature="docComment;method#Move#0;class#Move#0" expanded="false" />
+                <element signature="method#Move#2;class#Move#0" expanded="false" />
+                <element signature="docComment;method#toString#0;class#Move#0" expanded="false" />
                 <element signature="docComment;method#compareTo#0;class#Move#0" expanded="false" />
               </folding>
             </state>
@@ -129,8 +111,8 @@
       <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2107">
-              <caret line="31" column="59" lean-forward="false" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+            <state relative-caret-position="285">
+              <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,7 +123,7 @@
       <file leaf-file-name="Country.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Country.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1927">
+            <state relative-caret-position="300">
               <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
                 <element signature="e#5820#5821#0" expanded="true" />
@@ -185,16 +167,15 @@
         <option value="$PROJECT_DIR$/src/Diplomacy.java" />
         <option value="$PROJECT_DIR$/src/Territory.java" />
         <option value="$PROJECT_DIR$/src/Map.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Move.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="601" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="839" />
+    <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -213,7 +194,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,9 +220,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,57 +361,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28447205" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.621118" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -448,20 +407,14 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -522,20 +475,14 @@
         <state relative-caret-position="690">
           <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -570,7 +517,7 @@
             <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#convoyMove#0;class#Game#0" expanded="false" />
-            <element signature="method#convoyMove#0;class#Game#0" expanded="false" />
+            <element signature="method#execution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
             <element signature="method#countPending#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
@@ -605,20 +552,14 @@
         <state relative-caret-position="300">
           <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -667,20 +608,14 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -708,20 +643,14 @@
         <state relative-caret-position="240">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -749,20 +678,14 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -838,20 +761,14 @@
         <state relative-caret-position="330">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -875,7 +792,7 @@
             <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#convoyMove#0;class#Game#0" expanded="false" />
-            <element signature="method#convoyMove#0;class#Game#0" expanded="false" />
+            <element signature="method#execution#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
             <element signature="method#countPending#0;class#Game#0" expanded="false" />
             <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
@@ -889,20 +806,14 @@
         <state relative-caret-position="300">
           <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -951,20 +862,14 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -992,20 +897,14 @@
         <state relative-caret-position="240">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -1033,20 +932,14 @@
         <state relative-caret-position="90">
           <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
             <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
             <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
@@ -1103,29 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1927">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding>
-            <element signature="e#5820#5821#0" expanded="true" />
-            <element signature="e#5865#5866#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-          <folding>
-            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
-            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1134,48 +1004,8 @@
         <state relative-caret-position="416">
           <caret line="123" column="6" lean-forward="true" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
           <folding>
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5047#5048#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Territory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="103" column="22" lean-forward="false" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="method#Territory#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#equals#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchF#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="method#touchA#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#isSupplyCenter#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#toString#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#allNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
-            <element signature="method#setNeighbors#1;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
-            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="185" column="40" lean-forward="false" selection-start-line="185" selection-start-column="40" selection-end-line="185" selection-end-column="40" />
-          <folding>
-            <element signature="docComment;method#compareTo#0;class#Move#0" expanded="false" />
+            <element signature="e#4990#4991#0" expanded="false" />
+            <element signature="e#5047#5048#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1184,38 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="215" column="50" lean-forward="true" selection-start-line="215" selection-start-column="50" selection-end-line="215" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#buildphase#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#retreatphase#0;class#Game#0" expanded="false" />
-            <element signature="method#retreatphase#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#convoyMove#0;class#Game#0" expanded="false" />
-            <element signature="method#convoyMove#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
-            <element signature="method#countPending#0;class#Game#0" expanded="false" />
-            <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
-            <element signature="method#countExecutable#0;class#Game#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2107">
-          <caret line="31" column="59" lean-forward="false" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,19 +1027,108 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="15">
             <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Territory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1485#1486#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2557#2558#0" expanded="true" />
+            <element signature="e#2584#2585#0" expanded="true" />
+            <element signature="docComment;method#setNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="method#setNeighbors#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#setNeighbors#1;class#Territory#0" expanded="false" />
+            <element signature="method#setNeighbors#1;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#landlocked#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#water#0;class#Territory#0" expanded="false" />
+            <element signature="docComment;method#coast#0;class#Territory#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="e#5820#5821#0" expanded="true" />
+            <element signature="e#5865#5866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="463">
+          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="docComment;method#canMove#0;class#Unit#0" expanded="false" />
             <element signature="method#canMove#0;class#Unit#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-511">
+          <caret line="51" column="52" lean-forward="false" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+          <folding>
+            <element signature="docComment;method#Move#0;class#Move#0" expanded="false" />
+            <element signature="method#Move#2;class#Move#0" expanded="false" />
+            <element signature="docComment;method#toString#0;class#Move#0" expanded="false" />
+            <element signature="docComment;method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="302" column="65" lean-forward="true" selection-start-line="302" selection-start-column="65" selection-end-line="302" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#buildphase#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#retreatphase#0;class#Game#0" expanded="false" />
+            <element signature="method#retreatphase#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#movephase#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#resolution#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#convoyMove#0;class#Game#0" expanded="false" />
+            <element signature="method#execution#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#countPending#0;class#Game#0" expanded="false" />
+            <element signature="method#countPending#0;class#Game#0" expanded="false" />
+            <element signature="docComment;method#countExecutable#0;class#Game#0" expanded="false" />
+            <element signature="method#countExecutable#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1107">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
           </folding>
         </state>
       </provider>
