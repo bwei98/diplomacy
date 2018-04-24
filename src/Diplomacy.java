@@ -13,7 +13,7 @@ public class Diplomacy {
      * Initialize the game with the correct starts and units assigned
      */
     public static void init() {
-        year = 1900;
+        year = 1901;
         season = Map.SPRING;
         Map.initFull();
 
@@ -72,8 +72,7 @@ public class Diplomacy {
         for(int i = 0; i < numCountries; i++) {
             if(countries[i].alive) {
                 System.out.print(countries[i].name + " : what are your moves?\t");
-                String moveLine = reader.nextLine();
-                String[] cMoves = moveLine.split(";");
+                String[] cMoves = processInput(reader.nextLine()).split("; ");
 
                 for (int j = 0; j < cMoves.length; j++) cMoves[j] = i + " : " + cMoves[j].trim();
                 moves[i] = cMoves;
@@ -104,7 +103,7 @@ public class Diplomacy {
                 for(Territory t : retreat.canMove()) System.out.print(", " + t);
                 System.out.print("\n Where do you want to move this unit? \t");
 
-                String order = reader.nextLine();
+                String order = reader.nextLine().toUpperCase();
                 destinations[i] = order.trim();
             }
 
@@ -131,7 +130,7 @@ public class Diplomacy {
                     System.out.println("You may choose from: ");
                     for (Unit unit : country.units) System.out.println(unit);
                     System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
-                    buildMoves[i] = reader.nextLine().split("; ");
+                    buildMoves[i] = processInput(reader.nextLine()).split("; ");
                 } else if (diff < 0) {
                     System.out.println("You may build " + (-diff) + " armies.");
                     System.out.print("You may build in: ");
@@ -144,7 +143,7 @@ public class Diplomacy {
                         }
                     }
                     System.out.print("\n Enter your semicolon-separated builds (specify F/A): \t");
-                    buildMoves[i] = reader.nextLine().split("; ");
+                    buildMoves[i] = processInput(reader.nextLine()).split("; ");
                 }
             }
         }
@@ -196,6 +195,12 @@ public class Diplomacy {
                 year++;
             }
         }
+    }
+
+    public static String processInput(String o) {
+        o = o.trim().toUpperCase();
+        if(o.endsWith(";")) o = o.substring(0, o.length() - 1);
+        return o;
     }
 
 }

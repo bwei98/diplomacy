@@ -51,7 +51,7 @@ public class Territory {
      * @return boolean on if they are equal
      */
     public boolean equals(String s){
-        return this.name.equals(s);
+        return this.name.toUpperCase().equals(s.toUpperCase());
     }
 
     /**
