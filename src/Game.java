@@ -163,14 +163,14 @@ public class Game {
             for(String o : orders[id]) {
                 String[] order = o.split(" ");
                 for(String s: order)    s=s.trim();
-                System.out.println("movephase, id: " + id);
+//                System.out.println("movephase, id: " + id);
                 Move m=new Move(this, id, order);
                 moves.add(m);
             }
         }
 
-        for(Move m : moves)
-            System.out.println(m.toString());
+//        for(Move m : moves)
+//            System.out.println(m.toString());
 
         //determine which are valid
         while(countPending(moves)>0) {
@@ -179,12 +179,12 @@ public class Game {
         //remove all unnecessary
         moves.removeIf(m -> (m.status!=Status.EXECUTABLE));
 
-        System.out.println("NumExecutable = " + countExecutable(moves));
+//        System.out.println("NumExecutable = " + countExecutable(moves));
         //executes moves
         while(countExecutable(moves)>0) {
             g = this.execution(moves);
             moves.removeIf(m -> (m.status==Status.EXECUTED));
-            System.out.println("NumExecutable = " + countExecutable(moves));
+//            System.out.println("NumExecutable = " + countExecutable(moves));
         }
 
         //reset
@@ -203,10 +203,8 @@ public class Game {
      */
     private void resolution(ArrayList<Move> moveset){
         //@ENSURES countPending(moveset)>countPending(moveset')
-        System.out.println(moveset.toString());
         moveset.removeIf(m -> (m.status==Status.FAILED));
         for(Move m : moveset) {
-            System.out.println("loop 1: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.H) {
                 m.destination.takeStrength[m.country.id] += 2;
                 m.status = Status.EXECUTABLE;
@@ -214,7 +212,6 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            System.out.println("loop 2: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.M) {
                 m.destination.takeStrength[m.country.id]++;
                 //what if you *attack* at territory with two of your units (not support);
@@ -224,7 +221,6 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            System.out.println("loop 3: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.SH) {
                 for (Move n : moveset)
                     if (!m.equals(n) && n.destination.equals(m.destination) && n.type != Type.M
@@ -238,7 +234,6 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            System.out.println("loop 4: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.C) {
                 for (Move n : moveset)
                     if (n.type == Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
@@ -250,9 +245,7 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            System.out.println("loop 5: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.CM) {
-                System.out.println("reached CM");
                 //continuations would actually be kinda useful here
                 ArrayList<Territory> visited = new ArrayList<>();
                 Territory start = m.unit.location;
@@ -269,7 +262,6 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            System.out.println("loop 6: " + m.toString());
             if (m.status == Status.PENDING && m.type == Type.SA) {
                 for (Move n : moveset)
                     if (n.type == Type.M && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
@@ -292,7 +284,7 @@ public class Game {
      * @return is it valid?
      */
     private boolean convoyMove(Move m, ArrayList<Move> moveset, ArrayList<Territory> visited, Territory loc){
-        System.out.println("Call to convoyMove: " + m.toString() + " Moveset: " + moveset.toString() + " \n visited: " + visited.toString() + " loc: " + loc.toString());
+//        System.out.println("Call to convoyMove: " + m.toString() + " Moveset: " + moveset.toString() + " \n visited: " + visited.toString() + " loc: " + loc.toString());
         visited.add(loc);
         if(m.destination.equals(loc)) return true;
         boolean success = false;
@@ -315,20 +307,13 @@ public class Game {
      */
     private Game execution(ArrayList<Move> moveset) {
         //@ENSURES countExecutable(moveset)>countExecutable(moveset')
-        System.out.println("entering execution");
         ArrayList<Unit> retreats = new ArrayList<>();
         Unit[] newRetreats = this.retreatingUnits;
         Move m = moveset.get(0);
         Territory t = m.destination;
-        //TODO if mostPow is tie then all orders fail
-        int mostPow = 0;
-        int mostPowCountry = t.occupied;
-        for (int i = 0; i < t.takeStrength.length; i++){
-            if (t.takeStrength[i] > mostPow) {
-                mostPow = t.takeStrength[i];
-                mostPowCountry = i;
-            }
-    }
+
+        int mostPowCountry = arrMaxTies(t.takeStrength, t.occupied);
+
         if(t.occupied!=mostPowCountry){
             Collections.addAll(retreats, this.retreatingUnits);
             if(t.occupied != -1) {
@@ -352,9 +337,9 @@ public class Game {
         for(Move n : moveset)
             if(n.destination.equals(t))
                 n.status=Status.EXECUTED;
-        for(Country c : this.countries)
-            for(Unit u : c.units)
-                System.out.println(c.name + " " + u.toString());
+//        for(Country c : this.countries)
+//            for(Unit u : c.units)
+//                System.out.println(c.name + " " + u.toString());
         return new Game(this.countries, this.territories, newRetreats);
     }
 
@@ -384,6 +369,34 @@ public class Game {
         return numExecutable;
     }
 
+
+    /**
+     * Returns int for the index of the maximum of the array or a default value if there is a tie
+     * @param arr int array
+     * @param def default value
+     * @return index of max of arr or def if the max is a tie
+     */
+    private static int arrMaxTies(Integer[] arr, int def){
+        int ind;
+        if(arr[0]< arr[1])
+            ind = 1;
+        else
+            ind = 0;
+        int max1 = Integer.max(arr[0],arr[1]);
+        int max2 = Integer.min(arr[0],arr[1]);
+        for(int i=2; i<arr.length; i++){
+            if(arr[i]>max1){
+                max2=max1;
+                max1=arr[2];
+                ind = i;
+            }
+            else if(arr[i]>max2){
+                max2=arr[i];
+            }
+        }
+        if(max1==max2) return def;
+        return ind;
+    }
 
     //## : A Lvn H   (7)
     //## : A Lvn - War  (11)

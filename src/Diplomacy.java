@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Diplomacy {
-    public static int numCountries = 7; //TODO make this 7
+    public static int numCountries = 7;
     public static Country[] countries = new Country[numCountries];
     public static boolean won = false;
     public static Game gameState;
@@ -79,7 +79,7 @@ public class Diplomacy {
             }
         }
 
-        System.out.println("Got it");
+   //     System.out.println("Got it");
 
         gameState = gameState.movephase(moves);
         Unit[] retreats = gameState.retreatingUnits;

@@ -66,7 +66,6 @@ public class Move implements Comparable {
             }
         }
         if (unitCheck) {
-            System.out.println("unitCheck failed");
             this.status = Status.FAILED;
             this.type = Type.D;
             this.destination = null;
