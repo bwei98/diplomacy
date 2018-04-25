@@ -3,8 +3,8 @@ import java.util.Collections;
 import java.util.Arrays;
 
 public class Game {
-    public Country[] countries;
-    public Territory[] territories;
+    public final Country[] countries;
+    public final Territory[] territories;
     public Unit[] retreatingUnits;
     //Countries know what units they have, units know where they are so that should be enough
 
@@ -116,7 +116,7 @@ public class Game {
         Territory[] places = new Territory[retreatingUnits.length];
         int[] placesCount = new int[retreatingUnits.length];
         for(int i = 0; i < retreatingUnits.length; i++) {
-            Unit unit = retreatingUnits[i];
+//            Unit unit = retreatingUnits[i];
             Territory dest = dests[i];
 
             for(int j = 0; j < places.length; j++) {
@@ -155,7 +155,7 @@ public class Game {
      */
     public Game movephase(String[][] orders) {
         ArrayList<Move> moves = new ArrayList<>();
-        ArrayList<Unit> retreats = new ArrayList<>();
+//        ArrayList<Unit> retreats = new ArrayList<>();
         Game g = new Game();
 
         //reads orders into moves arraylist

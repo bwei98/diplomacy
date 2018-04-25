@@ -2,7 +2,7 @@ import java.util.*;
 
 
 public class Territory {
-    public String name;
+    public final String name;
     public Territory[] neighborsF;
     public Territory[] neighborsA;
     public int occupied; //-1: unoccupied, otherwise country id
@@ -100,7 +100,7 @@ public class Territory {
      * @return Territory[] containing all neighbors of the Territory
      */
     public Territory[] allNeighbors() {
-        Set<Territory> union = new HashSet<Territory>();
+        Set<Territory> union = new HashSet<>();
         union.addAll(Arrays.asList(neighborsA));
         union.addAll(Arrays.asList(neighborsF));
 

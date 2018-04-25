@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Unit implements Comparable {
-    public Country owner;
-    public boolean isFleet;    //true=fleet, false=army
+    public final Country owner;
+    public final boolean isFleet;    //true=fleet, false=army
     public Territory location;
     public boolean hasOrder;
 

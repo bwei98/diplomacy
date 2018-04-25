@@ -1,14 +1,11 @@
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
+@SuppressWarnings("ALL")
 public class Country implements Comparable {
-    public String name;
+    public final String name;
     public Unit[] units;
     public Territory[] supplyCenters;
-    public Territory[] homeSCs;
+    public final Territory[] homeSCs;
     public boolean alive;
-    public int id;
+    public final int id;
 
     /**
      * Basic constructor for Countries
@@ -67,7 +64,7 @@ public class Country implements Comparable {
      */
     public void gainSupplyCenter(Territory newSC) {
         Territory[] newTerritories = new Territory[supplyCenters.length + 1];
-        for(int i = 0; i < supplyCenters.length; i++) newTerritories[i] = supplyCenters[i];
+        System.arraycopy(supplyCenters, 0, newTerritories, 0, supplyCenters.length);
         newTerritories[supplyCenters.length] = newSC;
 
         supplyCenters = newTerritories;
@@ -115,7 +112,7 @@ public class Country implements Comparable {
     public void build(Territory sc, boolean isFleet) {
         Unit unit = new Unit(this, isFleet, sc);
         Unit[] newUnits = new Unit[units.length + 1];
-        for(int i = 0; i < units.length; i++) newUnits[i] = units[i];
+        System.arraycopy(units, 0, newUnits, 0, units.length);
         newUnits[units.length] = unit;
         sc.occupied = id;
 

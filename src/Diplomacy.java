@@ -182,17 +182,21 @@ public class Diplomacy {
 
             for(int i = 0; i < numCountries; i++) System.out.println(countries[i].toString());
 
-            if(season == Map.SPRING) {
-                runSeason();
-                season = (season + 1) % 3;
-            } else if (season == Map.FALL) {
-                runSeason();
-                resolveUnits();
-                season = (season + 1) % 3;
-            } else if(season == Map.WINTER) {
-                runBuild();
-                season = Map.SPRING;
-                year++;
+            switch (season) {
+                case Map.SPRING:
+                    runSeason();
+                    season = (season + 1) % 3;
+                    break;
+                case Map.FALL:
+                    runSeason();
+                    resolveUnits();
+                    season = (season + 1) % 3;
+                    break;
+                case Map.WINTER:
+                    runBuild();
+                    season = Map.SPRING;
+                    year++;
+                    break;
             }
         }
     }
