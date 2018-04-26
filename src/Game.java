@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Arrays;
+import org.apache.commons.lang3.tuple.*;
+
 
 public class Game {
     public final Country[] countries;
@@ -154,7 +156,8 @@ public class Game {
      * @return Game representing the new gamestate
      */
     public Game movephase(String[][] orders) {
-        ArrayList<Move> moves = new ArrayList<>();
+        ArrayList<Move> moves;
+        moves = new ArrayList<>();
 //        ArrayList<Unit> retreats = new ArrayList<>();
         Game g = new Game();
 
@@ -162,7 +165,7 @@ public class Game {
         for(int id=0; id<orders.length; id++) {
             for(String o : orders[id]) {
                 String[] order = o.split(" ");
-                for(String s: order)    s=s.trim();
+                for(String s: order) s = s.trim();
 //                System.out.println("movephase, id: " + id);
                 Move m=new Move(this, id, order);
                 moves.add(m);
@@ -188,8 +191,9 @@ public class Game {
         }
 
         //reset
-        for(Territory t : this.territories)
-            Arrays.fill(t.takeStrength, 0);
+        for(Territory t : this.territories) {
+            t.attacks = new ArrayList<>();
+        }
         for(Country c : g.countries)
             for(Unit u : c.units)
                 u.hasOrder=false;
@@ -206,14 +210,14 @@ public class Game {
         moveset.removeIf(m -> (m.status==Status.FAILED));
         for(Move m : moveset) {
             if (m.status == Status.PENDING && m.type == Type.H) {
-                m.destination.takeStrength[m.country.id] += 2;
+                m.destination.attacks.add(new MutableTriple<>(m, m.country, 2));
                 m.status = Status.EXECUTABLE;
                 return;
             }
         }
         for(Move m : moveset) {
             if (m.status == Status.PENDING && m.type == Type.M) {
-                m.destination.takeStrength[m.country.id]++;
+                m.destination.attacks.add(new MutableTriple<>(m, m.country, 1));
                 //what if you *attack* at territory with two of your units (not support);
                 //we have no way of dealing with that;
                 m.status = Status.EXECUTABLE;
@@ -221,19 +225,7 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.SH) {
-                for (Move n : moveset)
-                    if (!m.equals(n) && n.destination.equals(m.destination) && n.type != Type.M
-                            && n.type != Type.CM && n.type != Type.D) {
-                        m.status = Status.EXECUTABLE;
-                        m.destination.takeStrength[n.country.id]++;
-                        return;
-                    }
-                m.status = Status.FAILED;
-                return;
-            }
-        }
-        for(Move m : moveset) {
+            //TODO Fail convoys when they are displaced
             if (m.status == Status.PENDING && m.type == Type.C) {
                 for (Move n : moveset)
                     if (n.type == Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
@@ -253,7 +245,7 @@ public class Game {
                 if (convoyMove(m, moveset, visited, start)) {
                     m.status = Status.EXECUTABLE;
                     m.type = Type.M;
-                    m.destination.takeStrength[m.country.id]++;
+                    m.destination.attacks.add(new MutableTriple<>(m, m.country, 1));
                     return;
                 } else {
                     m.status = Status.FAILED;
@@ -262,13 +254,45 @@ public class Game {
             }
         }
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.SA) {
-                for (Move n : moveset)
-                    if (n.type == Type.M && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
-                        m.status = Status.EXECUTABLE;
-                        m.destination.takeStrength[n.country.id]++;
+            if (m.status == Status.PENDING && m.type == Type.SH) {
+                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+                    Move n = t.getLeft();
+                    if (n.destination.equals(m.unit.location) && (n.type == Type.M || n.type == Type.CM)){
+                        m.status = Status.FAILED;
                         return;
                     }
+                }
+                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+                    Move n = t.getLeft();
+                    if (m.destination.equals(n.destination) && n.type != Type.M
+                            && n.type != Type.CM && n.type != Type.D) {
+                        m.status = Status.EXECUTABLE;
+                        t.setRight(t.right++);
+                        return;
+                    }
+                }
+                m.status = Status.FAILED;
+                return;
+            }
+        }
+        for(Move m : moveset) {
+            if (m.status == Status.PENDING && m.type == Type.SA) {
+                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+                    Move n = t.getLeft();
+                    if (n.destination.equals(m.unit.location) && (n.type == Type.M || n.type == Type.CM)){
+                        m.status = Status.FAILED;
+                        return;
+                    }
+                }
+                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+                    Move n = t.getLeft();
+                    if ((n.type == Type.M || n.type == Type.CM) && n.unit.location.equals(m.source) &&
+                            n.destination.equals(m.destination)) {
+                        m.status = Status.EXECUTABLE;
+                        t.setRight(t.right++);
+                        return;
+                    }
+                }
                 m.status = Status.FAILED;
                 return;
             }
@@ -312,7 +336,7 @@ public class Game {
         Move m = moveset.get(0);
         Territory t = m.destination;
 
-        int mostPowCountry = arrMaxTies(t.takeStrength, t.occupied);
+        int mostPowCountry = tripArrLstMaxTies(t.attacks, t.occupied);
 
         if(t.occupied!=mostPowCountry){
             Collections.addAll(retreats, this.retreatingUnits);
@@ -387,11 +411,35 @@ public class Game {
         for(int i=2; i<arr.length; i++){
             if(arr[i]>max1){
                 max2=max1;
-                max1=arr[2];
+                max1=arr[i];
                 ind = i;
             }
             else if(arr[i]>max2){
                 max2=arr[i];
+            }
+        }
+        if(max1==max2) return def;
+        return ind;
+    }
+
+    private static int tripArrLstMaxTies(ArrayList<MutableTriple<Move,Country,Integer>> atks, int def){
+        int ind;
+        int zeroth = atks.get(0).right;
+        int fst = atks.get(1).right;
+        if(zeroth<fst)
+            ind = atks.get(1).middle.id;
+        else ind = atks.get(0).middle.id;
+        int max1 = Integer.max(zeroth,fst);
+        int max2 = Integer.min(zeroth,fst);
+        for(int i=2; i<atks.size(); i++){
+            int irt = atks.get(i).right;
+            if(irt>max1){
+                max2=max1;
+                max1=irt;
+                ind = atks.get(i).middle.id;
+            }
+            else if(irt>max2){
+                max2=irt;
             }
         }
         if(max1==max2) return def;

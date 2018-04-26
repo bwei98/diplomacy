@@ -1,5 +1,5 @@
 import java.util.*;
-
+import org.apache.commons.lang3.tuple.*;
 
 public class Territory {
     public final String name;
@@ -8,6 +8,8 @@ public class Territory {
     public int occupied; //-1: unoccupied, otherwise country id
     public int supplyCenter; //-99 = no, -1 = yes and neutral, otherwise yes and country id
     public Integer[] takeStrength;
+
+    public ArrayList<MutableTriple<Move, Country, Integer>> attacks;
 
     /**
      * Basic constructor for territory
@@ -22,6 +24,7 @@ public class Territory {
         this.occupied = -1;
         this.takeStrength = new Integer[Diplomacy.numCountries];
         Arrays.fill(takeStrength, 0);
+        this.attacks=new ArrayList<>();
     }
 
     /**
@@ -34,6 +37,7 @@ public class Territory {
         occupied=-1;
         supplyCenter=-99;
         takeStrength=null;
+        attacks=null;
     }
 
     /**
