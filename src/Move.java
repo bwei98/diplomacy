@@ -12,25 +12,6 @@ public class Move implements Comparable {
     public Status status;
 
     /**
-     * Basic constructor for a Move
-     *
-     * @param country     country making the order
-     * @param unit        unit making the move
-     * @param destination Territory representing the target
-     * @param type        type of move made
-     * @param status      status of the order
-     * @param source      origin for two dest orders
-     */
-    public Move(Country country, Unit unit, Territory destination, Territory source, Type type, Status status) {
-        this.country = country;
-        this.unit = unit;
-        this.destination = destination;
-        this.type = type;
-        this.status = status;
-        this.source = source;
-    }
-
-    /**
      * Default move constructor
      */
     public Move() {
@@ -229,40 +210,5 @@ public class Move implements Comparable {
         return this.unit.location.name.compareTo(m.unit.location.name);
     }
 }
-
-
-//
-//        /**
-//         * processOrder processes an order on a gamestate
-//         * @param id int representing country giving order
-//         * @param order String[] for the orders
-//         * @return boolean on if the order was valid
-//         */
-//        private boolean processOrder(int id, String[] order){
-//
-
-/*
-//Support Hold
-        if(order[2].equals("S") && order.length==4){
-            if(unit.isFleet) {
-                for (Territory border : this.unit.location.neighborsF) {
-                    if (border.equals(order[3]) && border.occupied != -1) {
-                        border.takeStrength[border.occupied]++;
-                        break;
-                    }
-                }
-            } else {    //unit is army
-                for (Territory border : this.unit.location.neighborsA) {
-                    if (border.equals(order[3]) && border.occupied != -1) {
-                        border.takeStrength[border.occupied]++;
-                        break;
-                    }
-                }
-            }
-            //Not valid Support hold
-            System.out.println("Not a valid support hold between " + order[1]+" and "+order[3] );
-            return false;
- */
-
 
 

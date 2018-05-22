@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Arrays;
 import org.apache.commons.lang3.tuple.*;
 
 
 public class Game {
-    public final Country[] countries;
-    public final Territory[] territories;
+    public Country[] countries;
+    public Territory[] territories;
     public Unit[] retreatingUnits;
     //Countries know what units they have, units know where they are so that should be enough
 
@@ -183,7 +182,7 @@ public class Game {
         moves.removeIf(m -> (m.status!=Status.EXECUTABLE));
 
 //        System.out.println("NumExecutable = " + countExecutable(moves));
-        //executes moves
+//        executes moves
         while(countExecutable(moves)>0) {
             g = this.execution(moves);
             moves.removeIf(m -> (m.status==Status.EXECUTED));
@@ -191,13 +190,14 @@ public class Game {
         }
 
         //reset
-        for(Territory t : this.territories) {
+        for(Territory t : this.territories)
             t.attacks = new ArrayList<>();
-        }
-        for(Country c : g.countries)
+        for(Country c : this.countries)
             for(Unit u : c.units)
                 u.hasOrder=false;
 
+        g.territories = this.territories;
+        g.countries = this.countries;
         return g;
     }
 
@@ -218,8 +218,6 @@ public class Game {
         for(Move m : moveset) {
             if (m.status == Status.PENDING && m.type == Type.M) {
                 m.destination.attacks.add(new MutableTriple<>(m, m.country, 1));
-                //what if you *attack* at territory with two of your units (not support);
-                //we have no way of dealing with that;
                 m.status = Status.EXECUTABLE;
                 return;
             }

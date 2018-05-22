@@ -8,6 +8,7 @@ public class Territory {
     public int occupied; //-1: unoccupied, otherwise country id
     public int supplyCenter; //-99 = no, -1 = yes and neutral, otherwise yes and country id
     public Integer[] takeStrength;
+    public ArrayList<Territory> pair;
 
     public ArrayList<MutableTriple<Move, Country, Integer>> attacks;
 
@@ -25,6 +26,7 @@ public class Territory {
         this.takeStrength = new Integer[Diplomacy.numCountries];
         Arrays.fill(takeStrength, 0);
         this.attacks=new ArrayList<>();
+        this.pair=null;
     }
 
     /**
@@ -83,6 +85,17 @@ public class Territory {
                 return true;
         return false;
     }
+
+    /**
+     * Adds a territory which is paired
+     * @param t the territory to add
+     * @return the original territory
+     */
+    public Territory setPair(Territory t){
+        this.pair.add(t);
+        return this;
+    }
+
 
     /**
      * is this territory a supplyCenter?

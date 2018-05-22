@@ -2,381 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3584b5e7-9a06-4d87-8d7f-0eaacdc4d985" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml" afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/CONTRIBUTING.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/NOTICE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/RELEASE-NOTES.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/allclasses-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/allclasses-noframe.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/constant-values.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/deprecated-list.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/help-doc.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/index-all.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/AnnotationUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ArchUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ArrayUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/BitField.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/BooleanUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/CharEncoding.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/CharSequenceUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/CharSet.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/CharSetUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/CharUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ClassPathUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ClassUtils.Interfaces.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ClassUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/Conversion.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/EnumUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/JavaVersion.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/LocaleUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/NotImplementedException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ObjectUtils.Null.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ObjectUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/RandomStringUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/RandomUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/Range.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/SerializationException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/SerializationUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/StringEscapeUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/StringUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/SystemUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ThreadUtils.NamePredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ThreadUtils.ThreadGroupPredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ThreadUtils.ThreadIdPredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ThreadUtils.ThreadPredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/ThreadUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/Validate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/Processor.Arch.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/Processor.Type.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/Processor.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/class-use/Processor.Arch.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/class-use/Processor.Type.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/class-use/Processor.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/arch/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/Builder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/CompareToBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/Diff.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/DiffBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/DiffResult.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/Diffable.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/EqualsBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/EqualsExclude.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/HashCodeBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/HashCodeExclude.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/MultilineRecursiveToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/RecursiveToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/ReflectionDiffBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/ReflectionToStringBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/StandardToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/ToStringBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/ToStringExclude.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/ToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/Builder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/CompareToBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/Diff.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/DiffBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/DiffResult.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/Diffable.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/EqualsBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/EqualsExclude.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/HashCodeBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/HashCodeExclude.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/MultilineRecursiveToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/RecursiveToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/ReflectionDiffBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/ReflectionToStringBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/StandardToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/ToStringBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/ToStringExclude.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/class-use/ToStringStyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/builder/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/AnnotationUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ArchUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ArrayUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/BitField.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/BooleanUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/CharEncoding.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/CharSequenceUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/CharSet.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/CharSetUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/CharUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ClassPathUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ClassUtils.Interfaces.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ClassUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/Conversion.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/EnumUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/JavaVersion.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/LocaleUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/NotImplementedException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ObjectUtils.Null.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ObjectUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/RandomStringUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/RandomUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/Range.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/SerializationException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/SerializationUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/StringEscapeUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/StringUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/SystemUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ThreadUtils.NamePredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ThreadUtils.ThreadGroupPredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ThreadUtils.ThreadIdPredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ThreadUtils.ThreadPredicate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/ThreadUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/class-use/Validate.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.State.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/AbstractCircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/AtomicInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/AtomicSafeInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/BackgroundInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/BasicThreadFactory.Builder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/BasicThreadFactory.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/CallableBackgroundInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/CircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/CircuitBreakingException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/Computable.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/ConcurrentException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/ConcurrentInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/ConcurrentRuntimeException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/ConcurrentUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/ConstantInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/EventCountCircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/LazyInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/Memoizer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/MultiBackgroundInitializer.MultiBackgroundInitializerResults.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/MultiBackgroundInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/ThresholdCircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/TimedSemaphore.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/AbstractCircuitBreaker.State.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/AbstractCircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/AtomicInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/AtomicSafeInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/BackgroundInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/BasicThreadFactory.Builder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/BasicThreadFactory.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/CallableBackgroundInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/CircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/CircuitBreakingException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/Computable.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/ConcurrentException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/ConcurrentInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/ConcurrentRuntimeException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/ConcurrentUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/ConstantInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/EventCountCircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/LazyInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/Memoizer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/MultiBackgroundInitializer.MultiBackgroundInitializerResults.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/MultiBackgroundInitializer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/ThresholdCircuitBreaker.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/class-use/TimedSemaphore.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/concurrent/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/EventListenerSupport.ProxyInvocationHandler.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/EventListenerSupport.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/EventUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/class-use/EventListenerSupport.ProxyInvocationHandler.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/class-use/EventListenerSupport.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/class-use/EventUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/event/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/CloneFailedException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/ContextedException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/ContextedRuntimeException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/DefaultExceptionContext.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/ExceptionContext.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/ExceptionUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/class-use/CloneFailedException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/class-use/ContextedException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/class-use/ContextedRuntimeException.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/class-use/DefaultExceptionContext.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/class-use/ExceptionContext.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/class-use/ExceptionUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/exception/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/Fraction.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/IEEE754rUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/NumberUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/class-use/Fraction.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/class-use/IEEE754rUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/class-use/NumberUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/math/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/Mutable.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableBoolean.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableByte.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableDouble.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableFloat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableInt.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableLong.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableObject.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/MutableShort.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/Mutable.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableBoolean.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableByte.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableDouble.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableFloat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableInt.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableLong.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableObject.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/class-use/MutableShort.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/mutable/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/ConstructorUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/FieldUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/InheritanceUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/MethodUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/TypeLiteral.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/TypeUtils.WildcardTypeBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/TypeUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/Typed.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/ConstructorUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/FieldUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/InheritanceUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/MethodUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/TypeLiteral.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/TypeUtils.WildcardTypeBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/TypeUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/class-use/Typed.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/reflect/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/CompositeFormat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/ExtendedMessageFormat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/FormatFactory.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/FormattableUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/StrBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/StrLookup.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/StrMatcher.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/StrSubstitutor.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/StrTokenizer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/WordUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/CompositeFormat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/ExtendedMessageFormat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/FormatFactory.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/FormattableUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/StrBuilder.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/StrLookup.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/StrMatcher.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/StrSubstitutor.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/StrTokenizer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/class-use/WordUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/AggregateTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/CharSequenceTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/CodePointTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/EntityArrays.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/LookupTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/NumericEntityEscaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.OPTION.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/NumericEntityUnescaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/OctalUnescaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/UnicodeEscaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/UnicodeUnescaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/UnicodeUnpairedSurrogateRemover.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/AggregateTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/CharSequenceTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/CodePointTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/EntityArrays.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/JavaUnicodeEscaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/LookupTranslator.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/NumericEntityEscaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/NumericEntityUnescaper.OPTION.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/NumericEntityUnescaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/OctalUnescaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/UnicodeEscaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/UnicodeUnescaper.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/class-use/UnicodeUnpairedSurrogateRemover.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/text/translate/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/DateFormatUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/DateParser.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/DatePrinter.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/DateUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/DurationFormatUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/FastDateFormat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/FastDateParser.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/FastDatePrinter.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/FastTimeZone.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/StopWatch.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/TimeZones.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/DateFormatUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/DateParser.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/DatePrinter.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/DateUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/DurationFormatUtils.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/FastDateFormat.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/FastDateParser.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/FastDatePrinter.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/FastTimeZone.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/StopWatch.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/class-use/TimeZones.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/time/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/ImmutablePair.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/ImmutableTriple.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/MutablePair.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/MutableTriple.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/Pair.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/Triple.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/class-use/ImmutablePair.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/class-use/ImmutableTriple.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/class-use/MutablePair.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/class-use/MutableTriple.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/class-use/Pair.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/class-use/Triple.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/package-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/package-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/package-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/org/apache/commons/lang3/tuple/package-use.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/overview-frame.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/overview-summary.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/overview-tree.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/package-list" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/resources/background.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/resources/tab.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/resources/titlebar.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/resources/titlebar_end.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/serialized-form.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/apidocs/stylesheet.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/commons-lang3-3.7-javadoc.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/commons-lang3-3.7-sources.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/commons-lang3-3.7-test-sources.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/commons-lang3-3.7-tests.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-lang3-3.7/commons-lang3-3.7.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
+      <change beforePath="$PROJECT_DIR$/src/Move.java" afterPath="$PROJECT_DIR$/src/Move.java" />
+      <change beforePath="$PROJECT_DIR$/src/Territory.java" afterPath="$PROJECT_DIR$/src/Territory.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -390,28 +19,28 @@
       <file leaf-file-name="Diplomacy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="177">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+                <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+                <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+                <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+                <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+                <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+                <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+                <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+                <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commons_lang3_3_7_sources.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="287">
+              <caret line="198" column="35" lean-forward="false" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#retreatphase#0;class#Game#0" expanded="false" />
@@ -423,9 +52,12 @@
       <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="73" column="9" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="503">
+              <caret line="211" column="1" lean-forward="false" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+              <folding>
+                <element signature="method#toString#0;class#Move#0" expanded="false" />
+                <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -433,15 +65,25 @@
       <file leaf-file-name="Territory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Territory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state relative-caret-position="381">
+              <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1404#1405#0" expanded="true" />
-                <element signature="e#1453#1454#0" expanded="true" />
-                <element signature="e#1663#1664#0" expanded="true" />
-                <element signature="e#1733#1734#0" expanded="true" />
+                <element signature="e#1466#1467#0" expanded="true" />
+                <element signature="e#1515#1516#0" expanded="true" />
+                <element signature="e#1725#1726#0" expanded="true" />
+                <element signature="e#1795#1796#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -449,7 +91,7 @@
       <file leaf-file-name="Country.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Country.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2820">
+            <state relative-caret-position="615">
               <caret line="192" column="5" lean-forward="false" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
               <folding>
                 <element signature="e#5770#5771#0" expanded="true" />
@@ -489,6 +131,8 @@
       <find>takest</find>
       <find>attacks</find>
       <find>takes</find>
+      <find>-&gt;</find>
+      <find>Spa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -502,14 +146,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Move.java" />
         <option value="$PROJECT_DIR$/src/Diplomacy.java" />
         <option value="$PROJECT_DIR$/src/Country.java" />
         <option value="$PROJECT_DIR$/src/Triple.java" />
-        <option value="$PROJECT_DIR$/src/Territory.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml" />
+        <option value="$PROJECT_DIR$/src/Territory.java" />
+        <option value="$PROJECT_DIR$/src/Map.java" />
+        <option value="$PROJECT_DIR$/src/Move.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -534,6 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -550,7 +196,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -561,30 +206,19 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="Diplomacy" type="cbb8eebc:String" user="Diplomacy" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Diplomacy" type="cbb8eebc:String" user="Diplomacy" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
-              <item name="libraries" type="cbb8eebc:String" user="libraries" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Diplomacy" type="cbb8eebc:String" user="Diplomacy" />
               <item name="src" type="cbb8eebc:String" user="src" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3218391" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -728,29 +362,29 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4248447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25831202" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18097281" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -760,35 +394,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="9" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="192" column="5" lean-forward="false" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
-          <folding>
-            <element signature="e#5770#5771#0" expanded="true" />
-            <element signature="e#5815#5816#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,7 +432,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -826,7 +450,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3840">
           <caret line="256" column="35" lean-forward="false" selection-start-line="256" selection-start-column="31" selection-end-line="256" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -836,10 +463,10 @@
           <caret line="38" column="26" lean-forward="true" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -870,7 +497,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -891,10 +528,10 @@
           <caret line="113" column="7" lean-forward="false" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -925,7 +562,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -944,7 +591,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
           <caret line="221" column="15" lean-forward="false" selection-start-line="221" selection-start-column="15" selection-end-line="221" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -965,10 +615,10 @@
           <caret line="113" column="7" lean-forward="false" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -988,7 +638,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2745">
           <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,7 +667,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
           <caret line="221" column="15" lean-forward="false" selection-start-line="221" selection-start-column="15" selection-end-line="221" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,10 +680,10 @@
           <caret line="113" column="7" lean-forward="false" selection-start-line="113" selection-start-column="7" selection-end-line="113" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1040,7 +703,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,7 +732,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3315">
           <caret line="221" column="15" lean-forward="false" selection-start-line="221" selection-start-column="15" selection-end-line="221" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,10 +745,10 @@
           <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1081,7 +757,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,10 +788,10 @@
           <caret line="56" column="6" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1114,7 +800,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3720">
           <caret line="248" column="25" lean-forward="false" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,7 +811,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,7 +840,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1151,10 +853,10 @@
           <caret line="56" column="6" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1167,13 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Triple.java" />
     <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_net_3_6.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_net_3_6_sources.xml" />
@@ -1181,10 +876,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../RSA/src/Runner.java" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1196,39 +898,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="9" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Territory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="43" lean-forward="false" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Country.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
+        <state relative-caret-position="615">
           <caret line="192" column="5" lean-forward="false" selection-start-line="192" selection-start-column="5" selection-end-line="192" selection-end-column="5" />
           <folding>
             <element signature="e#5770#5771#0" expanded="true" />
@@ -1237,22 +909,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="476">
+          <caret line="125" column="37" lean-forward="false" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Territory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="48" column="7" lean-forward="true" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#retreatphase#0;class#Game#0" expanded="false" />
+            <element signature="e#1466#1467#0" expanded="true" />
+            <element signature="e#1515#1516#0" expanded="true" />
+            <element signature="e#1725#1726#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/commons_lang3_3_7_sources.xml">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="true" />
+            <element signature="e#10148#10149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="211" column="1" lean-forward="false" selection-start-line="211" selection-start-column="1" selection-end-line="211" selection-end-column="1" />
+          <folding>
+            <element signature="method#toString#0;class#Move#0" expanded="false" />
+            <element signature="method#compareTo#0;class#Move#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Diplomacy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;method#init#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runSeason#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#runBuild#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#resolveUnits#0;class#Diplomacy#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#main#0;class#Diplomacy#0" expanded="false" />
+            <element signature="method#processInput#0;class#Diplomacy#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="198" column="35" lean-forward="false" selection-start-line="198" selection-start-column="35" selection-end-line="198" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#retreatphase#0;class#Game#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,7 +1026,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3218391" />
               </list>
             </option>
           </splitter-proportions>
