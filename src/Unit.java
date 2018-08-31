@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Unit implements Comparable {
-    public final Country owner;
-    public final boolean isFleet;    //true=fleet, false=army
-    public Territory location;
-    public boolean hasOrder;
+    private final Country owner;
+    private final boolean isFleet;    //true=fleet, false=army
+    private Territory location;
+    private boolean hasOrder;
 
     /**
      * Basic constructor for units
@@ -38,16 +38,41 @@ public class Unit implements Comparable {
         return str;
     }
 
+    public Country getOwner() {
+        return owner;
+    }
+
+    public boolean isFleet() {
+        return isFleet;
+    }
+
+    public Territory getLocation() {
+        return location;
+    }
+
+    public void setLocation(Territory location) {
+        this.location = location;
+    }
+
+    public boolean hasOrder() {
+        return hasOrder;
+    }
+
+    public void setHasOrder(boolean hasOrder) {
+        this.hasOrder = hasOrder;
+    }
+
     /**
+
      * Get a list of territories a unit can move to (for use in retreat)
      * @return Territory array of open territories
      */
     public Territory[] canMove () {
         ArrayList<Territory> openTs = new ArrayList<>();
         if(isFleet) {
-            for (Territory t : location.neighborsF) if (t.occupied != -1) openTs.add(t);
+            for (Territory t : location.getNeighborsF()) if (t.getOccupied() != -1) openTs.add(t);
         } else {
-            for (Territory t : location.neighborsA) if (t.occupied != -1) openTs.add(t);
+            for (Territory t : location.getNeighborsA()) if (t.getOccupied() != -1) openTs.add(t);
         }
 
         return (Territory[])openTs.toArray();
@@ -60,7 +85,7 @@ public class Unit implements Comparable {
      */
     public int compareTo(Object o) {
         Unit unit2 = (Unit)o;
-        if(owner.equals(unit2.owner)) return location.name.compareTo(unit2.location.name);
+        if(owner.equals(unit2.owner)) return location.getName().compareTo(unit2.location.getName());
         else return owner.compareTo(unit2.owner);
     }
 
@@ -72,12 +97,12 @@ public class Unit implements Comparable {
         if(isFleet) {
             if(location.touchF(location2)) {
                 location = location2;
-                location.occupied = owner.id;
+                location.setOccupied(owner.getId());
             }
         } else {
             if(location.touchA(location2)) {
                 location = location2;
-                location.occupied = owner.id;
+                location.setOccupied(owner.getId());
             }
         }
     }

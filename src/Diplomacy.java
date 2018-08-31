@@ -70,8 +70,8 @@ public class Diplomacy {
         //Take orders for stage: progress
         String[][] moves = new String[numCountries][0];
         for(int i = 0; i < numCountries; i++) {
-            if(countries[i].alive) {
-                System.out.print(countries[i].name + " : what are your moves?\t");
+            if(countries[i].isAlive()) {
+                System.out.print(countries[i].getName() + " : what are your moves?\t");
                 String[] cMoves = processInput(reader.nextLine()).split("; ");
 
                 for (int j = 0; j < cMoves.length; j++) cMoves[j] = i + " : " + cMoves[j].trim();
@@ -94,9 +94,9 @@ public class Diplomacy {
             int prevCountry = -1;
             for (int i = 0; i < retreats.length; i++) {
                 Unit retreat = retreats[i];
-                if(retreat.owner.id != prevCountry) {
-                    prevCountry = retreat.owner.id;
-                    System.out.println(countries[retreat.owner.id].name + " : please enter your retreats ");
+                if(retreat.getOwner().getId() != prevCountry) {
+                    prevCountry = retreat.getOwner().getId();
+                    System.out.println(countries[retreat.getOwner().getId()].getName() + " : please enter your retreats ");
                 }
                 System.out.println(retreat + ": ");
                 System.out.print("Options - DISBAND");
@@ -121,22 +121,22 @@ public class Diplomacy {
         String[][] buildMoves = new String[numCountries][0];
         for(int i = 0; i < numCountries; i++) {
             Country country = countries[i];
-            if(country.alive) {
-                System.out.println(country.name + ": ");
+            if(country.isAlive()) {
+                System.out.println(country.getName() + ": ");
                 int diff = country.numBuildsOrDisbands();
                 //Either disband or build
                 if (diff > 0) {
                     System.out.println("You have to disband " + diff + " armies.");
                     System.out.println("You may choose from: ");
-                    for (Unit unit : country.units) System.out.println(unit);
+                    for (Unit unit : country.getUnits()) System.out.println(unit);
                     System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
                     buildMoves[i] = processInput(reader.nextLine()).split("; ");
                 } else if (diff < 0) {
                     System.out.println("You may build " + (-diff) + " armies.");
                     System.out.print("You may build in: ");
-                    for(Territory sc : country.homeSCs) {
+                    for(Territory sc : country.getHomeSCs()) {
                         if (country.canBuild(sc)) {
-                            System.out.print(sc.name + " ");
+                            System.out.print(sc.getName() + " ");
                             if (sc.coast()) System.out.print("(F/A) ");
                             if (sc.water()) System.out.print("(F)");
                             if (sc.landlocked()) System.out.print("(A) ");
@@ -155,12 +155,12 @@ public class Diplomacy {
      */
     public static void resolveUnits() {
         for(Country country : countries) {
-            for(Unit unit : country.units) {
-                if(unit.location.isSupplyCenter() && unit.location.supplyCenter != unit.owner.id) {
-                    country.gainSupplyCenter(unit.location);
-                    if(unit.location.supplyCenter != -1)
-                        countries[unit.location.supplyCenter].loseSupplyCenter(unit.location);
-                    unit.location.supplyCenter = unit.owner.id;
+            for(Unit unit : country.getUnits()) {
+                if(unit.getLocation().isSupplyCenter() && unit.getLocation().getSupplyCenter() != unit.getOwner().getId()) {
+                    country.gainSupplyCenter(unit.getLocation());
+                    if(unit.getLocation().getSupplyCenter() != -1)
+                        countries[unit.getLocation().getSupplyCenter()].loseSupplyCenter(unit.getLocation());
+                    unit.getLocation().setSupplyCenter(unit.getOwner().getId());
                 }
             }
         }

@@ -5,15 +5,79 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Territory {
-    public final String name;
-    public Territory[] neighborsF;
-    public Territory[] neighborsA;
-    public int occupied; //-1: unoccupied, otherwise country id
-    public int supplyCenter; //-99 = no, -1 = yes and neutral, otherwise yes and country id
-    public Integer[] takeStrength;
-    public ArrayList<Territory> pair;
+    private final String name;
+    private Territory[] neighborsF;
+    private Territory[] neighborsA;
+    private int occupied; //-1: unoccupied, otherwise country id
+    private int supplyCenter; //-99 = no, -1 = yes and neutral, otherwise yes and country id
+    private Integer[] takeStrength;
+    private ArrayList<Territory> pair;
 
-    public ArrayList<MutableTriple<Move, Country, Integer>> attacks;
+    private ArrayList<MutableTriple<Move, Country, Integer>> attacks;
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public Territory[] getNeighborsF() {
+        return neighborsF;
+    }
+
+    public void setNeighborsF(Territory[] neighborsF) {
+        this.neighborsF = neighborsF;
+    }
+
+    public Territory[] getNeighborsA() {
+        return neighborsA;
+    }
+
+    public void setNeighborsA(Territory[] neighborsA) {
+        this.neighborsA = neighborsA;
+    }
+
+    public int getOccupied() {
+        return occupied;
+    }
+
+    public void setOccupied(int occupied) {
+        this.occupied = occupied;
+    }
+
+    public int getSupplyCenter() {
+        return supplyCenter;
+    }
+
+    public void setSupplyCenter(int supplyCenter) {
+        this.supplyCenter = supplyCenter;
+    }
+
+    public Integer[] getTakeStrength() {
+        return takeStrength;
+    }
+
+    public void setTakeStrength(Integer[] takeStrength) {
+        this.takeStrength = takeStrength;
+    }
+
+    public ArrayList<Territory> getPair() {
+        return pair;
+    }
+
+    public void setPair(ArrayList<Territory> pair) {
+        this.pair = pair;
+    }
+
+    public ArrayList<MutableTriple<Move, Country, Integer>> getAttacks() {
+        return attacks;
+    }
+
+    public void setAttacks(ArrayList<MutableTriple<Move, Country, Integer>> attacks) {
+        this.attacks = attacks;
+    }
+
+
 
     /**
      * Basic constructor for territory

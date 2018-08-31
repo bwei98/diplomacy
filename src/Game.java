@@ -62,23 +62,23 @@ public class Game {
 
                 int diff = country.numBuildsOrDisbands();
                 if (diff < 0) { //process as a build
-                    for (Territory sc : country.homeSCs) {
-                        if (sc.equals(location) && sc.occupied == -1) {
+                    for (Territory sc : country.getHomeSCs()) {
+                        if (sc.equals(location) && sc.getOccupied() == -1) {
                             if(!(isFleet && sc.landlocked())) country.build(sc, isFleet);
                         }
                     }
                 } else { //process as a disband
-                    for (Unit unit : country.units) {
-                        if (unit.location.equals(location)) {
+                    for (Unit unit : country.getUnits()) {
+                        if (unit.getLocation().equals(location)) {
                             country.disband(unit);
                         }
                     }
                 }
 
-                while(country.numBuildsOrDisbands() > 0) country.disband(country.units[0]);
+                while(country.numBuildsOrDisbands() > 0) country.disband(country.getUnits()[0]);
             }
 
-            if(country.units.length == 0) country.alive = false;
+            if(country.getUnits().length == 0) country.setAlive(false);
         }
 
         return this;
@@ -141,7 +141,7 @@ public class Game {
         for(int i = 0; i < retreatingUnits.length; i++) {
             Unit unit = retreatingUnits[i];
             Territory dest = dests[i];
-            if(dest == null) unit.owner.disband(unit);
+            if(dest == null) unit.getOwner().disband(unit);
             else unit.move(dest);
         }
 
@@ -179,22 +179,22 @@ public class Game {
             resolution(moves);
         }
         //remove all unnecessary
-        moves.removeIf(m -> (m.status!=Status.EXECUTABLE));
+        moves.removeIf(m -> (m.getStatus()!=Status.EXECUTABLE));
 
 //        System.out.println("NumExecutable = " + countExecutable(moves));
 //        executes moves
         while(countExecutable(moves)>0) {
             g = this.execution(moves);
-            moves.removeIf(m -> (m.status==Status.EXECUTED));
+            moves.removeIf(m -> (m.getStatus()==Status.EXECUTED));
 //            System.out.println("NumExecutable = " + countExecutable(moves));
         }
 
         //reset
         for(Territory t : this.territories)
-            t.attacks = new ArrayList<>();
+            t.setAttacks(new ArrayList<>());
         for(Country c : this.countries)
-            for(Unit u : c.units)
-                u.hasOrder=false;
+            for(Unit u : c.getUnits())
+                u.setHasOrder(false);
 
         g.territories = this.territories;
         g.countries = this.countries;
@@ -207,91 +207,91 @@ public class Game {
      */
     private void resolution(ArrayList<Move> moveset){
         //@ENSURES countPending(moveset)>countPending(moveset')
-        moveset.removeIf(m -> (m.status==Status.FAILED));
+        moveset.removeIf(m -> (m.getStatus()==Status.FAILED));
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.H) {
-                m.destination.attacks.add(new MutableTriple<>(m, m.country, 2));
-                m.status = Status.EXECUTABLE;
+            if (m.getStatus() == Status.PENDING && m.getType() == Type.H) {
+                m.getDestination().getAttacks().add(new MutableTriple<>(m, m.getCountry(), 2));
+                m.setStatus(Status.EXECUTABLE);
                 return;
             }
         }
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.M) {
-                m.destination.attacks.add(new MutableTriple<>(m, m.country, 1));
-                m.status = Status.EXECUTABLE;
+            if (m.getStatus() == Status.PENDING && m.getType() == Type.M) {
+                m.getDestination().getAttacks().add(new MutableTriple<>(m, m.getCountry(), 1));
+                m.setStatus(Status.EXECUTABLE);
                 return;
             }
         }
         for(Move m : moveset) {
             //TODO Fail convoys when they are displaced
-            if (m.status == Status.PENDING && m.type == Type.C) {
+            if (m.getStatus() == Status.PENDING && m.getType() == Type.C) {
                 for (Move n : moveset)
-                    if (n.type == Type.CM && n.unit.location.equals(m.source) && n.destination.equals(m.destination)) {
-                        m.status = Status.EXECUTABLE;
+                    if (n.getType() == Type.CM && n.getUnit().getLocation().equals(m.getSource()) && n.getDestination().equals(m.getDestination())) {
+                        m.setStatus(Status.EXECUTABLE);
                         return;
                     }
-                m.status = Status.FAILED;
+                m.setStatus(Status.FAILED);
                 return;
             }
         }
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.CM) {
+            if (m.getStatus() == Status.PENDING && m.getType() == Type.CM) {
                 //continuations would actually be kinda useful here
                 ArrayList<Territory> visited = new ArrayList<>();
-                Territory start = m.unit.location;
+                Territory start = m.getUnit().getLocation();
                 visited.add(start);
                 if (convoyMove(m, moveset, visited, start)) {
-                    m.status = Status.EXECUTABLE;
-                    m.type = Type.M;
-                    m.destination.attacks.add(new MutableTriple<>(m, m.country, 1));
+                    m.setStatus(Status.EXECUTABLE);
+                    m.setType(Type.M);
+                    m.getDestination().getAttacks().add(new MutableTriple<>(m, m.getCountry(), 1));
                     return;
                 } else {
-                    m.status = Status.FAILED;
+                    m.setStatus(Status.FAILED);
                     return;
                 }
             }
         }
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.SH) {
-                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+            if (m.getStatus() == Status.PENDING && m.getType() == Type.SH) {
+                for (MutableTriple<Move, Country, Integer> t : m.getDestination().getAttacks()) {
                     Move n = t.getLeft();
-                    if (n.destination.equals(m.unit.location) && (n.type == Type.M || n.type == Type.CM)){
-                        m.status = Status.FAILED;
+                    if (n.getDestination().equals(m.getUnit().getLocation()) && (n.getType() == Type.M || n.getType() == Type.CM)){
+                        m.setStatus(Status.FAILED);
                         return;
                     }
                 }
-                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+                for (MutableTriple<Move, Country, Integer> t : m.getDestination().getAttacks()) {
                     Move n = t.getLeft();
-                    if (m.destination.equals(n.destination) && n.type != Type.M
-                            && n.type != Type.CM && n.type != Type.D) {
-                        m.status = Status.EXECUTABLE;
+                    if (m.getDestination().equals(n.getDestination()) && n.getType() != Type.M
+                            && n.getType() != Type.CM && n.getType() != Type.D) {
+                        m.setStatus(Status.EXECUTABLE);
                         t.setRight(t.right++);
                         return;
                     }
                 }
-                m.status = Status.FAILED;
+                m.setStatus(Status.FAILED);
                 return;
             }
         }
         for(Move m : moveset) {
-            if (m.status == Status.PENDING && m.type == Type.SA) {
-                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+            if (m.getStatus() == Status.PENDING && m.getType() == Type.SA) {
+                for (MutableTriple<Move, Country, Integer> t : m.getDestination().getAttacks()) {
                     Move n = t.getLeft();
-                    if (n.destination.equals(m.unit.location) && (n.type == Type.M || n.type == Type.CM)){
-                        m.status = Status.FAILED;
+                    if (n.getDestination().equals(m.getUnit().getLocation()) && (n.getType() == Type.M || n.getType() == Type.CM)){
+                        m.setStatus(Status.FAILED);
                         return;
                     }
                 }
-                for (MutableTriple<Move, Country, Integer> t : m.destination.attacks) {
+                for (MutableTriple<Move, Country, Integer> t : m.getDestination().getAttacks()) {
                     Move n = t.getLeft();
-                    if ((n.type == Type.M || n.type == Type.CM) && n.unit.location.equals(m.source) &&
-                            n.destination.equals(m.destination)) {
-                        m.status = Status.EXECUTABLE;
+                    if ((n.getType() == Type.M || n.getType() == Type.CM) && n.getUnit().getLocation().equals(m.getSource()) &&
+                            n.getDestination().equals(m.getDestination())) {
+                        m.setStatus(Status.EXECUTABLE);
                         t.setRight(t.right++);
                         return;
                     }
                 }
-                m.status = Status.FAILED;
+                m.setStatus(Status.FAILED);
                 return;
             }
         }
@@ -308,12 +308,12 @@ public class Game {
     private boolean convoyMove(Move m, ArrayList<Move> moveset, ArrayList<Territory> visited, Territory loc){
 //        System.out.println("Call to convoyMove: " + m.toString() + " Moveset: " + moveset.toString() + " \n visited: " + visited.toString() + " loc: " + loc.toString());
         visited.add(loc);
-        if(m.destination.equals(loc)) return true;
+        if(m.getDestination().equals(loc)) return true;
         boolean success = false;
-        for(Territory t: loc.neighborsF) {
+        for(Territory t: loc.getNeighborsF()) {
             for (Move n : moveset) {
-                if (n.type == Type.C && n.source.equals(m.unit.location) &&
-                        n.destination.equals(m.destination) && !visited.contains(t) && !success) {
+                if (n.getType() == Type.C && n.getSource().equals(m.getUnit().getLocation()) &&
+                        n.getDestination().equals(m.getDestination()) && !visited.contains(t) && !success) {
                     success = convoyMove(m, moveset, visited, t);
                 }
             }
@@ -332,15 +332,15 @@ public class Game {
         ArrayList<Unit> retreats = new ArrayList<>();
         Unit[] newRetreats = this.retreatingUnits;
         Move m = moveset.get(0);
-        Territory t = m.destination;
+        Territory t = m.getDestination();
 
-        int mostPowCountry = tripArrLstMaxTies(t.attacks, t.occupied);
+        int mostPowCountry = tripArrLstMaxTies(t.getAttacks(), t.getOccupied());
 
-        if(t.occupied!=mostPowCountry){
+        if(t.getOccupied()!=mostPowCountry){
             Collections.addAll(retreats, this.retreatingUnits);
-            if(t.occupied != -1) {
-                for (Unit unit : this.countries[t.occupied].units)
-                    if (unit.location.equals(t))
+            if(t.getOccupied() != -1) {
+                for (Unit unit : this.countries[t.getOccupied()].getUnits())
+                    if (unit.getLocation().equals(t))
                         retreats.add(unit);
                 newRetreats = new Unit[retreats.size()];
                 newRetreats = retreats.toArray(newRetreats);
@@ -349,16 +349,16 @@ public class Game {
                 System.out.println(n.toString());
                 System.out.println(t.toString());
                 System.out.println(mostPowCountry);
-                if (n.destination.equals(t) && n.country.id == mostPowCountry) {
-                    n.unit.location = t;
-                    t.occupied = mostPowCountry;
+                if (n.getDestination().equals(t) && n.getCountry().getId() == mostPowCountry) {
+                    n.getUnit().setLocation(t);
+                    t.setOccupied(mostPowCountry);
                     break;
                 }
             }
         }
         for(Move n : moveset)
-            if(n.destination.equals(t))
-                n.status=Status.EXECUTED;
+            if(n.getDestination().equals(t))
+                n.setStatus(Status.EXECUTED);
 //        for(Country c : this.countries)
 //            for(Unit u : c.units)
 //                System.out.println(c.name + " " + u.toString());
@@ -373,7 +373,7 @@ public class Game {
     private static int countPending(ArrayList<Move> moveset) {
         int numPending=0;
         for(Move a : moveset)
-            if(a.status==Status.PENDING)
+            if(a.getStatus()==Status.PENDING)
                 numPending++;
         return numPending;
     }
@@ -386,7 +386,7 @@ public class Game {
     private static int countExecutable(ArrayList<Move> moveset) {
         int numExecutable=0;
         for(Move a : moveset)
-            if(a.status==Status.EXECUTABLE)
+            if(a.getStatus()==Status.EXECUTABLE)
                 numExecutable++;
         return numExecutable;
     }
@@ -431,8 +431,8 @@ public class Game {
         int zeroth = atks.get(0).right;
         int fst = atks.get(1).right;
         if(zeroth<fst)
-            ind = atks.get(1).middle.id;
-        else ind = atks.get(0).middle.id;
+            ind = atks.get(1).middle.getId();
+        else ind = atks.get(0).middle.getId();
         int max1 = Integer.max(zeroth,fst);
         int max2 = Integer.min(zeroth,fst);
         for(int i=2; i<atks.size(); i++){
@@ -440,7 +440,7 @@ public class Game {
             if(irt>max1){
                 max2=max1;
                 max1=irt;
-                ind = atks.get(i).middle.id;
+                ind = atks.get(i).middle.getId();
             }
             else if(irt>max2){
                 max2=irt;

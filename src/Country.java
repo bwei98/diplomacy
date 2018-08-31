@@ -1,11 +1,38 @@
-@SuppressWarnings("ALL")
 public class Country implements Comparable {
-    public final String name;
-    public Unit[] units;
-    public Territory[] supplyCenters;
-    public final Territory[] homeSCs;
-    public boolean alive;
-    public final int id;
+    private final String name;
+    private Unit[] units;
+    private Territory[] supplyCenters;
+    private final Territory[] homeSCs;
+    private boolean alive;
+    private final int id;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
+    public Unit[] getUnits() {
+        return units;
+    }
+
+    public Territory[] getSupplyCenters() {
+        return supplyCenters;
+    }
+
+    public Territory[] getHomeSCs() {
+        return homeSCs;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     /**
      * Basic constructor for Countries
@@ -114,7 +141,7 @@ public class Country implements Comparable {
         Unit[] newUnits = new Unit[units.length + 1];
         System.arraycopy(units, 0, newUnits, 0, units.length);
         newUnits[units.length] = unit;
-        sc.occupied = id;
+        sc.setOccupied(id);
 
         units = newUnits;
     }
@@ -132,7 +159,7 @@ public class Country implements Comparable {
                 idx++;
             }
         }
-        unit.location.occupied = -1;
+        unit.getLocation().setOccupied(-1);
 
         units = newUnits;
     }
@@ -159,7 +186,7 @@ public class Country implements Comparable {
      */
     public boolean canBuild(Territory sc) {
         for(Territory supplyCenter : homeSCs) {
-            if(sc.equals(supplyCenter) && sc.occupied == -1) return true;
+            if(sc.equals(supplyCenter) && sc.getOccupied() == -1) return true;
         }
         return false;
     }

@@ -4,12 +4,61 @@ enum Status                                                                     
     EXECUTED, EXECUTABLE, PENDING, UNREAD, FAILED                                                                      }
 
 public class Move implements Comparable {
-    public Country country;
-    public Unit unit;
-    public Territory destination;
-    public Territory source;
-    public Type type;
-    public Status status;
+    private Country country;
+    private Unit unit;
+    private Territory destination;
+    private Territory source;
+    private Type type;
+    private Status status;
+
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
+    }
+
+    public Territory getDestination() {
+        return destination;
+    }
+
+    public void setDestination(Territory destination) {
+        this.destination = destination;
+    }
+
+    public Territory getSource() {
+        return source;
+    }
+
+    public void setSource(Territory source) {
+        this.source = source;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
     /**
      * Default move constructor
@@ -36,13 +85,13 @@ public class Move implements Comparable {
         String[] order = new String[orderOrig.length-2];
         for(int i=0; i<order.length; i++)
             order[i]=orderOrig[i+2];
-        for (Unit u : this.country.units) {
-            if (order.length>2 && (u.isFleet && order[0].equals("F") || (!u.isFleet && order[0].equals("A")))
-                    && (u.location.equals(order[1]))) {
-                if (u.hasOrder) break;
+        for (Unit u : this.country.getUnits()) {
+            if (order.length>2 && (u.isFleet() && order[0].equals("F") || (!u.isFleet() && order[0].equals("A")))
+                    && (u.getLocation().equals(order[1]))) {
+                if (u.hasOrder()) break;
                 this.unit = u;
                 unitCheck = false;
-                this.unit.hasOrder = true;
+                this.unit.setHasOrder(true);
                 break;
             }
         }
@@ -56,15 +105,15 @@ public class Move implements Comparable {
         //default is that the unit holds in place, we overwrite this if different
         this.type = Type.H;
         this.status = Status.PENDING;
-        this.destination = this.unit.location;
+        this.destination = this.unit.getLocation();
         //Hold
         if (order[2].equals("H"))
             return;
         //Support Hold
         if (order[2].equals("S") && order.length == 4) {
-            if (unit.isFleet) {
-                for (Territory border : this.unit.location.neighborsF) {
-                    if (border.equals(order[3]) && border.occupied != -1) {
+            if (unit.isFleet()) {
+                for (Territory border : this.unit.getLocation().getNeighborsF()) {
+                    if (border.equals(order[3]) && border.getOccupied() != -1) {
                         this.type = Type.SH;
                         this.status = Status.PENDING;
                         this.destination = border;
@@ -72,8 +121,8 @@ public class Move implements Comparable {
                     }
                 }
             } else {
-                for (Territory border : this.unit.location.neighborsA) {
-                    if (border.equals(order[3]) && border.occupied != -1) {
+                for (Territory border : this.unit.getLocation().getNeighborsA()) {
+                    if (border.equals(order[3]) && border.getOccupied() != -1) {
                         this.type = Type.SH;
                         this.status = Status.PENDING;
                         this.destination = border;
@@ -88,11 +137,11 @@ public class Move implements Comparable {
         if (order[2].equals("S") && order.length == 6) {
             if (!order[4].equals("-")) //improper syntax - resolves to hold on spot
                 return;
-            if (unit.isFleet) {
-                for (Territory border : this.unit.location.neighborsF) {
+            if (unit.isFleet()) {
+                for (Territory border : this.unit.getLocation().getNeighborsF()) {
                     if (border.equals(order[5])) {
                         for (Territory border2 : border.allNeighbors()) {
-                            if (border2.equals(order[3]) && border2.occupied != -1) {
+                            if (border2.equals(order[3]) && border2.getOccupied() != -1) {
                                 this.type = Type.SA;
                                 this.status = Status.PENDING;
                                 this.source = border;
@@ -103,10 +152,10 @@ public class Move implements Comparable {
                     }
                 }
             } else {
-                for (Territory border : this.unit.location.neighborsA) {
+                for (Territory border : this.unit.getLocation().getNeighborsA()) {
                     if (border.equals(order[5])) {
                         for (Territory border2 : border.allNeighbors()) {
-                            if (border2.equals(order[3]) && border2.occupied != -1) {
+                            if (border2.equals(order[3]) && border2.getOccupied() != -1) {
                                 this.type = Type.SA;
                                 this.status = Status.PENDING;
                                 this.source = border;
@@ -125,7 +174,7 @@ public class Move implements Comparable {
         if (order[2].equals("C")) {
             if (order.length != 6 || !order[4].equals("-")) //improper syntax - resolves to hold on spot
                 return;
-            if (!this.unit.isFleet) //Armies cannot convoy - resolves to hold on spot
+            if (!this.unit.isFleet()) //Armies cannot convoy - resolves to hold on spot
                 return;
             else {
                 for (Territory t : g.territories)
@@ -144,8 +193,8 @@ public class Move implements Comparable {
         }
         //Move
         if (order[2].equals("-")) {
-            if (unit.isFleet) {
-                for (Territory t : unit.location.neighborsF)
+            if (unit.isFleet()) {
+                for (Territory t : unit.getLocation().getNeighborsF())
                     if (t.equals(order[3])) {
                         this.destination = t;
                         this.type = Type.M;
@@ -154,14 +203,14 @@ public class Move implements Comparable {
                     }
             } else {
                 //regular move
-                for (Territory t : unit.location.neighborsA)
+                for (Territory t : unit.getLocation().getNeighborsA())
                     if (t.equals(order[3])) {
                         this.destination = t;
                         this.type = Type.M;
                         this.status = Status.PENDING;
                         return;
                     }
-                if (unit.location.landlocked()) return;
+                if (unit.getLocation().landlocked()) return;
                 for (Territory t : g.territories)
                     if (t.equals(order[3]) && t.coast()) {
                         //potentially a convoy
@@ -180,9 +229,9 @@ public class Move implements Comparable {
     public String toString(){
         if(this.status==Status.FAILED) return "Failed";
         String out = "";
-        out += this.country.id;
+        out += this.country.getId();
         out += " ";
-        out += this.unit.location.toString();
+        out += this.unit.getLocation().toString();
         out += " ";
         out += this.type;
         out += this.status;
@@ -203,11 +252,11 @@ public class Move implements Comparable {
         if (scompare != 0) return scompare;
         int tcompare = this.type.compareTo(m.type);
         if (tcompare != 0) return tcompare;
-        int dcompare = this.destination.name.compareTo(m.destination.name);
+        int dcompare = this.destination.getName().compareTo(m.destination.getName());
         if (dcompare != 0) return dcompare;
-        int ccompare = m.country.id - this.country.id;
+        int ccompare = m.country.getId() - this.country.getId();
         if (ccompare != 0) return ccompare;
-        return this.unit.location.name.compareTo(m.unit.location.name);
+        return this.unit.getLocation().getName().compareTo(m.unit.getLocation().getName());
     }
 }
 

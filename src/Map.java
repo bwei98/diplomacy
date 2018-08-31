@@ -230,20 +230,20 @@ public class Map {
      */
     public static void makeNeighbor(Territory t1, Territory t2, boolean canFleet, boolean canArmy) {
         if(canFleet) {
-            List<Territory> neighborsT1 = Arrays.asList(t1.neighborsF);
-            List<Territory> neighborsT2 = Arrays.asList(t2.neighborsF);
+            List<Territory> neighborsT1 = Arrays.asList(t1.getNeighborsF());
+            List<Territory> neighborsT2 = Arrays.asList(t2.getNeighborsF());
             neighborsT1.add(t2);
             neighborsT2.add(t1);
-            t1.neighborsF = (Territory[])neighborsT1.toArray();
-            t2.neighborsF = (Territory[])neighborsT2.toArray();
+            t1.setNeighborsF((Territory[])neighborsT1.toArray());
+            t2.setNeighborsF((Territory[])neighborsT2.toArray());
         }
         if(canArmy) {
-            List<Territory> neighborsT1 = Arrays.asList(t1.neighborsA);
-            List<Territory> neighborsT2 = Arrays.asList(t2.neighborsA);
+            List<Territory> neighborsT1 = Arrays.asList(t1.getNeighborsA());
+            List<Territory> neighborsT2 = Arrays.asList(t2.getNeighborsA());
             neighborsT1.add(t2);
             neighborsT2.add(t1);
-            t1.neighborsA = (Territory[])neighborsT1.toArray();
-            t2.neighborsA = (Territory[])neighborsT2.toArray();
+            t1.setNeighborsA((Territory[])neighborsT1.toArray());
+            t2.setNeighborsA((Territory[])neighborsT2.toArray());
         }
     }
 }
