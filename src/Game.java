@@ -1,6 +1,6 @@
+import org.apache.commons.lang3.tuple.MutableTriple;
 import java.util.ArrayList;
 import java.util.Collections;
-import org.apache.commons.lang3.tuple.*;
 
 
 public class Game {
@@ -42,7 +42,7 @@ public class Game {
     }
 
     /**
-     * buildphase processses a single movement phase
+     * buildphase processes a single movement phase
      * In case of incorrect orders:
      * Incorrect disbands will cause the buildphase to randomly select units to disband
      * Incorrect builds will result in a country losing that build
@@ -420,6 +420,12 @@ public class Game {
         return ind;
     }
 
+    /**
+     * Returns int for the index of the maximum attack of the arrayList or a default value if the max is a tie
+     * @param atks ArrayList<MutableTriple<Move,Country,Integer>> representing the attacks
+     * @param def default value
+     * @return index of max of atks or def if the max is a tie
+     */
     private static int tripArrLstMaxTies(ArrayList<MutableTriple<Move,Country,Integer>> atks, int def){
         int ind;
         int zeroth = atks.get(0).right;

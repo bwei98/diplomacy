@@ -1,5 +1,8 @@
-import java.util.*;
-import org.apache.commons.lang3.tuple.*;
+import org.apache.commons.lang3.tuple.MutableTriple;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Territory {
     public final String name;

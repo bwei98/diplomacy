@@ -201,6 +201,11 @@ public class Diplomacy {
         }
     }
 
+    /**
+     * Removes semicolons and standardizes formatting
+     * @param o - the input to process
+     * @return - the formatted input
+     */
     public static String processInput(String o) {
         o = o.trim().toUpperCase();
         if(o.endsWith(";")) o = o.substring(0, o.length() - 1);

@@ -10,7 +10,7 @@ public class Map {
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
 
     //Countries:
-    //England 0, France 1, Germany 2, Russia 3, Austria 4, Italy 5, Trukey 6
+    //England 0, France 1, Germany 2, Russia 3, Austria 4, Italy 5, Turkey 6
 
     public static Territory Lvp = new Territory("Lvp", 0);
     public static Territory Cly = new Territory("Cly", -99);
