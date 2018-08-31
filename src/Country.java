@@ -165,8 +165,10 @@ public class Country implements Comparable {
     }
 
     /**
-     * toString returns the name, units, and supply centers of a country
+     * Give country details
+     * @return string with name, units, and supply centers of the country
      */
+    @Override
     public String toString() {
         String str = name;
         str += "\nUnits: ";
@@ -183,11 +185,18 @@ public class Country implements Comparable {
      * @param o The other country
      * @return -1 if o has a smaller id and 1 if o has a larger id
      */
+    @Override
     public int compareTo(Object o) {
         Country country2 = (Country)o;
         return country2.id - this.id;
     }
 
+    /**
+     * Check if two countries are equal
+     * @param o - the other country
+     * @return - are they equal?
+     */
+    @Override
     public boolean equals(Object o) {
         return this.compareTo(o) == 0;
     }
