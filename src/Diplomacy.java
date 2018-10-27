@@ -54,7 +54,6 @@ public class Diplomacy {
         Turkey.setUnits(new Unit[]{ new Unit(Turkey, true, Map.Ank), new Unit(Turkey, false, Map.Smy),
                                     new Unit(Turkey, false, Map.Con)});
         /*------------------------------------------------*/
-
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
     }
 

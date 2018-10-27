@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 enum Type                                                                                                              {
     D, H, M, C, CM, SH, SA                                                                                             }
 enum Status                                                                                                            {
@@ -83,6 +85,7 @@ public class Move implements Comparable {
         this.country = g.countries[id];
         boolean unitCheck = true;
         String[] order = new String[orderOrig.length-2];
+        System.out.println(Arrays.toString(orderOrig));
         for(int i=0; i<order.length; i++)
             order[i]=orderOrig[i+2];
         for (Unit u : this.country.getUnits()) {

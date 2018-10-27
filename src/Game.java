@@ -226,7 +226,8 @@ public class Game {
             //TODO Fail convoys when they are displaced
             if (m.getStatus() == Status.PENDING && m.getType() == Type.C) {
                 for (Move n : moveset)
-                    if (n.getType() == Type.CM && n.getUnit().getLocation().equals(m.getSource()) && n.getDestination().equals(m.getDestination())) {
+                    if (n.getType() == Type.CM && n.getUnit().getLocation().equals(m.getSource())
+                            && n.getDestination().equals(m.getDestination())) {
                         m.setStatus(Status.EXECUTABLE);
                         return;
                     }
@@ -255,7 +256,8 @@ public class Game {
             if (m.getStatus() == Status.PENDING && m.getType() == Type.SH) {
                 for (MutableTriple<Move, Country, Integer> t : m.getDestination().getAttacks()) {
                     Move n = t.getLeft();
-                    if (n.getDestination().equals(m.getUnit().getLocation()) && (n.getType() == Type.M || n.getType() == Type.CM)){
+                    if (n.getDestination().equals(m.getUnit().getLocation()) && (n.getType() == Type.M
+                            || n.getType() == Type.CM)){
                         m.setStatus(Status.FAILED);
                         return;
                     }
@@ -427,15 +429,11 @@ public class Game {
      * @return index of max of atks or def if the max is a tie
      */
     private static int tripArrLstMaxTies(ArrayList<MutableTriple<Move,Country,Integer>> atks, int def){
-        int ind;
-        int zeroth = atks.get(0).right;
-        int fst = atks.get(1).right;
-        if(zeroth<fst)
-            ind = atks.get(1).middle.getId();
-        else ind = atks.get(0).middle.getId();
-        int max1 = Integer.max(zeroth,fst);
-        int max2 = Integer.min(zeroth,fst);
-        for(int i=2; i<atks.size(); i++){
+        int ind = -1;
+        if(atks.size() < 2) return 0;
+        int max1 = -1;
+        int max2 = -2;
+        for(int i=0; i<atks.size(); i++){
             int irt = atks.get(i).right;
             if(irt>max1){
                 max2=max1;
