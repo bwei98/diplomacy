@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 
 enum Type                                                                                                              {
     D, H, M, C, CM, SH, SA                                                                                             }
@@ -260,6 +262,37 @@ public class Move implements Comparable {
         int ccompare = m.country.getId() - this.country.getId();
         if (ccompare != 0) return ccompare;
         return this.unit.getLocation().getName().compareTo(m.unit.getLocation().getName());
+    }
+
+
+    private static Comparator<Move> MoveCComparator
+            = new Comparator<>() {
+        /**
+         * Compare moves m and n for Type Convoy.
+         * @param m first move
+         * @param n second move
+         * @return 0 if neither or same, 1 if m is convoy, -1 if n is convoy
+         */
+        public int compare(Move m, Move n) {
+            if(m.getType() ==  n.getType())
+                return 0;
+            else if(m.getType() == Type.C)
+                return 1;
+            else if(n.getType() == Type.C)
+                return -1;
+            else
+                return 0;
+        }
+
+    };
+
+    /**
+     * sorts the array based on comparator for Type Convoy
+     * inplace
+     * @param moves arraylist to sort
+     */
+    public static void sortC(ArrayList<Move> moves){
+        moves.sort(MoveCComparator);
     }
 }
 

@@ -182,6 +182,8 @@ public class Game {
         moves.removeIf(m -> (m.getStatus()!=Status.EXECUTABLE));
 
 //        System.out.println("NumExecutable = " + countExecutable(moves));
+        // sort so territories in a convoy are first
+        Move.sortC(moves);
 //        executes moves
         while(countExecutable(moves)>0) {
             g = this.execution(moves);
@@ -243,7 +245,6 @@ public class Game {
                 visited.add(start);
                 if (convoyMove(m, moveset, visited, start)) {
                     m.setStatus(Status.EXECUTABLE);
-                    m.setType(Type.M);
                     m.getDestination().getAttacks().add(new MutableTriple<>(m, m.getCountry(), 1));
                     return;
                 } else {
@@ -339,13 +340,25 @@ public class Game {
         int mostPowCountry = tripArrLstMaxTies(t.getAttacks(), t.getOccupied());
 
         if(t.getOccupied()!=mostPowCountry){
+
+            // if it's part of a convoy and dies then kill everything related to it
+            if(m.getType() == Type.C){
+                for(Move n : moveset){
+                    if(n.getDestination() == m.getDestination() && (n.getType() == Type.C || n.getType() == Type.CM)){
+                        moveset.remove(n);
+                    }
+                }
+            }
+
             Collections.addAll(retreats, this.retreatingUnits);
             if(t.getOccupied() != -1) {
                 for (Unit unit : this.countries[t.getOccupied()].getUnits())
-                    if (unit.getLocation().equals(t))
+                    if (unit.getLocation().equals(t)) {
                         retreats.add(unit);
+                    }
                 newRetreats = new Unit[retreats.size()];
                 newRetreats = retreats.toArray(newRetreats);
+
             }
             for(Move n : moveset) {
                 System.out.println(n.toString());
