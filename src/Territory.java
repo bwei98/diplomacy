@@ -15,8 +15,9 @@ public class Territory {
 
     private ArrayList<MutableTriple<Move, Country, Integer>> attacks;
 
-
-
+    /*
+    Here's a bunch of getters and setters, they are pretty obvious, you know what they do.
+     */
     public String getName() {
         return name;
     }

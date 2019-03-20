@@ -6,30 +6,51 @@ public class Country implements Comparable {
     private boolean alive;
     private final int id;
 
+    /**
+     * @return name of the country as string
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param alive alive status to set (true = alive, false = not alive)
+     */
     public void setAlive(boolean alive) {
         this.alive = alive;
     }
 
+    /**
+     * @return array of units owned by this country
+     */
     public Unit[] getUnits() {
         return units;
     }
 
+    /**
+     * @return array of territories which are supply centers of this country
+     */
     public Territory[] getSupplyCenters() {
         return supplyCenters;
     }
 
+    /**
+     * @return array of home supply centers of the country
+     */
     public Territory[] getHomeSCs() {
         return homeSCs;
     }
 
+    /**
+     * @return are we alive?
+     */
     public boolean isAlive() {
         return alive;
     }
 
+    /**
+     * @return integer id of the country, this is a unique identifier for each country
+     */
     public int getId() {
         return id;
     }
@@ -227,5 +248,7 @@ public class Country implements Comparable {
     public boolean equals(Object o) {
         return this.compareTo(o) == 0;
     }
+
+
 
 }
