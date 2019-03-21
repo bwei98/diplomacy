@@ -196,7 +196,6 @@ public class Territory {
      * Set the neighbors of the Territory
      * @param neighbors The territory neighbors
      * @param isFleet Whether the territories are connected by land or water
-     * @return
      */
     public void setNeighbors(Territory[] neighbors, boolean isFleet) {
         if(isFleet) neighborsF = neighbors;

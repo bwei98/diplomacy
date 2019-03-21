@@ -144,7 +144,7 @@ public class Country implements Comparable {
     public boolean hasSupplyCenter(Territory scCheck) {
         boolean hasSC = false;
         for(Territory sc : supplyCenters)
-            if(sc.equals(sc)) {
+            if(sc.equals(scCheck)) {
                 hasSC = true;
                 break;
             }
@@ -248,7 +248,6 @@ public class Country implements Comparable {
     public boolean equals(Object o) {
         return this.compareTo(o) == 0;
     }
-
 
 
 }
