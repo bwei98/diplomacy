@@ -65,18 +65,6 @@ public class Move implements Comparable {
     }
 
     /**
-     * Default move constructor
-     */
-    public Move() {
-        this.country = new Country();
-        this.unit = new Unit();
-        this.destination = new Territory();
-        this.type = Type.D;
-        this.status = Status.UNREAD;
-        this.source = null;
-    }
-
-    /**
      * Most useful move constructor
      *
      * @param g     Game which is the state the move is using

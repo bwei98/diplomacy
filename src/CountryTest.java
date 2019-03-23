@@ -15,14 +15,15 @@ class CountryTest {
         T2 = new Territory("terr2", 0);
         T3 = new Territory("terr3", 0);
 
-        C = new Country();
+        int id = 0;
+        C = new Country(id);
         U1 = new Unit(C, true, T2);
         U2 = new Unit(C, false, T3);
         Unit[] u = {U1, U2};
         units = u;
         Territory[] t = {T2, T3};
         scs = t;
-        C = new Country("CountryA", units, scs, 0);
+        C = new Country("CountryA", units, scs, id);
     }
 
     @org.junit.jupiter.api.Test
@@ -53,7 +54,7 @@ class CountryTest {
     @org.junit.jupiter.api.Test
     void hasSupplyCenter() {
         Assertions.assertTrue(C.hasSupplyCenter(T2), "fails hasSupplyCenter when true");
-        Assertions.assertFalse(!C.hasSupplyCenter(T1), "fails hasSupplyCenter when false");
+        Assertions.assertFalse(C.hasSupplyCenter(T1), "fails hasSupplyCenter when false");
     }
 
     @org.junit.jupiter.api.Test

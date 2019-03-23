@@ -17,14 +17,7 @@ public class Unit implements Comparable {
         this.isFleet = type;
         this.location = init;
         this.hasOrder=false;
-    }
-
-
-    public Unit(){
-        owner=new Country();
-        isFleet=false;
-        location=new Territory();
-        hasOrder=false;
+        init.setOccupied(owner.getId());
     }
 
     /**

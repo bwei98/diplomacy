@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 public class Country implements Comparable {
     private final String name;
     private Unit[] units;
@@ -62,7 +64,7 @@ public class Country implements Comparable {
      * @param supplyCenters Territory[] for the supply centers controlled
      * @param id int for the country id
      */
-    public Country(String name, Unit[] units, Territory[] supplyCenters, int id) {
+    public Country(String name, @NotNull Unit[] units, @NotNull Territory[] supplyCenters, int id) {
         this.name = name;
         this.units = units;
         this.supplyCenters = supplyCenters;
@@ -89,13 +91,13 @@ public class Country implements Comparable {
     /**
      * Default Country constructor
      */
-    public Country(){
+    public Country(int cId){
         name="";
         units=null;
         supplyCenters =null;
         homeSCs = null;
         alive = false;
-        id=-1;
+        id=cId;
     }
 
     /**
@@ -114,6 +116,7 @@ public class Country implements Comparable {
         Territory[] newTerritories = new Territory[supplyCenters.length + 1];
         System.arraycopy(supplyCenters, 0, newTerritories, 0, supplyCenters.length);
         newTerritories[supplyCenters.length] = newSC;
+        newSC.setSupplyCenter(id);
 
         supplyCenters = newTerritories;
     }
@@ -132,6 +135,7 @@ public class Country implements Comparable {
                 idx++;
             }
         }
+        goneSC.setSupplyCenter(-1);
 
         supplyCenters = newTerritories;
     }
@@ -143,11 +147,12 @@ public class Country implements Comparable {
      */
     public boolean hasSupplyCenter(Territory scCheck) {
         boolean hasSC = false;
-        for(Territory sc : supplyCenters)
-            if(sc.equals(scCheck)) {
+        for(Territory sc : supplyCenters) {
+            if (sc.equals(scCheck)) {
                 hasSC = true;
                 break;
             }
+        }
         return hasSC;
     }
 
@@ -195,7 +200,7 @@ public class Country implements Comparable {
         if(diff <= 0) return diff;
         else {
             int numBuilds = 0;
-            for(Territory sc : homeSCs) if(canBuild(sc)) numBuilds++;
+            for(Territory sc : supplyCenters) if(canBuild(sc)) numBuilds++;
             return Math.min(numBuilds, diff);
         }
     }
@@ -206,7 +211,7 @@ public class Country implements Comparable {
      * @return Whether or not sc is a country's home supply center and is empty
      */
     public boolean canBuild(Territory sc) {
-        for(Territory supplyCenter : homeSCs) {
+        for(Territory supplyCenter : supplyCenters) {
             if(sc.equals(supplyCenter) && sc.getOccupied() == -1) return true;
         }
         return false;
