@@ -2,8 +2,6 @@
 
 **Build and run instructions**
 
-Download external library `lang3-3.7` from apache commons: https://commons.apache.org/proper/commons-lang/download_lang.cgi
-
 Java 10.0 or higher might be required
 
 To run from IDE: run `Diplomacy`
@@ -16,6 +14,9 @@ Compile with:
 Then run with:
 `java -cp ./bin Diplomacy`
 
-**To be tested:**
 
-everything
+**Known bugs:**
+
+Moving into a friendly territory that is evacuated in the same turn (e.g. A Ber - Kie, F Kie - Den) fails
+
+Builds are not given for newly acquired supply centers

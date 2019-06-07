@@ -337,7 +337,7 @@ public class Game {
         Move m = moveset.get(0);
         Territory t = m.getDestination();
 
-        int mostPowCountry = tripArrLstMaxTies(t.getAttacks(), t.getOccupied());
+        int mostPowCountry = t.getAttacks().get(tripArrLstMaxTies(t.getAttacks(), t.getOccupied())).getMiddle().getId();
 
         if(t.getOccupied()!=mostPowCountry){
 
