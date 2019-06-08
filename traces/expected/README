@@ -1,0 +1,12 @@
+Enter expected results of movements for corresponding trace in the following format:
+
+<type> <Location>; <type> <location>; ...
+<SC>; <SC>; <SC>; ...
+
+There are two rows of text per country.
+The first is semicolon separated unit locations with their type (e.g. F Lon; A Lvp)
+The second is semicolon separated supply centers (e.g Lon, Bre, Par)
+Countries must be in order of country ids for that game
+# commented lines using '#' are ignored
+
+'pass' keyword automatically passes the current verification.  The following lines will be read for the following turns.

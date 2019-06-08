@@ -361,9 +361,9 @@ public class Game {
 
             }
             for(Move n : moveset) {
-                System.out.println(n.toString());
-                System.out.println(t.toString());
-                System.out.println(mostPowCountry);
+//                System.out.println(n.toString());
+//                System.out.println(t.toString());
+//                System.out.println(mostPowCountry);
                 if (n.getDestination().equals(t) && n.getCountry().getId() == mostPowCountry) {
                     n.getUnit().setLocation(t);
                     t.setOccupied(mostPowCountry);

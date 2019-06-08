@@ -1,0 +1,8 @@
+Enter orders for test in standard accepted format:
+F Lon - ENG; A Lvp - Wal
+
+Countries must be in order of country ids for that game
+# commented lines using '#' are ignored
+If a country has no orders use a blank line.
+Whitespace is not "free" and will be read as part of the input; use a commented blank line instead
+Execution will stop at the end of the file
