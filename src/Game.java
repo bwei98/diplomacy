@@ -61,7 +61,7 @@ public class Game {
                 String location = order[1].trim();
 
                 int diff = country.numBuildsOrDisbands();
-                if (diff < 0) { //process as a build
+                if (diff > 0) { //process as a build
                     for (Territory sc : country.getHomeSCs()) {
                         if (sc.equals(location) && sc.getOccupied() == -1) {
                             if(!(isFleet && sc.landlocked())) country.build(sc, isFleet);
@@ -75,7 +75,7 @@ public class Game {
                     }
                 }
 
-                while(country.numBuildsOrDisbands() > 0) country.disband(country.getUnits()[0]);
+                while(country.numBuildsOrDisbands() < 0) country.disband(country.getUnits()[0]);
             }
 
             if(country.getUnits().length == 0) country.setAlive(false);
@@ -365,8 +365,9 @@ public class Game {
 //                System.out.println(t.toString());
 //                System.out.println(mostPowCountry);
                 if (n.getDestination().equals(t) && n.getCountry().getId() == mostPowCountry) {
-                    n.getUnit().setLocation(t);
-                    t.setOccupied(mostPowCountry);
+                    n.getUnit().move(t);
+                    //n.getUnit().setLocation(t);
+                    //t.setOccupied(mostPowCountry);
                     break;
                 }
             }

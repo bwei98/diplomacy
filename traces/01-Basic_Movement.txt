@@ -7,4 +7,4 @@ A Vie - Tyr; F Tri - ADR; A Bud - Ser
 A Rom - Apu; A Ven - Pie; F Nap - ION
 A Con - Bul; A Smy - Syr; F Ank - Arm
 #
-# Fall 1901
+# END

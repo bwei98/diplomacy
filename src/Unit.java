@@ -89,11 +89,13 @@ public class Unit implements Comparable {
     public void move(Territory location2) {
         if(isFleet) {
             if(location.touchF(location2)) {
+                location.setOccupied(-1);
                 location = location2;
                 location.setOccupied(owner.getId());
             }
         } else {
             if(location.touchA(location2)) {
+                location.setOccupied(-1);
                 location = location2;
                 location.setOccupied(owner.getId());
             }

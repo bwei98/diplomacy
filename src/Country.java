@@ -196,7 +196,8 @@ public class Country implements Comparable {
      * @return see above
      */
     public int numBuildsOrDisbands() {
-        int diff = units.length - supplyCenters.length;
+        int diff = supplyCenters.length - units.length;
+
         if(diff <= 0) return diff;
         else {
             int numBuilds = 0;

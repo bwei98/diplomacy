@@ -12,7 +12,7 @@ Compile with:
 `javac -cp lib/*:. src/*.java -d bin`
 
 Then run with:
-`java -cp lib/*:./bin Diplomacy <args>
+`java -cp lib/*:./bin Diplomacy <args>`
 
 #### Arguments
     java -cp lib/*:./bin Diplomacy [-v] [-t trace]
@@ -20,6 +20,15 @@ Then run with:
     -t, --trace <tracefile>: name trace to execute
     -v, --verbose: print moves, requests, and gamestate in each iteration; default is off; forced on if no trace is provided
 
+### Using a subset of the current available map (full and UK-only are the current coded options)
+
+To change the map
+    In Diplomacy.java:
+        Change numCountries
+        Call the approriate initialization method in init (create one if necessary)
+        Comment out the unused countries
+    In Map.java:
+        Change NUM_TERRITORIES
 
 ### Known bugs:
 Traces and verbosity has NOT been implemented with builds and retreats

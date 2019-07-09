@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Diplomacy {
-    public static int numCountries = 7;
+    public static int numCountries = 3;//7;
     public static Country[] countries = new Country[numCountries];
     public static boolean won = false;
     public static Game gameState;
@@ -35,7 +35,8 @@ public class Diplomacy {
         }
         year = 1901;
         season = Map.SPRING;
-        Map.initFull();
+        //Map.initFull();
+        Map.initUK_FR_GR();
 
         /*------------------------------------------------*/
         Country England = new Country("England", new Territory[]{Map.Lvp, Map.Edi, Map.Lon}, 0);
@@ -53,7 +54,7 @@ public class Diplomacy {
         countries[2] = Germany;
         Germany.setUnits(new Unit[]{new Unit(Germany, true, Map.Kie), new Unit(Germany, false, Map.Ber),
                                     new Unit(Germany, false, Map.Mun)});
-
+        /*------------------------------------------------
         Country Russia = new Country("Russia",new Territory[]{Map.Mos, Map.Stp, Map.Sev, Map.War},3);
         countries[3] = Russia;
         Russia.setUnits(new Unit[]{ new Unit(Russia, true, Map.Stp), new Unit(Russia, false, Map.Mos),
@@ -73,7 +74,7 @@ public class Diplomacy {
         countries[6] = Turkey;
         Turkey.setUnits(new Unit[]{ new Unit(Turkey, true, Map.Ank), new Unit(Turkey, false, Map.Smy),
                                     new Unit(Turkey, false, Map.Con)});
-        /*------------------------------------------------*/
+        ------------------------------------------------*/
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
     }
 
@@ -144,16 +145,17 @@ public class Diplomacy {
             if(country.isAlive()) {
                 System.out.println(country.getName() + ": ");
                 int diff = country.numBuildsOrDisbands();
+                //System.out.println(diff);
                 //Either disband or build
-                if (diff > 0) {
-                    System.out.println("You have to disband " + diff + " armies.");
+                if (diff < 0) {
+                    System.out.println("You have to disband " + (-diff) + " armies.");
                     System.out.println("You may choose from: ");
                     for (Unit unit : country.getUnits()) System.out.println(unit);
                     System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
                     String s = readNextLine(inputReader);
                     buildMoves[i] = processInput(s).split("; ");
-                } else if (diff < 0) {
-                    System.out.println("You may build " + (-diff) + " armies.");
+                } else if (diff > 0) {
+                    System.out.println("You may build " + diff + " armies.");
                     System.out.print("You may build in: ");
                     for(Territory sc : country.getHomeSCs()) {
                         if (country.canBuild(sc)) {
@@ -179,9 +181,9 @@ public class Diplomacy {
         for(Country country : countries) {
             for(Unit unit : country.getUnits()) {
                 if(unit.getLocation().isSupplyCenter() && unit.getLocation().getSupplyCenter() != unit.getOwner().getId()) {
-                    country.gainSupplyCenter(unit.getLocation());
                     if(unit.getLocation().getSupplyCenter() != -1)
                         countries[unit.getLocation().getSupplyCenter()].loseSupplyCenter(unit.getLocation());
+                    country.gainSupplyCenter(unit.getLocation());
                     unit.getLocation().setSupplyCenter(unit.getOwner().getId());
                 }
             }
@@ -209,7 +211,10 @@ public class Diplomacy {
                         break;
                     }
                 }
-                if(!ind) return false;
+                if(!ind) {
+                    System.out.println("Unit locations incorrect for " + gameState.countries[i].getName());
+                    return false;
+                }
             }
             if((line = readNextLine(checkReader)).equals("pass")) return true;
             String[] expectedSc = line.split(";");
@@ -224,7 +229,10 @@ public class Diplomacy {
                         break;
                     }
                 }
-                if(!ind) return false;
+                if(!ind) {
+                    System.out.println("Supply Centers incorrect for " + gameState.countries[i].getName());
+                    return false;
+                }
             }
         }
         return true;

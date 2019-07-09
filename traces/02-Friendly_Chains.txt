@@ -1,0 +1,11 @@
+# Spring 1901
+# England and France tests are basic; Russia is a longer chain; Turkey tests cycle
+F Edi - NTH; A Lvp - Edi
+F Bre - MAO; A Par - Bre
+
+A War - Mos; A Mos - Sev; F Sev - BLA
+
+
+F Ank - Con; A Con - Smy; A Smy - Ank
+#
+# END

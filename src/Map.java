@@ -6,7 +6,7 @@ public class Map {
     public static final int FALL = 2;
     public static final int WINTER = 0;
 
-    public static final int NUM_TERRITORIES = 75; //Change to 6 for UK
+    public static final int NUM_TERRITORIES = 24; //Change to 6 for UK // 24 for UK_FR_GR //75 for all
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
 
     //Countries:
@@ -110,6 +110,47 @@ public class Map {
         Wal.setNeighbors(new Territory[]{Lvp, Yor, Lon}, new Territory[]{Lvp, Lon});
         Edi.setNeighbors(new Territory[]{Cly, Lvp, Lon}, new Territory[]{Cly, Yor});
         Lon.setNeighbors(new Territory[]{Yor, Wal}, new Territory[]{Yor, Wal});
+    }
+
+    public static void initUK_FR_GR() {
+        TERRITORIES[0] = Lvp;   TERRITORIES[10] = Par;  TERRITORIES[20] = NWG;
+        TERRITORIES[1] = Cly;   TERRITORIES[11] = Bre;  TERRITORIES[21] = NTH;
+        TERRITORIES[2] = Yor;   TERRITORIES[12] = Pic;  TERRITORIES[22] = LYO;
+        TERRITORIES[3] = Wal;   TERRITORIES[13] = Bur;  TERRITORIES[23] = NAO;
+        TERRITORIES[4] = Edi;   TERRITORIES[14] = Bel;
+        TERRITORIES[5] = Lon;   TERRITORIES[15] = Hol;
+        TERRITORIES[6] = MAO;   TERRITORIES[16] = Ruh;
+        TERRITORIES[7] = ENG;   TERRITORIES[17] = Kie;
+        TERRITORIES[8] = Gas;   TERRITORIES[18] = Mun;
+        TERRITORIES[9] = Mar;   TERRITORIES[19] = Ber;
+
+        NWG.setNeighbors(new Territory[]{}, new Territory[]{NAO, Cly, Edi, NTH});
+        NTH.setNeighbors(new Territory[]{}, new Territory[]{Lon, Yor, Edi, NWG, Hol, Bel, ENG});
+        NAO.setNeighbors(new Territory[]{}, new Territory[]{NWG, Cly, MAO});
+        ENG.setNeighbors(new Territory[]{}, new Territory[]{MAO, Wal, Lon, Bel, Pic, Bre});
+        MAO.setNeighbors(new Territory[]{}, new Territory[]{NAO, ENG, Bre, Gas});
+        LYO.setNeighbors(new Territory[]{}, new Territory[]{Mar});
+
+
+        Lvp.setNeighbors(new Territory[]{Cly, Yor, Wal, Edi, Lon}, new Territory[]{Cly, Wal, NAO, IRI});
+        Cly.setNeighbors(new Territory[]{Edi, Lvp}, new Territory[]{Edi, Lvp, NAO, NWG});
+        Yor.setNeighbors(new Territory[]{Lvp, Wal, Edi, Lon}, new Territory[]{Edi, Lon, NTH});
+        Wal.setNeighbors(new Territory[]{Lvp, Yor, Lon}, new Territory[]{Lvp, Lon, IRI, ENG});
+        Edi.setNeighbors(new Territory[]{Cly, Lvp, Lon}, new Territory[]{Cly, Yor, NWG, NTH});
+        Lon.setNeighbors(new Territory[]{Yor, Wal}, new Territory[]{Yor, Wal, ENG, NTH});
+        Gas.setNeighbors(new Territory[]{Bre, Par, Bur, Mar}, new Territory[]{MAO, Bre});
+        Mar.setNeighbors(new Territory[]{Gas, Bur}, new Territory[]{Spa, LYO});
+
+        Par.setNeighbors(new Territory[]{Pic, Bre, Gas, Bur, Mar}, new Territory[]{});
+        Bre.setNeighbors(new Territory[]{Pic, Par, Gas}, new Territory[]{Pic, Gas, MAO, ENG});
+        Pic.setNeighbors(new Territory[]{Par, Bre, Bel, Bur}, new Territory[]{ENG, Bre, Bel});
+        Bur.setNeighbors(new Territory[]{Gas, Par, Pic, Bel, Ruh, Mun, Mar}, new Territory[]{});
+        Bel.setNeighbors(new Territory[]{Pic, Bur, Ruh, Hol}, new Territory[]{ENG, NTH, Pic, Hol});
+        Hol.setNeighbors(new Territory[]{Bel, Ruh, Kie}, new Territory[]{NTH, Kie, Bel});
+        Ruh.setNeighbors(new Territory[]{Bel, Hol, Kie, Mun, Bur}, new Territory[]{});
+        Kie.setNeighbors(new Territory[]{Hol, Ber, Mun, Ruh}, new Territory[]{HEL, Hol, Ber});
+        Mun.setNeighbors(new Territory[]{Kie, Ber, Bur, Ruh}, new Territory[]{});
+        Ber.setNeighbors(new Territory[]{Mun, Kie}, new Territory[]{Kie});
     }
 
 

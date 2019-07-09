@@ -9,3 +9,7 @@ F Fin; A Ukr; A Gal; F BLA
 Mos; Stp; Sev; War
 F ADR; A Ser; A Tyr
 Vie; Tri; Bud
+A Apu; A Pie; F ION
+Rom; Nap; Ven
+A Bul; A Syr; F Arm
+Con; Smy; Ank

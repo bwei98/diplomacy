@@ -134,9 +134,8 @@ public class Territory {
      * @return boolean which is true iff T touches w.r.t fleets
      */
     public boolean touchF(Territory T) {
-        int len = this.neighborsF.length-1;
-        while(len >= 0)
-            if(this.neighborsF[len].equals(T))
+        for (Territory neighbor : neighborsF)
+            if(neighbor.equals(T))
                 return true;
         return false;
     }
@@ -147,9 +146,8 @@ public class Territory {
      * @return boolean which is true iff T touches w.r.t armies
      */
     public boolean touchA(Territory T) {
-        int len = this.neighborsF.length-1;
-        while(len >= 0)
-            if(this.neighborsA[len].equals(T))
+        for (Territory neighbor : neighborsA)
+            if(neighbor.equals(T))
                 return true;
         return false;
     }

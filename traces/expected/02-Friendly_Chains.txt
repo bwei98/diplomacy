@@ -1,0 +1,17 @@
+# Spring 1901
+F NTH; A Lvp; F Lon
+Lvp; Edi; Lon
+F MAO; A Bre; A Mar
+Par; Bre; Mar
+F Kie; A Ber; A Mun
+Kie; Ber; Mun
+F Stp; A Mos; A Sev; F BLA
+Mos; Stp; Sev; War
+F Tri; A Vie; A Bud
+Vie; Tri; Bud
+A Ven; A Rom; F Nap
+Rom; Ven; Nap
+A Smy; A Ank; F Con
+Smy; Ank; Con
+#
+# END
