@@ -31,8 +31,5 @@ To change the map
         Change NUM_TERRITORIES
 
 ### Known bugs:
-Traces and verbosity has NOT been implemented with builds and retreats
 
 Moving into a friendly territory that is evacuated in the same turn (e.g. A Ber - Kie, F Kie - Den) fails
-
-Builds are not given for newly acquired supply centers

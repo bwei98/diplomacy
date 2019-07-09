@@ -6,7 +6,7 @@ public class Map {
     public static final int FALL = 2;
     public static final int WINTER = 0;
 
-    public static final int NUM_TERRITORIES = 24; //Change to 6 for UK // 24 for UK_FR_GR //75 for all
+    public static final int NUM_TERRITORIES = 75; //Change to 6 for UK // 24 for UK_FR_GR //75 for all
     public static final Territory[] TERRITORIES = new Territory[NUM_TERRITORIES];
 
     //Countries:

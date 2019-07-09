@@ -1,0 +1,49 @@
+# Spring 1901
+F NTH; A Yor; F NWG
+Lvp; Edi; Lon
+F MAO; A Pic; A Gas
+Par; Bre; Mar
+F HOL; A Ber; A Bur
+Kie; Ber; Mun
+F Stp; A Mos; A War; F Sev
+Mos; Stp; Sev; War
+F Tri; A Vie; A Bud
+Vie; Tri; Bud
+A Ven; A Rom; F Nap
+Rom; Ven; Nap
+A Smy; F Ank; A Con
+Smy; Ank; Con
+#
+# Fall 1901
+F NTH; A Yor; F NWG
+Lvp; Edi; Lon
+F MAO; A Pic; A Gas
+Bre; Mar
+F Hol; A Ber; A Par
+Kie; Ber; Mun; Hol; Par
+F Stp; A Mos; A War; F Sev
+Mos; Stp; Sev; War
+F Tri; A Vie; A Bud
+Vie; Tri; Bud
+A Ven; A Rom; F Nap
+Rom; Ven; Nap
+A Smy; F Ank; A Con
+Smy; Ank; Con
+#
+# Spring 1902
+F NTH; A Yor; F NWG
+Lvp; Edi; Lon
+A Pic; A Gas
+Bre; Mar
+F Hol; A Ber; A Par; F Kie; A Mun
+Kie; Ber; Mun; Hol; Par
+F Stp; A Mos; A War; F Sev
+Mos; Stp; Sev; War
+F Tri; A Vie; A Bud
+Vie; Tri; Bud
+A Ven; A Rom; F Nap
+Rom; Ven; Nap
+A Smy; F Ank; A Con
+Smy; Ank; Con
+#
+# END

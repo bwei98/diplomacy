@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Diplomacy {
-    public static int numCountries = 3;//7;
+    public static int numCountries = 7;
     public static Country[] countries = new Country[numCountries];
     public static boolean won = false;
     public static Game gameState;
@@ -35,8 +35,8 @@ public class Diplomacy {
         }
         year = 1901;
         season = Map.SPRING;
-        //Map.initFull();
-        Map.initUK_FR_GR();
+        Map.initFull();
+        //Map.initUK_FR_GR();
 
         /*------------------------------------------------*/
         Country England = new Country("England", new Territory[]{Map.Lvp, Map.Edi, Map.Lon}, 0);
@@ -54,7 +54,7 @@ public class Diplomacy {
         countries[2] = Germany;
         Germany.setUnits(new Unit[]{new Unit(Germany, true, Map.Kie), new Unit(Germany, false, Map.Ber),
                                     new Unit(Germany, false, Map.Mun)});
-        /*------------------------------------------------
+        /*------------------------------------------------*/
         Country Russia = new Country("Russia",new Territory[]{Map.Mos, Map.Stp, Map.Sev, Map.War},3);
         countries[3] = Russia;
         Russia.setUnits(new Unit[]{ new Unit(Russia, true, Map.Stp), new Unit(Russia, false, Map.Mos),
@@ -74,7 +74,7 @@ public class Diplomacy {
         countries[6] = Turkey;
         Turkey.setUnits(new Unit[]{ new Unit(Turkey, true, Map.Ank), new Unit(Turkey, false, Map.Smy),
                                     new Unit(Turkey, false, Map.Con)});
-        ------------------------------------------------*/
+        /*------------------------------------------------*/
         gameState = new Game(countries, Map.TERRITORIES, new Unit[0]);
     }
 
@@ -99,12 +99,8 @@ public class Diplomacy {
             }
         }
 
-   //     System.out.println("Got it");
-
         gameState = gameState.movephase(moves);
         Unit[] retreats = gameState.retreatingUnits;
-
-//        System.out.println("Retreats: " + (retreats.length > 0));
 
         //Take orders for stage: retreat if necessary
         if(retreats.length > 0) {
@@ -116,12 +112,12 @@ public class Diplomacy {
                 Unit retreat = retreats[i];
                 if(retreat.getOwner().getId() != prevCountry) {
                     prevCountry = retreat.getOwner().getId();
-                    System.out.println(countries[retreat.getOwner().getId()].getName() + " : please enter your retreats ");
+                    if (verbose) System.out.println(countries[retreat.getOwner().getId()].getName() + " : please enter your retreats ");
                 }
-                System.out.println(retreat + ": ");
-                System.out.print("Options - DISBAND");
+                if (verbose) System.out.println(retreat + ": ");
+                if (verbose) System.out.print("Options - DISBAND");
                 for(Territory t : retreat.canMove()) System.out.print(", " + t);
-                System.out.print("\n Where do you want to move this unit? \t");
+                if (verbose) System.out.print("\n Where do you want to move this unit? \t");
 
                 String s = readNextLine(inputReader);
                 String order = s.toUpperCase();
@@ -143,29 +139,28 @@ public class Diplomacy {
         for(int i = 0; i < numCountries; i++) {
             Country country = countries[i];
             if(country.isAlive()) {
-                System.out.println(country.getName() + ": ");
+                if (verbose) System.out.println(country.getName() + ": ");
                 int diff = country.numBuildsOrDisbands();
-                //System.out.println(diff);
                 //Either disband or build
                 if (diff < 0) {
-                    System.out.println("You have to disband " + (-diff) + " armies.");
-                    System.out.println("You may choose from: ");
-                    for (Unit unit : country.getUnits()) System.out.println(unit);
-                    System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
+                    if (verbose) System.out.println("You have to disband " + (-diff) + " armies.");
+                    if (verbose) System.out.println("You may choose from: ");
+                    if (verbose) for (Unit unit : country.getUnits()) System.out.println(unit);
+                    if (verbose) System.out.print("Enter your semicolon-separated disbands (specify F/A): \t");
                     String s = readNextLine(inputReader);
                     buildMoves[i] = processInput(s).split("; ");
                 } else if (diff > 0) {
-                    System.out.println("You may build " + diff + " armies.");
-                    System.out.print("You may build in: ");
+                    if (verbose) System.out.println("You may build " + diff + " armies.");
+                    if (verbose) System.out.print("You may build in: ");
                     for(Territory sc : country.getHomeSCs()) {
                         if (country.canBuild(sc)) {
-                            System.out.print(sc.getName() + " ");
-                            if (sc.coast()) System.out.print("(F/A) ");
-                            if (sc.water()) System.out.print("(F)");
-                            if (sc.landlocked()) System.out.print("(A) ");
+                            if (verbose) System.out.print(sc.getName() + " ");
+                            if (verbose) if (sc.coast()) System.out.print("(F/A) ");
+                            if (verbose) if (sc.water()) System.out.print("(F)");
+                            if (verbose) if (sc.landlocked()) System.out.print("(A) ");
                         }
                     }
-                    System.out.print("\n Enter your semicolon-separated builds (specify F/A): \t");
+                    if (verbose) System.out.print("\n Enter your semicolon-separated builds (specify F/A): \t");
                     String s = readNextLine(inputReader);
                     buildMoves[i] = processInput(s).split("; ");
                 }
@@ -206,7 +201,7 @@ public class Diplomacy {
                 String location = unit.substring(2);
                 boolean ind = false;
                 for(Unit u : units){
-                    if(u.isFleet() == type && u.getLocation().toString().equals(location)) {
+                    if(u.isFleet() == type && u.getLocation().toString().toUpperCase().equals(location.toUpperCase())) {
                         ind = true;
                         break;
                     }
