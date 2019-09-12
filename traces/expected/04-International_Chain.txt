@@ -1,0 +1,10 @@
+# Spring 1901
+F ENG; A Lvp; F Edi
+pass
+# Fall 1901
+F Bre; A Lvp; F Edi
+Lvp, Edi, Lon
+F MAO; A Par; A Mar
+pass
+#
+# END

@@ -188,9 +188,17 @@ public class Diplomacy {
 
     public static boolean checkState(){
         String line;
-        if(verbose) System.out.println("EXPECTED: ");
+        if(verbose) System.out.print("EXPECTED: ");
         for(int i = 0; i < numCountries; i++){
+            Country crit = gameState.countries[i];
             if((line = readNextLine(checkReader)).equals("pass")) return true;
+            if(verbose) {
+                System.out.print("GOT: ");
+                for(int j = 0; j < crit.getUnits().length; j++) {
+                    System.out.print(crit.getUnits()[j].toString().trim() + "; ");
+                }
+                System.out.print("\n");
+            }
             Country c = gameState.countries[i];
             Unit[] units = c.getUnits();
             String[] expectedUnits = line.split(";");
@@ -207,7 +215,7 @@ public class Diplomacy {
                     }
                 }
                 if(!ind) {
-                    System.out.println("Unit locations incorrect for " + gameState.countries[i].getName());
+                    System.out.println("Unit locations incorrect for " + crit.getName());
                     return false;
                 }
             }
